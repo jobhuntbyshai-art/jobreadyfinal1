@@ -367,7 +367,7 @@ function App() {
 
       {/* Testimonials Section */}
       <section className="px-6 pt-24 pb-24">
-        <div className="text-center mb-16 max-w-7xl mx-auto">
+        <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-4">
             Don't just take our word for it — real students, real results.
           </h2>
