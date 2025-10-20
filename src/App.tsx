@@ -162,7 +162,7 @@ function App() {
       <section 
         id="syllabus" 
         className="py-24 bg-cover bg-center bg-no-repeat" 
-        style={{ backgroundImage: 'url(/ux-background_1760951530967.png)' }}
+        style={{ backgroundImage: 'url(/ux-background.png)' }}
       >
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
