@@ -1,4 +1,4 @@
-import { Star, PlayCircle } from 'lucide-react';
+import { Star, FileText } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -119,8 +119,8 @@ function App() {
               Join the Job Ready Sprint
             </button>
             <button className="px-8 py-4 text-[#1A1A2E] border border-[#1A1A2E]/20 rounded-lg hover:bg-white/50 transition font-semibold flex items-center gap-2">
-              <PlayCircle className="w-5 h-5" />
-              Learn more
+              <FileText className="w-5 h-5" />
+              View Syllabus
             </button>
           </div>
 
@@ -132,7 +132,7 @@ function App() {
               ))}
             </div>
             <span className="text-sm text-[#1A1A2E]/60">4.8/5</span>
-            <span className="text-xs text-[#1A1A2E]/40">from 1,234 reviews • 5,678 students</span>
+            <span className="text-xs text-[#1A1A2E]/40">from 100+ designers</span>
           </div>
         </div>
 
