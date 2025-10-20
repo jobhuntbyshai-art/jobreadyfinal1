@@ -127,7 +127,10 @@ function App() {
             <button className="px-8 py-4 bg-[#1A1A2E] text-[#E8E4D9] rounded-lg hover:bg-[#1A1A2E]/90 transition font-semibold">
               Join the Job Ready Sprint
             </button>
-            <button className="px-8 py-4 text-[#1A1A2E] border border-[#1A1A2E]/20 rounded-lg hover:bg-white/50 transition font-semibold flex items-center gap-2">
+            <button 
+              onClick={() => document.getElementById('syllabus')?.scrollIntoView({ behavior: 'smooth' })}
+              className="px-8 py-4 text-[#1A1A2E] border border-[#1A1A2E]/20 rounded-lg hover:bg-white/50 transition font-semibold flex items-center gap-2"
+            >
               <FileText className="w-5 h-5" />
               View Syllabus
             </button>
@@ -156,7 +159,7 @@ function App() {
       </section>
 
       {/* Program Schedule Section */}
-      <section className="px-6 pb-24 max-w-4xl mx-auto">
+      <section id="syllabus" className="px-6 pb-24 max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Your 14-Day Journey</h2>
           <p className="text-[#1A1A2E]/60 text-lg">
