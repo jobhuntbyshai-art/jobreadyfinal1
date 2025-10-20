@@ -366,8 +366,8 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="px-6 pb-24 max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+      <section className="px-6 pt-24 pb-24">
+        <div className="text-center mb-16 max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-4">
             Don't just take our<br />
             word for it — real<br />
@@ -379,6 +379,8 @@ function App() {
             Students, not funded, changed.
           </p>
         </div>
+
+        <div className="max-w-6xl mx-auto">
 
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-2 gap-8">
@@ -475,6 +477,7 @@ function App() {
               </div>
             </div>
           ))}
+        </div>
         </div>
       </section>
 
