@@ -156,7 +156,7 @@ function App() {
       </section>
 
       {/* Program Schedule Section */}
-      <section className="px-6 py-24 max-w-6xl mx-auto">
+      <section className="px-6 py-24 max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Your 14-Day Journey</h2>
           <p className="text-[#1A1A2E]/60 text-lg">
