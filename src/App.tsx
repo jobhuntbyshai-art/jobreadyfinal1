@@ -149,13 +149,19 @@ function App() {
         </div>
       </section>
 
-      {/* Full Width Image */}
-      <div className="w-full">
-        <img
-          src="/uxdesigner.png"
-          alt="UX Designer"
-          className="w-full h-auto object-cover"
-        />
+      {/* Image with fade effect */}
+      <div className="max-w-4xl mx-auto px-6">
+        <div className="overflow-hidden relative">
+          <div className="absolute inset-0 pointer-events-none z-10">
+            <div className="absolute top-0 bottom-0 left-0 w-16 bg-gradient-to-r from-[#E8E4D9] to-transparent"></div>
+            <div className="absolute top-0 bottom-0 right-0 w-16 bg-gradient-to-l from-[#E8E4D9] to-transparent"></div>
+          </div>
+          <img
+            src="/uxdesigner.png"
+            alt="UX Designer"
+            className="w-full h-auto object-cover"
+          />
+        </div>
       </div>
 
       {/* Program Schedule Section */}
