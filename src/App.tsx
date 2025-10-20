@@ -42,7 +42,7 @@ function App() {
       setScrollPosition((prev) => {
         const cardHeight = 100 / testimonials.length;
         const next = prev - 0.05;
-        if (Math.abs(next) >= cardHeight * testimonials.length) {
+        if (next <= -(cardHeight * testimonials.length)) {
           return 0;
         }
         return next;
