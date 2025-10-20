@@ -377,7 +377,7 @@ function App() {
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-6 mb-12">
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center flex-1" data-testid="step-live-session">
-              <div className="w-32 h-32 bg-[#F4E04D] rounded-lg mb-4 flex items-center justify-center border-2 border-[#1A1A2E] p-2">
+              <div className="w-32 h-32 mb-4 flex items-center justify-center">
                 <img src="/livezoom.png" alt="Live Session" className="w-full h-full object-contain" />
               </div>
               <h3 className="font-bold text-[#1A1A2E] text-lg mb-2">Live Session</h3>
@@ -388,8 +388,8 @@ function App() {
 
             {/* Step 2 */}
             <div className="flex flex-col items-center text-center flex-1" data-testid="step-assignment">
-              <div className="w-32 h-32 bg-[#B8A8D8] rounded-lg mb-4 flex items-center justify-center border-2 border-[#1A1A2E]">
-                <div className="text-4xl">✏️</div>
+              <div className="w-32 h-32 mb-4 flex items-center justify-center">
+                <img src="/assignment.png" alt="Assignment" className="w-full h-full object-contain" />
               </div>
               <h3 className="font-bold text-[#1A1A2E] text-lg mb-2">Assignment</h3>
             </div>
@@ -399,7 +399,7 @@ function App() {
 
             {/* Step 3 */}
             <div className="flex flex-col items-center text-center flex-1" data-testid="step-review">
-              <div className="w-32 h-32 bg-[#FFB6C1] rounded-lg mb-4 flex items-center justify-center border-2 border-[#1A1A2E]">
+              <div className="w-32 h-32 mb-4 flex items-center justify-center">
                 <div className="text-4xl">✨</div>
               </div>
               <h3 className="font-bold text-[#1A1A2E] text-lg mb-2">Personal Review</h3>
