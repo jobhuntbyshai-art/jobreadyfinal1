@@ -77,7 +77,7 @@ function App() {
       </header>
 
       {/* Main Content */}
-      <section className="pt-24 px-6 max-w-4xl mx-auto">
+      <section className="pt-24 pb-24 px-6 max-w-4xl mx-auto">
         {/* Auto-scrolling Testimonials - Vertical */}
         <div className="h-[280px] overflow-hidden relative mb-8">
           <div className="absolute inset-0 pointer-events-none z-10">
@@ -156,7 +156,7 @@ function App() {
       </section>
 
       {/* Program Schedule Section */}
-      <section className="px-6 py-24 max-w-4xl mx-auto">
+      <section className="px-6 pb-24 max-w-4xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold mb-4">Your 14-Day Journey</h2>
           <p className="text-[#1A1A2E]/60 text-lg">
@@ -317,7 +317,7 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="px-6 py-24 max-w-6xl mx-auto">
+      <section className="px-6 pb-24 max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold mb-4">
             Don't just take our<br />
