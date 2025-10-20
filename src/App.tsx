@@ -58,11 +58,11 @@ function App() {
     <div className="min-h-screen bg-[#E8E4D9] text-[#1A1A2E]">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between bg-[#E8E4D9]/90 backdrop-blur-sm">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
           <svg width="32" height="32" viewBox="0 0 76 75" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M35.0123 2.5105C35.7755 -0.509544 40.0664 -0.509551 40.8295 2.51049L44.9836 18.9503C45.4417 20.763 47.4283 21.7196 49.1311 20.9475L64.5743 13.9454C67.4112 12.659 70.0866 16.0138 68.2012 18.4934L57.9381 31.9913C56.8065 33.4796 57.2971 35.6292 58.9625 36.4792L74.0657 44.1873C76.8402 45.6034 75.8854 49.7867 72.7712 49.8586L55.8193 50.2505C53.9501 50.2937 52.5753 52.0175 52.9492 53.8495L56.3393 70.4636C56.9621 73.5156 53.0962 75.3774 51.0983 72.9875L40.2226 59.9783C39.0234 58.5438 36.8185 58.5438 35.6193 59.9783L24.7436 72.9875C22.7457 75.3774 18.8797 73.5157 19.5025 70.4636L22.8927 53.8495C23.2665 52.0175 21.8917 50.2937 20.0226 50.2505L3.07061 49.8586C-0.043531 49.7867 -0.998353 45.6034 1.77616 44.1873L16.8794 36.4792C18.5447 35.6292 19.0353 33.4796 17.9037 31.9913L7.64064 18.4934C5.75528 16.0138 8.4306 12.659 11.2676 13.9454L26.7108 20.9475C28.4136 21.7196 30.4001 20.763 30.8582 18.9503L35.0123 2.5105Z" fill="#042800"/>
           </svg>
-          <span className="text-sm text-[#1A1A2E]/60">Job Ready Sprint • 1 tutorial • $99.00</span>
+          <span className="text-xl font-bold text-[#1A1A2E]">Job Ready Sprint</span>
         </div>
         <button className="px-4 py-2 bg-[#F4E04D] text-[#1A1A2E] text-sm rounded-md hover:bg-[#F4E04D]/90 transition font-semibold">
           Join Program
