@@ -498,7 +498,7 @@ function App() {
             Don't just take our word for it — real students, real results.
           </h2>
           <p className="text-[#1A1A2E]/60">
-            How does everybody made to kick their clients — chosen income. Students, not funded, changed.
+            Hear from designers who transformed their portfolios and landed interviews.
           </p>
         </div>
 
@@ -506,99 +506,33 @@ function App() {
 
         {/* Testimonials Grid */}
         <div className="grid md:grid-cols-2 gap-8">
-          {[
-            {
-              icon: '01',
-              title: 'I made my first £1,000 in a weekend!',
-              text: 'Honestly? I was sceptical. But within two days of launching my product, I had made four figures. It completely changed how I see online income. This is not luck. This is a blueprint.',
-              author: 'Emma Harper',
-              role: 'Graphic Designer',
-              color: 'bg-[#FEFB9F]',
-              rotation: 'rotate-1'
-            },
-            {
-              icon: '01',
-              title: 'Digital income finally made sense to me.',
-              text: "I'd tried everything — blogging, freelancing, even dropshipping. Nothing stuck. Then I took this course. The approach is so simple, so logical. I launched my first product in a weekend, made my first sale on day three, and I haven't looked back.",
-              author: 'Sarah Lin',
-              role: 'Former teacher',
-              color: 'bg-[#E8D5F2]',
-              rotation: '-rotate-1'
-            },
-            {
-              icon: '02',
-              title: 'This course paid for itself in just days!',
-              text: 'By Saturday, I had already made back the course fee. Then it kept going. By Monday, I had tripled my investment. If you are on the fence, just do it. The ROI is insane.',
-              author: 'Sadie Hart',
-              role: 'University Intern',
-              color: 'bg-[#FFE5E5]',
-              rotation: '-rotate-2'
-            },
-            {
-              icon: '02',
-              title: 'I launched my first product in a weekend!',
-              text: 'I thought it would take months to build something worth selling. Turns out, I already had what I needed — I just did not know how to package it. Now I have a live product generating sales while I sleep.',
-              author: 'Dani C. Oregon',
-              role: 'Content Writer',
-              color: 'bg-[#D9F0FF]',
-              rotation: 'rotate-2'
-            },
-            {
-              icon: '03',
-              title: 'I finally own something that earns for me.',
-              text: 'Everyone talks about assets, but no one tells you how to actually build one. This showed me exactly how to create something I own, something that makes money even when I am not working. That is real freedom.',
-              author: 'Louis Mitchell',
-              role: 'Junior Designer',
-              color: 'bg-[#FEFB9F]',
-              rotation: 'rotate-1'
-            },
-            {
-              icon: '03',
-              title: 'I earned more than a week\'s salary overnight!',
-              text: 'I worked a 9-5. I launched a thing on a Tuesday, By Thursday morning, I had made more than I would in a full week at my job. I could not believe it. I still have my job, but now I also have options.',
-              author: 'Mia Nguyen',
-              role: 'Engineer',
-              color: 'bg-[#D5F5E3]',
-              rotation: '-rotate-1'
-            },
-            {
-              icon: '04',
-              title: 'It turned my knowledge into real income.',
-              text: 'I always felt like I had something to offer, but did not know how to monetise it. This course showed me how to package what I already knew and turn it into a product people would actually pay for.',
-              author: 'Lucas Lei',
-              role: 'Writer',
-              color: 'bg-[#FFE5E5]',
-              rotation: '-rotate-2'
-            },
-            {
-              icon: '04',
-              title: 'My side hustle finally started earning.',
-              text: "I have tried side hustles before. Most fizzled out. But this one stuck. I followed the steps, kept it simple, launched small — and it worked. Now I am earning consistently every month, and it only took me a weekend to set up.",
-              author: 'Evelyn Huang',
-              role: 'UX Designer',
-              color: 'bg-[#E8D5F2]',
-              rotation: 'rotate-2'
-            }
-          ].map((testimonial, i) => (
-            <div 
-              key={i} 
-              className={`${testimonial.color} ${testimonial.rotation} p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0`}
-              style={{
-                clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
-              }}
-            >
-              <div className="text-[#1A1A2E] text-sm font-bold mb-4">{testimonial.icon}</div>
-              <h3 className="text-xl font-bold mb-4 text-[#1A1A2E]">{testimonial.title}</h3>
-              <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">{testimonial.text}</p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-[#1A1A2E]/10 rounded-full"></div>
-                <div>
-                  <div className="text-sm font-medium text-[#1A1A2E]">{testimonial.author}</div>
-                  <div className="text-xs text-[#1A1A2E]/50">{testimonial.role}</div>
-                </div>
+          {/* Harshita's Testimonial */}
+          <div 
+            className="bg-[#D9F0FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+            style={{
+              clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
+            }}
+            data-testid="testimonial-harshita"
+          >
+            <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
+            <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+              It started off great for me, and I got a much-needed reality check on my existing work — which I see as a positive thing. Even senior designers rarely give such honest feedback, so that's really valuable.
+              <br/><br/>
+              Both Shai and Nandini have been very supportive throughout.
+              <br/><br/>
+              I'm trying to catch up with everything, and <span className="relative inline-block px-1">
+                <span className="relative z-10">I even got two interview calls during the sessions</span>
+                <span className="absolute bottom-0 left-0 w-full h-3 bg-[#A8D5F0] -rotate-1"></span>
+              </span>. I haven't cleared them completely yet since I'm still learning, but I'm confident that I'll land a good opportunity within the next 2–3 months.
+            </p>
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-[#1A1A2E]/10 rounded-full"></div>
+              <div>
+                <div className="text-sm font-medium text-[#1A1A2E]">Harshita Gautam</div>
+                <div className="text-xs text-[#1A1A2E]/50">Product Designer</div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
         </div>
       </section>
