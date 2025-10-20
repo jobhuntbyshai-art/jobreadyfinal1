@@ -114,7 +114,10 @@ function App() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-            The 2-week playbook top designers use to land real interviews.
+            The <span className="relative inline-block px-2">
+              <span className="relative z-10">2-week</span>
+              <span className="absolute bottom-1 left-0 w-full h-3 bg-[#F4E04D] -rotate-1 animate-highlight"></span>
+            </span> playbook top designers use to land real interviews.
           </h1>
           <p className="text-[#1A1A2E]/60 text-lg mb-8">
             Standing out in a crowded UX market isn't that hard!
