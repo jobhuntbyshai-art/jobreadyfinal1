@@ -369,14 +369,10 @@ function App() {
       <section className="px-6 pt-24 pb-24">
         <div className="text-center mb-16 max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold mb-4">
-            Don't just take our<br />
-            word for it — real<br />
-            students, real results.
+            Don't just take our word for it — real students, real results.
           </h2>
           <p className="text-[#1A1A2E]/60">
-            How does everybody made to kick<br />
-            their clients — chosen income.<br />
-            Students, not funded, changed.
+            How does everybody made to kick their clients — chosen income. Students, not funded, changed.
           </p>
         </div>
 
