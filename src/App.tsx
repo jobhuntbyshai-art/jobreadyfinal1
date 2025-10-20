@@ -470,6 +470,45 @@ function App() {
         </div>
       </section>
 
+      {/* Enrollment Footer Section */}
+      <section className="px-6 pb-24">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-[#FF8C42] rounded-3xl p-12 text-center shadow-xl">
+            <div className="inline-flex items-center gap-2 bg-[#1A1A2E] text-white px-4 py-2 rounded-full text-sm font-semibold mb-6" data-testid="badge-join-now">
+              <Star className="w-4 h-4 fill-white" />
+              JOIN US NOW
+            </div>
+            
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-12" data-testid="text-next-batch-heading">
+              Next batch starts soon
+            </h2>
+            
+            <div className="grid md:grid-cols-3 gap-8 mb-12">
+              <div data-testid="card-next-batch">
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">June 7th'25</div>
+                <div className="text-white/80 text-lg">Next Batch</div>
+              </div>
+              <div data-testid="card-seats-left">
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">4/20</div>
+                <div className="text-white/80 text-lg">Seats left</div>
+              </div>
+              <div data-testid="card-duration">
+                <div className="text-4xl md:text-5xl font-bold text-white mb-2">4 Weeks</div>
+                <div className="text-white/80 text-lg">Duration</div>
+              </div>
+            </div>
+            
+            <button 
+              className="px-10 py-4 bg-[#1A1A2E] text-white rounded-full hover:bg-[#2A2A3E] transition font-semibold text-lg flex items-center gap-2 mx-auto"
+              data-testid="button-enroll-now"
+            >
+              Enroll Now
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="px-6 py-12 text-center text-[#1A1A2E]/40 text-sm">
         <p>© 2024 Digital Product Platform. All rights reserved.</p>
