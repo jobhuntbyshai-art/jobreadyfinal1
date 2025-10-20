@@ -159,15 +159,20 @@ function App() {
       </section>
 
       {/* Program Schedule Section */}
-      <section id="syllabus" className="px-6 pb-24 max-w-4xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Your 14-Day Journey</h2>
-          <p className="text-[#1A1A2E]/60 text-lg">
-            A structured path to transform your portfolio and land interviews
-          </p>
-        </div>
+      <section 
+        id="syllabus" 
+        className="py-24 bg-cover bg-center bg-no-repeat" 
+        style={{ backgroundImage: 'url(/ux-background_1760951530967.png)' }}
+      >
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4">Your 14-Day Journey</h2>
+            <p className="text-[#1A1A2E]/60 text-lg">
+              A structured path to transform your portfolio and land interviews
+            </p>
+          </div>
 
-        <div className="border-4 border-[#1A1A2E] rounded-lg overflow-hidden bg-white hidden md:block">
+          <div className="border-4 border-[#1A1A2E] rounded-lg overflow-hidden bg-white hidden md:block">
           <table className="w-full table-fixed">
             <colgroup>
               <col style={{ width: '12%' }} />
@@ -319,10 +324,10 @@ function App() {
               </tr>
             </tbody>
           </table>
-        </div>
+          </div>
 
-        {/* Mobile Cards View */}
-        <div className="md:hidden space-y-4">
+          {/* Mobile Cards View */}
+          <div className="md:hidden space-y-4">
           {[
             { day: 'Day 0', topic: 'Learn to Whiteboard', type: 'Live Session', color: 'bg-[#F4E04D]' },
             { day: 'Day 1', topic: 'Learn - How to Build a Perfect UX Case Study', type: 'Live Session', color: 'bg-[#F4E04D]' },
@@ -350,6 +355,7 @@ function App() {
               <p className="text-sm text-[#1A1A2E]">{item.topic}</p>
             </div>
           ))}
+          </div>
         </div>
       </section>
 
