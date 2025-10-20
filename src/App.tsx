@@ -400,7 +400,7 @@ function App() {
             {/* Step 3 */}
             <div className="flex flex-col items-center text-center flex-1" data-testid="step-review">
               <div className="w-32 h-32 mb-4 flex items-center justify-center">
-                <div className="text-4xl">✨</div>
+                <img src="/personal-review.png" alt="Personal Review" className="w-full h-full object-contain" />
               </div>
               <h3 className="font-bold text-[#1A1A2E] text-lg mb-2">Personal Review</h3>
             </div>
