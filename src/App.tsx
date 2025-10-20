@@ -364,6 +364,61 @@ function App() {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <section className="py-24 px-6 bg-[#E8E4D9]">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 text-[#1A1A2E]">
+              Turn 2 weeks into a complete career upgrade.
+            </h2>
+            <p className="text-lg font-semibold text-[#1A1A2E]/80 mb-12">
+              Live Session → Assignment → Personal Review
+            </p>
+          </div>
+
+          {/* Process Flow */}
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-6 mb-12">
+            {/* Step 1 */}
+            <div className="flex flex-col items-center text-center flex-1" data-testid="step-live-session">
+              <div className="w-32 h-32 bg-[#F4E04D] rounded-lg mb-4 flex items-center justify-center border-2 border-[#1A1A2E]">
+                <div className="text-4xl">📚</div>
+              </div>
+              <h3 className="font-bold text-[#1A1A2E] text-lg mb-2">Live Session</h3>
+            </div>
+
+            {/* Arrow */}
+            <div className="hidden md:block text-[#1A1A2E]/40 text-2xl -mt-12">→</div>
+
+            {/* Step 2 */}
+            <div className="flex flex-col items-center text-center flex-1" data-testid="step-assignment">
+              <div className="w-32 h-32 bg-[#B8A8D8] rounded-lg mb-4 flex items-center justify-center border-2 border-[#1A1A2E]">
+                <div className="text-4xl">✏️</div>
+              </div>
+              <h3 className="font-bold text-[#1A1A2E] text-lg mb-2">Assignment</h3>
+            </div>
+
+            {/* Arrow */}
+            <div className="hidden md:block text-[#1A1A2E]/40 text-2xl -mt-12">→</div>
+
+            {/* Step 3 */}
+            <div className="flex flex-col items-center text-center flex-1" data-testid="step-review">
+              <div className="w-32 h-32 bg-[#FFB6C1] rounded-lg mb-4 flex items-center justify-center border-2 border-[#1A1A2E]">
+                <div className="text-4xl">✨</div>
+              </div>
+              <h3 className="font-bold text-[#1A1A2E] text-lg mb-2">Personal Review</h3>
+            </div>
+          </div>
+
+          {/* Description */}
+          <div className="text-center max-w-2xl mx-auto">
+            <p className="text-[#1A1A2E]/70 text-base leading-relaxed">
+              We break down every concept in simple, actionable ways during live sessions.
+              You then put that learning to work through focused assignments — and get a personal review on your submission so you can refine, improve, and actually see progress each week.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="px-6 pt-24 pb-24">
         <div className="text-center mb-16 max-w-4xl mx-auto">
