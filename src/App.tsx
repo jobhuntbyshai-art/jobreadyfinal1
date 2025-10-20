@@ -371,9 +371,6 @@ function App() {
             <h2 className="text-4xl font-bold mb-4 text-[#1A1A2E]">
               Turn 2 weeks into a complete career upgrade.
             </h2>
-            <p className="text-lg font-semibold text-[#1A1A2E]/80 mb-12">
-              Live Session → Assignment → Personal Review
-            </p>
           </div>
 
           {/* Process Flow */}
