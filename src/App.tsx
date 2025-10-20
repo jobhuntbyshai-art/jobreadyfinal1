@@ -167,149 +167,149 @@ function App() {
           </p>
         </div>
 
-        <div className="overflow-x-auto">
+        <div className="border-4 border-[#1A1A2E] rounded-lg overflow-hidden bg-white">
           <table className="w-full">
             <thead>
               <tr className="border-b-2 border-[#1A1A2E]">
-                <th className="px-4 py-3 text-left text-xs font-semibold text-[#1A1A2E]/60 uppercase tracking-wider">Day</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-[#1A1A2E]/60 uppercase tracking-wider">Topic</th>
-                <th className="px-4 py-3 text-left text-xs font-semibold text-[#1A1A2E]/60 uppercase tracking-wider">Type</th>
+                <th className="px-6 py-4 text-left text-sm font-bold text-[#1A1A2E]">Day</th>
+                <th className="px-6 py-4 text-left text-sm font-bold text-[#1A1A2E]">Topic</th>
+                <th className="px-6 py-4 text-left text-sm font-bold text-[#1A1A2E]">Type</th>
               </tr>
             </thead>
             <tbody>
-              <tr className="border-b border-[#1A1A2E]/10 hover:bg-white/50 transition">
-                <td className="px-4 py-3">
+              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
+                <td className="px-6 py-4">
                   <span className="text-sm font-medium text-[#1A1A2E]">Day 0</span>
                 </td>
-                <td className="px-4 py-3 text-sm text-[#1A1A2E]">Learn to Whiteboard</td>
-                <td className="px-4 py-3">
-                  <span className="text-xs font-medium text-[#F4E04D] bg-[#F4E04D]/20 px-2 py-1 rounded">Live Session</span>
+                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Learn to Whiteboard</td>
+                <td className="px-6 py-4">
+                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#F4E04D] px-3 py-1 rounded">Live Session</span>
                 </td>
               </tr>
-              <tr className="border-b border-[#1A1A2E]/10 hover:bg-white/50 transition">
-                <td className="px-4 py-3">
+              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
+                <td className="px-6 py-4">
                   <span className="text-sm font-medium text-[#1A1A2E]">Day 1</span>
                 </td>
-                <td className="px-4 py-3 text-sm text-[#1A1A2E]">Learn - How to Build a Perfect UX Case Study</td>
-                <td className="px-4 py-3">
-                  <span className="text-xs font-medium text-[#F4E04D] bg-[#F4E04D]/20 px-2 py-1 rounded">Live Session</span>
+                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Learn - How to Build a Perfect UX Case Study</td>
+                <td className="px-6 py-4">
+                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#F4E04D] px-3 py-1 rounded">Live Session</span>
                 </td>
               </tr>
-              <tr className="border-b border-[#1A1A2E]/10 hover:bg-white/50 transition">
-                <td className="px-4 py-3">
+              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
+                <td className="px-6 py-4">
                   <span className="text-sm font-medium text-[#1A1A2E]">Day 2</span>
                 </td>
-                <td className="px-4 py-3 text-sm text-[#1A1A2E]">Optimize your Perfect UX Case Study</td>
-                <td className="px-4 py-3">
-                  <span className="text-xs font-medium text-[#8B7FB8] bg-[#B8A8D8]/20 px-2 py-1 rounded">Assignment</span>
+                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Optimize your Perfect UX Case Study</td>
+                <td className="px-6 py-4">
+                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#B8A8D8] px-3 py-1 rounded">Assignment</span>
                 </td>
               </tr>
-              <tr className="border-b border-[#1A1A2E]/10 hover:bg-white/50 transition">
-                <td className="px-4 py-3">
+              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
+                <td className="px-6 py-4">
                   <span className="text-sm font-medium text-[#1A1A2E]">Day 3</span>
                 </td>
-                <td className="px-4 py-3 text-sm text-[#1A1A2E]">Submit the Optimized Case Study and get Feedback</td>
-                <td className="px-4 py-3">
-                  <span className="text-xs font-medium text-[#C88A9E] bg-[#FFE5E5] px-2 py-1 rounded">Review</span>
+                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Submit the Optimized Case Study and get Feedback</td>
+                <td className="px-6 py-4">
+                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#FFB6C1] px-3 py-1 rounded">Review</span>
                 </td>
               </tr>
-              <tr className="border-b border-[#1A1A2E]/10 hover:bg-white/50 transition">
-                <td className="px-4 py-3">
+              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
+                <td className="px-6 py-4">
                   <span className="text-sm font-medium text-[#1A1A2E]">Day 4</span>
                 </td>
-                <td className="px-4 py-3 text-sm text-[#1A1A2E]">Learn - How to Build a Perfect Presentation deck of your UX Case Study for a Portfolio Round</td>
-                <td className="px-4 py-3">
-                  <span className="text-xs font-medium text-[#F4E04D] bg-[#F4E04D]/20 px-2 py-1 rounded">Live Session</span>
+                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Learn - How to Build a Perfect Presentation deck of your UX Case Study for a Portfolio Round</td>
+                <td className="px-6 py-4">
+                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#F4E04D] px-3 py-1 rounded">Live Session</span>
                 </td>
               </tr>
-              <tr className="border-b border-[#1A1A2E]/10 hover:bg-white/50 transition">
-                <td className="px-4 py-3">
+              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
+                <td className="px-6 py-4">
                   <span className="text-sm font-medium text-[#1A1A2E]">Day 5</span>
                 </td>
-                <td className="px-4 py-3 text-sm text-[#1A1A2E]">Use the template to build your presentation deck for your UX Case study</td>
-                <td className="px-4 py-3">
-                  <span className="text-xs font-medium text-[#8B7FB8] bg-[#B8A8D8]/20 px-2 py-1 rounded">Assignment</span>
+                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Use the template to build your presentation deck for your UX Case study</td>
+                <td className="px-6 py-4">
+                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#B8A8D8] px-3 py-1 rounded">Assignment</span>
                 </td>
               </tr>
-              <tr className="border-b border-[#1A1A2E]/10 hover:bg-white/50 transition">
-                <td className="px-4 py-3">
+              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
+                <td className="px-6 py-4">
                   <span className="text-sm font-medium text-[#1A1A2E]">Day 6</span>
                 </td>
-                <td className="px-4 py-3 text-sm text-[#1A1A2E]">Submit your Pitch Deck and get Feedback</td>
-                <td className="px-4 py-3">
-                  <span className="text-xs font-medium text-[#C88A9E] bg-[#FFE5E5] px-2 py-1 rounded">Review</span>
+                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Submit your Pitch Deck and get Feedback</td>
+                <td className="px-6 py-4">
+                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#FFB6C1] px-3 py-1 rounded">Review</span>
                 </td>
               </tr>
-              <tr className="border-b border-[#1A1A2E]/10 hover:bg-white/50 transition">
-                <td className="px-4 py-3">
+              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
+                <td className="px-6 py-4">
                   <span className="text-sm font-medium text-[#1A1A2E]">Day 7</span>
                 </td>
-                <td className="px-4 py-3 text-sm text-[#1A1A2E]">Learn - Build Perfect Resume (with Template)</td>
-                <td className="px-4 py-3">
-                  <span className="text-xs font-medium text-[#F4E04D] bg-[#F4E04D]/20 px-2 py-1 rounded">Live Session</span>
+                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Learn - Build Perfect Resume (with Template)</td>
+                <td className="px-6 py-4">
+                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#F4E04D] px-3 py-1 rounded">Live Session</span>
                 </td>
               </tr>
-              <tr className="border-b border-[#1A1A2E]/10 hover:bg-white/50 transition">
-                <td className="px-4 py-3">
+              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
+                <td className="px-6 py-4">
                   <span className="text-sm font-medium text-[#1A1A2E]">Day 8</span>
                 </td>
-                <td className="px-4 py-3 text-sm text-[#1A1A2E]">Optimize and build your resume</td>
-                <td className="px-4 py-3">
-                  <span className="text-xs font-medium text-[#8B7FB8] bg-[#B8A8D8]/20 px-2 py-1 rounded">Assignment</span>
+                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Optimize and build your resume</td>
+                <td className="px-6 py-4">
+                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#B8A8D8] px-3 py-1 rounded">Assignment</span>
                 </td>
               </tr>
-              <tr className="border-b border-[#1A1A2E]/10 hover:bg-white/50 transition">
-                <td className="px-4 py-3">
+              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
+                <td className="px-6 py-4">
                   <span className="text-sm font-medium text-[#1A1A2E]">Day 9</span>
                 </td>
-                <td className="px-4 py-3 text-sm text-[#1A1A2E]">Submit your resume and get feedback</td>
-                <td className="px-4 py-3">
-                  <span className="text-xs font-medium text-[#C88A9E] bg-[#FFE5E5] px-2 py-1 rounded">Review</span>
+                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Submit your resume and get feedback</td>
+                <td className="px-6 py-4">
+                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#FFB6C1] px-3 py-1 rounded">Review</span>
                 </td>
               </tr>
-              <tr className="border-b border-[#1A1A2E]/10 hover:bg-white/50 transition">
-                <td className="px-4 py-3">
+              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
+                <td className="px-6 py-4">
                   <span className="text-sm font-medium text-[#1A1A2E]">Day 10</span>
                 </td>
-                <td className="px-4 py-3 text-sm text-[#1A1A2E]">Learn - How to Build a Perfect LinkedIn</td>
-                <td className="px-4 py-3">
-                  <span className="text-xs font-medium text-[#F4E04D] bg-[#F4E04D]/20 px-2 py-1 rounded">Live Session</span>
+                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Learn - How to Build a Perfect LinkedIn</td>
+                <td className="px-6 py-4">
+                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#F4E04D] px-3 py-1 rounded">Live Session</span>
                 </td>
               </tr>
-              <tr className="border-b border-[#1A1A2E]/10 hover:bg-white/50 transition">
-                <td className="px-4 py-3">
+              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
+                <td className="px-6 py-4">
                   <span className="text-sm font-medium text-[#1A1A2E]">Day 11</span>
                 </td>
-                <td className="px-4 py-3 text-sm text-[#1A1A2E]">Optimize your LinkedIn</td>
-                <td className="px-4 py-3">
-                  <span className="text-xs font-medium text-[#8B7FB8] bg-[#B8A8D8]/20 px-2 py-1 rounded">Assignment</span>
+                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Optimize your LinkedIn</td>
+                <td className="px-6 py-4">
+                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#B8A8D8] px-3 py-1 rounded">Assignment</span>
                 </td>
               </tr>
-              <tr className="border-b border-[#1A1A2E]/10 hover:bg-white/50 transition">
-                <td className="px-4 py-3">
+              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
+                <td className="px-6 py-4">
                   <span className="text-sm font-medium text-[#1A1A2E]">Day 12</span>
                 </td>
-                <td className="px-4 py-3 text-sm text-[#1A1A2E]">Submit your optimized LinkedIn and get Feedback</td>
-                <td className="px-4 py-3">
-                  <span className="text-xs font-medium text-[#C88A9E] bg-[#FFE5E5] px-2 py-1 rounded">Review</span>
+                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Submit your optimized LinkedIn and get Feedback</td>
+                <td className="px-6 py-4">
+                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#FFB6C1] px-3 py-1 rounded">Review</span>
                 </td>
               </tr>
-              <tr className="border-b border-[#1A1A2E]/10 hover:bg-white/50 transition">
-                <td className="px-4 py-3">
+              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
+                <td className="px-6 py-4">
                   <span className="text-sm font-medium text-[#1A1A2E]">Day 13</span>
                 </td>
-                <td className="px-4 py-3 text-sm text-[#1A1A2E]">Learn - How to Crack the HR Interview</td>
-                <td className="px-4 py-3">
-                  <span className="text-xs font-medium text-[#F4E04D] bg-[#F4E04D]/20 px-2 py-1 rounded">Live Session</span>
+                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Learn - How to Crack the HR Interview</td>
+                <td className="px-6 py-4">
+                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#F4E04D] px-3 py-1 rounded">Live Session</span>
                 </td>
               </tr>
-              <tr className="border-b border-[#1A1A2E]/10 hover:bg-white/50 transition">
-                <td className="px-4 py-3">
+              <tr className="hover:bg-[#E8E4D9]/30 transition">
+                <td className="px-6 py-4">
                   <span className="text-sm font-medium text-[#1A1A2E]">Day 14</span>
                 </td>
-                <td className="px-4 py-3 text-sm text-[#1A1A2E]">Ask me Anything - QA on Discord (Text Communication)</td>
-                <td className="px-4 py-3">
-                  <span className="text-xs font-medium text-[#D4A574] bg-[#F4E04D]/20 px-2 py-1 rounded">AMA</span>
+                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Ask me Anything - QA on Discord (Text Communication)</td>
+                <td className="px-6 py-4">
+                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#D4A574] px-3 py-1 rounded">AMA</span>
                 </td>
               </tr>
             </tbody>
