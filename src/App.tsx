@@ -77,7 +77,7 @@ function App() {
       </header>
 
       {/* Main Content */}
-      <section className="pt-24 pb-24 px-6 max-w-4xl mx-auto">
+      <section className="pt-24 px-6 max-w-4xl mx-auto">
         {/* Auto-scrolling Testimonials - Vertical */}
         <div className="h-[280px] overflow-hidden relative mb-8">
           <div className="absolute inset-0 pointer-events-none z-10">
@@ -147,16 +147,16 @@ function App() {
             <span className="text-xs text-[#1A1A2E]/40">from 100+ designers</span>
           </div>
         </div>
-
-        {/* Full Width Image */}
-        <div className="w-full">
-          <img
-            src="/uxdesigner.png"
-            alt="UX Designer"
-            className="w-full h-auto object-cover"
-          />
-        </div>
       </section>
+
+      {/* Full Width Image */}
+      <div className="w-full">
+        <img
+          src="/uxdesigner.png"
+          alt="UX Designer"
+          className="w-full h-auto object-cover"
+        />
+      </div>
 
       {/* Program Schedule Section */}
       <section 
