@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [scrollDirection, setScrollDirection] = useState(-1);
 
   const testimonials = [
     {
@@ -41,16 +40,10 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       setScrollPosition((prev) => {
-        const cardHeight = 100 / testimonials.length;
-        const next = prev + (scrollDirection * 0.05);
+        const next = prev - 0.05;
+        const resetPoint = -(100 / 3);
         
-        if (next <= -(cardHeight * testimonials.length)) {
-          setScrollDirection(1);
-          return prev;
-        }
-        
-        if (next >= 0) {
-          setScrollDirection(-1);
+        if (next <= resetPoint) {
           return 0;
         }
         
@@ -59,7 +52,7 @@ function App() {
     }, 50);
 
     return () => clearInterval(interval);
-  }, [testimonials.length, scrollDirection]);
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#E8E4D9] text-[#1A1A2E]">
