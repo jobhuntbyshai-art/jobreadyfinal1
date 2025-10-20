@@ -150,7 +150,7 @@ function App() {
             <div className="absolute top-0 bottom-0 right-0 w-16 bg-gradient-to-l from-[#E8E4D9] to-transparent"></div>
           </div>
           <img
-            src="/uxdesigner.png"
+            src="/uxdesginers_1760957982266.png"
             alt="UX Designer"
             className="w-full h-auto object-cover"
           />
