@@ -526,7 +526,11 @@ function App() {
               </span>. I haven't cleared them completely yet since I'm still learning, but I'm confident that I'll land a good opportunity within the next 2–3 months.
             </p>
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 bg-[#1A1A2E]/10 rounded-full"></div>
+              <img 
+                src="/harshita.png" 
+                alt="Harshita Gautam" 
+                className="w-10 h-10 rounded-full object-cover"
+              />
               <div>
                 <div className="text-sm font-medium text-[#1A1A2E]">Harshita Gautam</div>
                 <div className="text-xs text-[#1A1A2E]/50">Product Designer</div>
