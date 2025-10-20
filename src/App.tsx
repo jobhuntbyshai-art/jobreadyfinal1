@@ -72,7 +72,7 @@ function App() {
           <span className="text-sm text-[#1A1A2E]/60">DigitalProduct • 1 tutorial • $99.00</span>
         </div>
         <button className="px-4 py-2 bg-[#F4E04D] text-[#1A1A2E] text-sm rounded-md hover:bg-[#F4E04D]/90 transition font-semibold">
-          Full access
+          Join Program
         </button>
       </header>
 
