@@ -1,4 +1,4 @@
-import { Star, FileText } from 'lucide-react';
+import { Star, FileText, ChevronRight } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 function App() {
@@ -412,6 +412,81 @@ function App() {
               We break down every concept in simple, actionable ways during live sessions.
               You then put that learning to work through focused assignments — and get a personal review on your submission so you can refine, improve, and actually see progress each week.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Studies Section */}
+      <section className="py-24 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 text-[#1A1A2E]">
+              See what our mentees have built.
+            </h2>
+            <p className="text-[#1A1A2E]/60 text-lg">
+              Real portfolios that landed real interviews.
+            </p>
+          </div>
+
+          {/* Case Studies Grid */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                name: 'Priya Sharma',
+                title: 'Food Delivery App Redesign',
+                company: 'Swiggy Case Study'
+              },
+              {
+                name: 'Rahul Mehta',
+                title: 'E-Commerce Checkout Flow',
+                company: 'Flipkart Case Study'
+              },
+              {
+                name: 'Anjali Verma',
+                title: 'Banking App UX Improvement',
+                company: 'HDFC Bank Case Study'
+              },
+              {
+                name: 'Karthik Reddy',
+                title: 'Ed-Tech Learning Platform',
+                company: 'BYJU\'S Case Study'
+              }
+            ].map((caseStudy, index) => (
+              <div 
+                key={index}
+                className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+                data-testid={`card-case-study-${index}`}
+              >
+                {/* Placeholder Image */}
+                <div className="w-full h-48 bg-gradient-to-br from-[#F4E04D] via-[#B8A8D8] to-[#FFB6C1] flex items-center justify-center">
+                  <div className="text-[#1A1A2E]/20 font-bold text-2xl">
+                    Case Study {index + 1}
+                  </div>
+                </div>
+                
+                {/* Content */}
+                <div className="p-6">
+                  <h3 className="font-bold text-xl text-[#1A1A2E] mb-2">
+                    {caseStudy.title}
+                  </h3>
+                  <p className="text-[#1A1A2E]/60 text-sm mb-1">
+                    {caseStudy.company}
+                  </p>
+                  <p className="text-[#1A1A2E]/80 text-sm mb-4">
+                    by {caseStudy.name}
+                  </p>
+                  
+                  {/* View Button */}
+                  <button 
+                    className="inline-flex items-center gap-2 text-[#1A1A2E] font-semibold text-sm hover:gap-3 transition-all"
+                    data-testid={`button-view-case-${index}`}
+                  >
+                    View Case Study
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
