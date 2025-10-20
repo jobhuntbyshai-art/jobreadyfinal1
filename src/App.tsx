@@ -1,6 +1,5 @@
 import { Star, FileText } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import jobReadyLogo from '@assets/jobreadylogo_1760960044817.png';
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -61,7 +60,7 @@ function App() {
       <header className="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between bg-[#E8E4D9]/90 backdrop-blur-sm">
         <div className="flex items-center gap-3">
           <img 
-            src={jobReadyLogo} 
+            src="/jobreadylogo.png" 
             alt="jobready logo" 
             className="w-8 h-8 animate-tilt"
             data-testid="img-logo"
