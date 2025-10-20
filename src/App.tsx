@@ -365,7 +365,7 @@ function App() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-24 px-6 bg-[#E8E4D9]">
+      <section className="py-16 px-6 bg-[#E8E4D9]">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-[#1A1A2E]">
@@ -417,7 +417,7 @@ function App() {
       </section>
 
       {/* Case Studies Section */}
-      <section className="py-24 px-6">
+      <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-[#1A1A2E]">
@@ -492,7 +492,7 @@ function App() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="px-6 pt-24 pb-24">
+      <section className="px-6 pt-16 pb-24">
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold mb-4">
             Don't just take our word for it — real students, real results.
