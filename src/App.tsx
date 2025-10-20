@@ -62,10 +62,10 @@ function App() {
           <img 
             src="/jobreadylogo.png" 
             alt="jobready logo" 
-            className="w-8 h-8 animate-tilt"
+            className="h-8 w-auto animate-tilt"
             data-testid="img-logo"
           />
-          <span className="text-lg font-semibold text-[#1A1A2E]">jobready</span>
+          <span className="text-lg font-semibold text-[#1A1A2E]">UX jobready</span>
         </div>
         <button className="px-4 py-2 bg-[#F4E04D] text-[#1A1A2E] text-sm rounded-md hover:bg-[#F4E04D]/90 transition font-semibold">
           Join Program
