@@ -378,7 +378,7 @@ function App() {
             {/* Step 1 */}
             <div className="flex flex-col items-center text-center flex-1" data-testid="step-live-session">
               <div className="w-32 h-32 mb-4 flex items-center justify-center">
-                <img src="/livezoom.png" alt="Live Session" className="w-full h-full object-contain" />
+                <img src="/live-3d.png" alt="Live Session" className="w-full h-full object-contain" />
               </div>
               <h3 className="font-bold text-[#1A1A2E] text-lg mb-2">Live Session</h3>
             </div>
