@@ -167,10 +167,15 @@ function App() {
           </p>
         </div>
 
-        <div className="border-4 border-[#1A1A2E] rounded-lg overflow-hidden bg-white">
-          <table className="w-full">
+        <div className="border-4 border-[#1A1A2E] rounded-lg overflow-hidden bg-white hidden md:block">
+          <table className="w-full table-fixed">
+            <colgroup>
+              <col style={{ width: '12%' }} />
+              <col style={{ width: '60%' }} />
+              <col style={{ width: '28%' }} />
+            </colgroup>
             <thead>
-              <tr className="border-b-2 border-[#1A1A2E]">
+              <tr className="border-b-2 border-[#1A1A2E] bg-[#F4E04D]">
                 <th className="px-6 py-4 text-left text-sm font-bold text-[#1A1A2E]">Day</th>
                 <th className="px-6 py-4 text-left text-sm font-bold text-[#1A1A2E]">Topic</th>
                 <th className="px-6 py-4 text-left text-sm font-bold text-[#1A1A2E]">Type</th>
@@ -314,6 +319,37 @@ function App() {
               </tr>
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Cards View */}
+        <div className="md:hidden space-y-4">
+          {[
+            { day: 'Day 0', topic: 'Learn to Whiteboard', type: 'Live Session', color: 'bg-[#F4E04D]' },
+            { day: 'Day 1', topic: 'Learn - How to Build a Perfect UX Case Study', type: 'Live Session', color: 'bg-[#F4E04D]' },
+            { day: 'Day 2', topic: 'Optimize your Perfect UX Case Study', type: 'Assignment', color: 'bg-[#B8A8D8]' },
+            { day: 'Day 3', topic: 'Submit the Optimized Case Study and get Feedback', type: 'Review', color: 'bg-[#FFB6C1]' },
+            { day: 'Day 4', topic: 'Learn - How to Build a Perfect Presentation deck of your UX Case Study for a Portfolio Round', type: 'Live Session', color: 'bg-[#F4E04D]' },
+            { day: 'Day 5', topic: 'Use the template to build your presentation deck for your UX Case study', type: 'Assignment', color: 'bg-[#B8A8D8]' },
+            { day: 'Day 6', topic: 'Submit your Pitch Deck and get Feedback', type: 'Review', color: 'bg-[#FFB6C1]' },
+            { day: 'Day 7', topic: 'Learn - Build Perfect Resume (with Template)', type: 'Live Session', color: 'bg-[#F4E04D]' },
+            { day: 'Day 8', topic: 'Optimize and build your resume', type: 'Assignment', color: 'bg-[#B8A8D8]' },
+            { day: 'Day 9', topic: 'Submit your resume and get feedback', type: 'Review', color: 'bg-[#FFB6C1]' },
+            { day: 'Day 10', topic: 'Learn - How to Build a Perfect LinkedIn', type: 'Live Session', color: 'bg-[#F4E04D]' },
+            { day: 'Day 11', topic: 'Optimize your LinkedIn', type: 'Assignment', color: 'bg-[#B8A8D8]' },
+            { day: 'Day 12', topic: 'Submit your optimized LinkedIn and get Feedback', type: 'Review', color: 'bg-[#FFB6C1]' },
+            { day: 'Day 13', topic: 'Learn - How to Crack the HR Interview', type: 'Live Session', color: 'bg-[#F4E04D]' },
+            { day: 'Day 14', topic: 'Ask me Anything - QA on Discord (Text Communication)', type: 'AMA', color: 'bg-[#D4A574]' },
+          ].map((item, i) => (
+            <div key={i} className="border-2 border-[#1A1A2E] rounded-lg p-4 bg-white">
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-sm font-bold text-[#1A1A2E]">{item.day}</span>
+                <span className={`text-xs font-semibold text-[#1A1A2E] ${item.color} px-3 py-1 rounded`}>
+                  {item.type}
+                </span>
+              </div>
+              <p className="text-sm text-[#1A1A2E]">{item.topic}</p>
+            </div>
+          ))}
         </div>
       </section>
 
