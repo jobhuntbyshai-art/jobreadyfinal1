@@ -975,9 +975,63 @@ function App() {
         </div>
       </section>
 
+      {/* Next Batch Card */}
+      <section className="px-6 py-16">
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-white border-2 border-[#1A1A2E] rounded-lg p-8 md:p-12 shadow-lg">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-[#1A1A2E]">
+              Next batch starts soon
+            </h2>
+            
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              {/* Next Batch */}
+              <div className="text-center p-4 bg-[#D9F0FF] rounded-lg">
+                <p className="text-sm text-[#1A1A2E]/60 mb-2">Next Batch</p>
+                <p className="text-xl font-bold text-[#1A1A2E]" data-testid="text-batch-date">15th Nov'25</p>
+              </div>
+              
+              {/* Seats Left */}
+              <div className="text-center p-4 bg-[#FFE5F0] rounded-lg">
+                <p className="text-sm text-[#1A1A2E]/60 mb-2">Seats left</p>
+                <p className="text-xl font-bold text-[#1A1A2E]" data-testid="text-seats-left">4/20</p>
+              </div>
+              
+              {/* Duration */}
+              <div className="text-center p-4 bg-[#D4B5FF] rounded-lg">
+                <p className="text-sm text-[#1A1A2E]/60 mb-2">Duration</p>
+                <p className="text-xl font-bold text-[#1A1A2E]" data-testid="text-duration">2 Weeks</p>
+              </div>
+            </div>
+
+            {/* Pricing */}
+            <div className="text-center mb-8">
+              <div className="inline-block p-6 bg-[#F4E04D]/30 rounded-lg border-2 border-[#F4E04D]">
+                <p className="text-sm text-[#1A1A2E]/60 mb-2">Early bird</p>
+                <div className="flex items-center justify-center gap-3">
+                  <p className="text-3xl md:text-4xl font-bold text-[#1A1A2E]" data-testid="text-price-early">₹7,999</p>
+                  <p className="text-xl text-[#1A1A2E]/40 line-through" data-testid="text-price-original">₹11,000</p>
+                </div>
+                <p className="text-xs text-[#1A1A2E]/60 mt-2">(Only for first 7 Designers)</p>
+              </div>
+            </div>
+
+            {/* CTA Button */}
+            <div className="text-center">
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="px-10 py-4 bg-[#1A1A2E] text-[#E8E4D9] rounded-lg hover:bg-[#1A1A2E]/90 transition font-semibold text-lg"
+                data-testid="button-join-now-footer"
+              >
+                Join Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="px-6 py-12 text-center text-[#1A1A2E]/40 text-sm">
-        <p>© 2024 Digital Product Platform. All rights reserved.</p>
+        <p>© 2025 Job Ready By Designfolio. All rights reserved.</p>
       </footer>
 
       {/* Iframe Modal Popup */}
