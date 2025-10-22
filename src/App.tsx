@@ -646,6 +646,39 @@ function App() {
               </div>
             </div>
           </div>
+
+          {/* Madhulika's Testimonial */}
+          <div 
+            className="bg-[#FFE5F0] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+            style={{
+              clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
+            }}
+            data-testid="testimonial-madhulika"
+          >
+            <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
+            <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+              The program has been incredibly helpful. I'd spent weeks refining my case study but was never fully satisfied. <span className="relative inline-block px-1">
+                <span className="relative z-10">Session 1 with Shai brought complete clarity—within two days, I felt confident about my case study.</span>
+                <span className="absolute bottom-0 left-0 w-full h-3 bg-[#FFB6D9] -rotate-1"></span>
+              </span>
+              <br/><br/>
+              Session 2 gave deeper insights into Shai's process and how to connect design decisions to real outcomes. The resume session was highly actionable—I learned small mistakes that could've affected my ATS ranking. Nandini's session was clear, structured, and easy to apply.
+              <br/><br/>
+              Overall, I'm very happy with the program. Great work, team!
+            </p>
+            <div className="flex items-center gap-3">
+              <img 
+                src="/madhulika_1761106014792.png" 
+                alt="Madhulika" 
+                className="w-10 h-10 rounded-full object-cover"
+                data-testid="img-madhulika"
+              />
+              <div>
+                <div className="text-sm font-medium text-[#1A1A2E]">Madhulika</div>
+                <div className="text-xs text-[#1A1A2E]/50">UX UI Designer</div>
+              </div>
+            </div>
+          </div>
         </div>
         </div>
       </section>
