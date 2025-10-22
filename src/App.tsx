@@ -676,28 +676,31 @@ function App() {
                       </div>
                     </div>
 
-                    {/* Fourth Card - Placeholder */}
+                    {/* Sundar's Real Case Study */}
                     <div 
-                      className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+                      className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
                       data-testid="card-case-study-3"
+                      onClick={() => setIframeUrl('https://sundaraganapathyv.designfolio.me/project/68e665aecb2d80278caaeb83')}
                     >
-                      {/* Placeholder Image */}
-                      <div className="w-full h-48 bg-gradient-to-br from-[#F4E04D] via-[#B8A8D8] to-[#FFB6C1] flex items-center justify-center">
-                        <div className="text-[#1A1A2E]/20 font-bold text-xl">
-                          Case Study 4
-                        </div>
+                      {/* Real Thumbnail */}
+                      <div className="w-full h-48 overflow-hidden">
+                        <img 
+                          src="/sundaruxcasestudy.png" 
+                          alt="Sundar Case Study" 
+                          className="w-full h-full object-cover border-b-2 border-[#1A1A2E]/10"
+                        />
                       </div>
                       
                       {/* Content */}
                       <div className="p-4">
-                        <h3 className="font-bold text-lg text-[#1A1A2E] mb-1">
-                          Ed-Tech Learning Platform
+                        <h3 className="font-bold text-lg text-[#1A1A2E] mb-1 line-clamp-2">
+                          Redesigning LinkedIn's Comment Section UX to Cut "Time to Insight" by 66%
                         </h3>
                         <p className="text-[#1A1A2E]/60 text-sm mb-0.5">
-                          BYJU'S Case Study
+                          Linkedin - Comment Section
                         </p>
                         <p className="text-[#1A1A2E]/80 text-sm mb-3">
-                          by Karthik Reddy
+                          by Sundar
                         </p>
                         
                         {/* View Button */}
