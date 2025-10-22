@@ -1,8 +1,9 @@
-import { Star, FileText, ChevronRight } from 'lucide-react';
+import { Star, FileText, ChevronRight, ChevronLeft } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [currentMentor, setCurrentMentor] = useState(0);
 
   const testimonials = [
     {
@@ -412,6 +413,114 @@ function App() {
               We break down every concept in simple, actionable ways during live sessions.
               You then put that learning to work through focused assignments — and get a personal review on your submission so you can refine, improve, and actually see progress each week.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Meet Your Mentors Section */}
+      <section className="py-16 px-6">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-[#1A1A2E]">
+              Meet Your Mentors
+            </h2>
+            <p className="text-[#1A1A2E]/60 text-lg">
+              Learn from industry veterans who've helped hundreds of designers land their dream roles
+            </p>
+          </div>
+
+          {/* Mentor Card */}
+          <div className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-0">
+              {/* Left: Content */}
+              <div className="p-8 md:p-12 flex flex-col justify-center order-2 md:order-1">
+                {currentMentor === 0 ? (
+                  <div data-testid="mentor-content-0">
+                    <h3 className="text-2xl font-bold text-[#1A1A2E] mb-3">
+                      Shai Halevi
+                    </h3>
+                    <p className="text-[#1A1A2E]/60 text-sm mb-4">
+                      Senior Product Designer
+                    </p>
+                    <p className="text-[#1A1A2E]/70 text-base leading-relaxed mb-6">
+                      With over a decade of experience designing for Fortune 500 companies and fast-growing startups, Shai has mastered the art of creating portfolios that catch recruiters' eyes. She's passionate about breaking down complex UX concepts into actionable steps that actually help you land interviews. Her honest, no-nonsense feedback has helped hundreds of designers transform their portfolios from overlooked to interview-worthy.
+                    </p>
+                    <div className="flex items-center gap-2 text-sm text-[#1A1A2E]/60">
+                      <span className="px-3 py-1 bg-[#F4E04D] rounded-full text-[#1A1A2E] font-medium">UX Strategy</span>
+                      <span className="px-3 py-1 bg-[#F4E04D] rounded-full text-[#1A1A2E] font-medium">Portfolio Review</span>
+                    </div>
+                  </div>
+                ) : (
+                  <div data-testid="mentor-content-1">
+                    <h3 className="text-2xl font-bold text-[#1A1A2E] mb-3">
+                      Nandini Sharma
+                    </h3>
+                    <p className="text-[#1A1A2E]/60 text-sm mb-4">
+                      Lead UX Researcher & Career Coach
+                    </p>
+                    <p className="text-[#1A1A2E]/70 text-base leading-relaxed mb-6">
+                      Nandini brings a unique blend of research expertise and career coaching to the program. Having navigated the UX job market across multiple countries, she understands what it takes to stand out in competitive markets. Her specialty is helping designers craft compelling narratives around their work and communicate their value with confidence. Students love her encouraging approach and practical insights on resume optimization and interview preparation.
+                    </p>
+                    <div className="flex items-center gap-2 text-sm text-[#1A1A2E]/60">
+                      <span className="px-3 py-1 bg-[#F4E04D] rounded-full text-[#1A1A2E] font-medium">Career Coaching</span>
+                      <span className="px-3 py-1 bg-[#F4E04D] rounded-full text-[#1A1A2E] font-medium">Interview Prep</span>
+                    </div>
+                  </div>
+                )}
+
+                {/* Navigation */}
+                <div className="flex items-center gap-4 mt-8">
+                  <button
+                    onClick={() => setCurrentMentor(currentMentor === 0 ? 1 : 0)}
+                    disabled={currentMentor === 0}
+                    className={`p-2 rounded-full border-2 border-[#1A1A2E] transition ${
+                      currentMentor === 0 
+                        ? 'opacity-30 cursor-not-allowed' 
+                        : 'hover:bg-[#F4E04D] cursor-pointer'
+                    }`}
+                    data-testid="button-prev-mentor"
+                    aria-label="Previous mentor"
+                  >
+                    <ChevronLeft className="w-5 h-5 text-[#1A1A2E]" />
+                  </button>
+                  <button
+                    onClick={() => setCurrentMentor(currentMentor === 0 ? 1 : 0)}
+                    disabled={currentMentor === 1}
+                    className={`p-2 rounded-full border-2 border-[#1A1A2E] transition ${
+                      currentMentor === 1 
+                        ? 'opacity-30 cursor-not-allowed' 
+                        : 'hover:bg-[#F4E04D] cursor-pointer'
+                    }`}
+                    data-testid="button-next-mentor"
+                    aria-label="Next mentor"
+                  >
+                    <ChevronRight className="w-5 h-5 text-[#1A1A2E]" />
+                  </button>
+                  <span className="text-sm text-[#1A1A2E]/60">
+                    {currentMentor + 1} of 2
+                  </span>
+                </div>
+              </div>
+
+              {/* Right: Image */}
+              <div className="order-1 md:order-2 bg-gradient-to-br from-[#F4E04D]/20 to-[#B8A8D8]/20 flex items-center justify-center p-8">
+                {currentMentor === 0 ? (
+                  <img
+                    src="/aishwarya copy.png"
+                    alt="Shai Halevi"
+                    className="w-full h-full object-cover rounded-lg"
+                    data-testid="img-mentor-0"
+                  />
+                ) : (
+                  <img
+                    src="/sundaraganapthy.png"
+                    alt="Nandini Sharma"
+                    className="w-full h-full object-cover rounded-lg"
+                    data-testid="img-mentor-1"
+                  />
+                )}
+              </div>
+            </div>
           </div>
         </div>
       </section>
