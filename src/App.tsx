@@ -502,14 +502,17 @@ function App() {
                 </div>
               </div>
 
-              {/* Right: Image */}
+              {/* Right: Image/Video */}
               <div className="order-1 md:order-2 bg-gradient-to-br from-[#F4E04D]/20 to-[#B8A8D8]/20 flex items-center justify-center p-8">
                 {currentMentor === 0 ? (
-                  <img
-                    src="/aishwarya copy.png"
-                    alt="Shai Halevi"
+                  <video
+                    src="/shai-mentor-hi.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                     className="w-full h-full object-cover rounded-lg"
-                    data-testid="img-mentor-0"
+                    data-testid="video-mentor-0"
                   />
                 ) : (
                   <img
