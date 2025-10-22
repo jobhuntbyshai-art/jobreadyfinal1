@@ -122,28 +122,28 @@ function App() {
 
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl md:text-6xl font-bold mb-6 leading-tight">
             The <span className="relative inline-block px-2">
               <span className="relative z-10">2-week</span>
               <span className="absolute bottom-1 left-0 w-full h-5 bg-[#F4E04D] -rotate-1 animate-highlight"></span>
             </span> playbook top designers use to land real interviews.
           </h1>
-          <p className="text-[#1A1A2E]/60 text-lg mb-8">
+          <p className="text-[#1A1A2E]/60 text-base md:text-lg mb-8">
             Standing out in a crowded UX market isn't that hard!
           </p>
-          <div className="flex items-center justify-center gap-4 mb-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="px-8 py-4 bg-[#1A1A2E] text-[#E8E4D9] rounded-lg hover:bg-[#1A1A2E]/90 transition font-semibold"
+              className="w-full md:w-auto px-8 py-4 bg-[#1A1A2E] text-[#E8E4D9] rounded-lg hover:bg-[#1A1A2E]/90 transition font-semibold"
               data-testid="button-join-sprint"
             >
-              Join the Job Ready Sprint
+              Join Program
             </button>
             <button 
               onClick={() => document.getElementById('syllabus')?.scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-4 text-[#1A1A2E] border border-[#1A1A2E]/20 rounded-lg hover:bg-white/50 transition font-semibold flex items-center gap-2"
+              className="w-full md:w-auto px-8 py-4 text-[#1A1A2E] border border-[#1A1A2E]/20 rounded-lg hover:bg-white/50 transition font-semibold flex items-center justify-center gap-2"
             >
-              <FileText className="w-5 h-5" />
+              <FileText className="w-5 h-5 md:block hidden" />
               View Syllabus
             </button>
           </div>
@@ -184,8 +184,8 @@ function App() {
       >
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Your 14-Day Journey</h2>
-            <p className="text-[#1A1A2E]/60 text-lg">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4">Your 14-Day Journey</h2>
+            <p className="text-[#1A1A2E]/60 text-sm md:text-lg">
               A structured path to transform your portfolio and land interviews
             </p>
           </div>
@@ -433,10 +433,10 @@ function App() {
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-[#1A1A2E]">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-[#1A1A2E]">
               Meet Your Mentors
             </h2>
-            <p className="text-[#1A1A2E]/60 text-lg">
+            <p className="text-[#1A1A2E]/60 text-sm md:text-lg">
               Learn from industry veterans who've helped hundreds of designers land their dream roles
             </p>
           </div>
@@ -558,10 +558,10 @@ function App() {
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-[#1A1A2E]">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-[#1A1A2E]">
               UX case studies built during the program.
             </h2>
-            <p className="text-[#1A1A2E]/60 text-lg">
+            <p className="text-[#1A1A2E]/60 text-sm md:text-lg">
               Portfolio-ready work that landed them interviews at top companies.
             </p>
           </div>
@@ -576,7 +576,7 @@ function App() {
               >
                 {/* Slide 1: First 2 cards */}
                 <div className="w-full flex-shrink-0">
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {/* Pooja's Real Case Study */}
                     <div 
                       className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
@@ -767,10 +767,10 @@ function App() {
       {/* Testimonials Section */}
       <section className="px-6 pt-16 pb-24">
         <div className="text-center mb-16 max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4">
             Don't just take our word for it — real students, real results.
           </h2>
-          <p className="text-[#1A1A2E]/60">
+          <p className="text-[#1A1A2E]/60 text-sm md:text-base">
             Hear from designers who transformed their portfolios and landed interviews.
           </p>
         </div>
@@ -778,7 +778,7 @@ function App() {
         <div className="max-w-4xl mx-auto">
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Harshita's Testimonial */}
           <div 
             className="bg-[#D9F0FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
@@ -979,17 +979,17 @@ function App() {
       <section className="border-t border-[#1A1A2E]/10">
         <div className="max-w-6xl mx-auto px-6 py-20">
           {/* Main Content */}
-          <div className="grid md:grid-cols-3 gap-12 items-center mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start md:items-center mb-16">
             {/* Left: Headline */}
-            <div>
-              <h2 className="text-4xl font-bold text-[#1A1A2E] mb-2">
+            <div className="text-left">
+              <h2 className="text-2xl md:text-4xl font-bold text-[#1A1A2E] mb-2">
                 Next batch starts soon
               </h2>
-              <p className="text-[#1A1A2E]/60">Limited seats available</p>
+              <p className="text-[#1A1A2E]/60 text-sm md:text-base">Limited seats available</p>
             </div>
 
             {/* Center: Stats */}
-            <div className="flex items-center justify-center gap-6 text-center">
+            <div className="flex items-center justify-start md:justify-center gap-6 text-left md:text-center">
               <div>
                 <p className="text-xs text-[#1A1A2E]/50 mb-1 uppercase tracking-wide">Batch</p>
                 <p className="text-lg font-bold text-[#1A1A2E]" data-testid="text-batch-date">15th Nov'25</p>
@@ -1007,14 +1007,14 @@ function App() {
             </div>
 
             {/* Right: CTA */}
-            <div className="text-center md:text-right">
+            <div className="text-left md:text-right">
               <p className="text-2xl font-bold text-[#1A1A2E] mb-1">
                 ₹8,999 <span className="text-base text-[#1A1A2E]/40 line-through ml-1">₹11,000</span>
               </p>
               <p className="text-xs text-[#1A1A2E]/50 mb-4">Early bird pricing</p>
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="px-6 py-2.5 bg-[#1A1A2E] text-white rounded-md hover:bg-[#1A1A2E]/90 transition font-medium text-sm shadow-sm"
+                className="w-full md:w-auto px-6 py-2.5 bg-[#1A1A2E] text-white rounded-md hover:bg-[#1A1A2E]/90 transition font-medium text-sm shadow-sm"
                 data-testid="button-join-now-footer"
               >
                 Join Now →
@@ -1023,7 +1023,7 @@ function App() {
           </div>
 
           {/* Bottom: Mentee Photos */}
-          <div className="relative overflow-hidden pt-8 border-t border-[#1A1A2E]/5 flex justify-center">
+          <div className="relative overflow-hidden pt-8 border-t border-[#1A1A2E]/5 flex justify-start md:justify-center">
             <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#E8E4D9] to-transparent z-10 pointer-events-none"></div>
             <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#E8E4D9] to-transparent z-10 pointer-events-none"></div>
             
@@ -1061,7 +1061,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 py-12 text-center text-[#1A1A2E]/40 text-sm">
+      <footer className="px-6 py-12 text-left md:text-center text-[#1A1A2E]/40 text-sm">
         <p>© 2025 Job Ready By Designfolio. All rights reserved.</p>
       </footer>
 
