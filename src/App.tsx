@@ -6,6 +6,7 @@ function App() {
   const [currentMentor, setCurrentMentor] = useState(0);
   const [currentCaseStudy, setCurrentCaseStudy] = useState(0);
   const [iframeUrl, setIframeUrl] = useState<string | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const testimonials = [
     {
@@ -71,7 +72,11 @@ function App() {
           />
           <span className="text-lg font-semibold text-[#1A1A2E]">UX jobready</span>
         </div>
-        <button className="px-4 py-2 bg-[#F4E04D] text-[#1A1A2E] text-sm rounded-md hover:bg-[#F4E04D]/90 transition font-semibold">
+        <button 
+          onClick={() => setIsModalOpen(true)}
+          className="px-4 py-2 bg-[#F4E04D] text-[#1A1A2E] text-sm rounded-md hover:bg-[#F4E04D]/90 transition font-semibold"
+          data-testid="button-join-program-header"
+        >
           Join Program
         </button>
       </header>
@@ -127,7 +132,11 @@ function App() {
             Standing out in a crowded UX market isn't that hard!
           </p>
           <div className="flex items-center justify-center gap-4 mb-8">
-            <button className="px-8 py-4 bg-[#1A1A2E] text-[#E8E4D9] rounded-lg hover:bg-[#1A1A2E]/90 transition font-semibold">
+            <button 
+              onClick={() => setIsModalOpen(true)}
+              className="px-8 py-4 bg-[#1A1A2E] text-[#E8E4D9] rounded-lg hover:bg-[#1A1A2E]/90 transition font-semibold"
+              data-testid="button-join-sprint"
+            >
               Join the Job Ready Sprint
             </button>
             <button 
@@ -999,6 +1008,114 @@ function App() {
               title="Case Study Viewer"
               data-testid="iframe-case-study"
             />
+          </div>
+        </div>
+      )}
+
+      {/* Join Program Modal */}
+      {isModalOpen && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setIsModalOpen(false)}
+          data-testid="join-modal-overlay"
+        >
+          <div 
+            className="relative w-full max-w-lg bg-white rounded-2xl overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setIsModalOpen(false)}
+              className="absolute top-4 right-4 z-10 p-2 bg-[#1A1A2E] hover:bg-[#F4E04D] text-white hover:text-[#1A1A2E] rounded-full transition-all shadow-lg"
+              data-testid="button-close-join-modal"
+              aria-label="Close"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Modal Content */}
+            <div className="p-8 md:p-12">
+              {/* Circular Video */}
+              <div className="flex justify-center mb-8">
+                <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-[#F4E04D] shadow-lg">
+                  <video
+                    src="/shai.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    className="w-full h-full object-cover"
+                    data-testid="video-join-modal"
+                  />
+                </div>
+              </div>
+
+              {/* Title */}
+              <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-[#1A1A2E]">
+                Ready to Get Started?
+              </h2>
+
+              {/* 3 Steps */}
+              <div className="space-y-6">
+                {/* Step 1 */}
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E04D] flex items-center justify-center font-bold text-[#1A1A2E]">
+                    1
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-[#1A1A2E]/70 leading-relaxed">
+                      Join WhatsApp group:{" "}
+                      <a 
+                        href="https://chat.whatsapp.com/IOcvgOE9VRfHFIFjJShBty"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#1A1A2E] font-semibold underline hover:text-[#F4E04D] transition"
+                        data-testid="link-whatsapp"
+                      >
+                        Click here
+                      </a>
+                    </p>
+                  </div>
+                </div>
+
+                {/* Step 2 */}
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E04D] flex items-center justify-center font-bold text-[#1A1A2E]">
+                    2
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-[#1A1A2E]/70 leading-relaxed">
+                      Text there <span className="font-semibold text-[#1A1A2E]">"Job Ready"</span>
+                    </p>
+                  </div>
+                </div>
+
+                {/* Step 3 */}
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#F4E04D] flex items-center justify-center font-bold text-[#1A1A2E]">
+                    3
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-[#1A1A2E]/70 leading-relaxed">
+                      Shai/Nandini will get in touch with you
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* CTA Button */}
+              <div className="mt-8 text-center">
+                <a
+                  href="https://chat.whatsapp.com/IOcvgOE9VRfHFIFjJShBty"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-8 py-4 bg-[#1A1A2E] text-[#E8E4D9] rounded-lg hover:bg-[#1A1A2E]/90 transition font-semibold"
+                  data-testid="button-join-whatsapp"
+                >
+                  Join WhatsApp Group
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       )}
