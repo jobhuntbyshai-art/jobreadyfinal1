@@ -749,6 +749,37 @@ function App() {
               </div>
             </div>
           </div>
+
+          {/* Satvik's Testimonial */}
+          <div 
+            className="bg-[#F0E5FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+            style={{
+              clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
+            }}
+            data-testid="testimonial-satvik"
+          >
+            <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
+            <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+              When I joined this program, my goal was to understand what recruiters truly look for. Even with solid projects and a good portfolio, I hadn't received interview calls for over a month — until I joined Shai's Job Ready Program. <span className="relative inline-block px-1">
+                <span className="relative z-10">It turned out to be a game-changer, helping me craft an ATS-friendly résumé and build a strong case study from a project I had once overlooked.</span>
+                <span className="absolute bottom-0 left-0 w-full h-3 bg-[#D4B5FF] -rotate-1"></span>
+              </span>
+              <br/><br/>
+              Nandini's LinkedIn Masterclass was equally transformative — after implementing her tips, I started receiving inbound interest from companies like SuperMoney, PhonePe, and Juspay. I'm deeply grateful to Shai and Nandini!
+            </p>
+            <div className="flex items-center gap-3">
+              <img 
+                src="/satvik_1761115411601.png" 
+                alt="Satvik" 
+                className="w-10 h-10 rounded-full object-cover"
+                data-testid="img-satvik"
+              />
+              <div>
+                <div className="text-sm font-medium text-[#1A1A2E]">Satvik</div>
+                <div className="text-xs text-[#1A1A2E]/50">Product Designer, NxtWave</div>
+              </div>
+            </div>
+          </div>
         </div>
         </div>
       </section>
