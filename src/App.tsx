@@ -446,13 +446,8 @@ function App() {
                       Staff Product Designer @Sense | Ex-Freshworks | Founder @Designfolio
                     </p>
                     
-                    <div className="mb-4 p-4 bg-[#F4E04D]/30 rounded-lg border-l-4 border-[#1A1A2E]">
-                      <p className="text-[#1A1A2E] text-base font-semibold italic">
-                        "Great designers — despite how good they are — often fail to showcase their work the best."
-                      </p>
-                    </div>
-
                     <div className="space-y-3 text-[#1A1A2E]/70 text-sm leading-relaxed mb-6">
+                      <p className="font-bold italic">Great designers — despite how good they are — often fail to showcase their work the best.</p>
                       <p>Last year, I reviewed over 200+ portfolios and realized most weren't bad at design — just bad at storytelling. Brilliant work often gets lost in cluttered layouts and weak narratives.</p>
                       <p>That's why I built this program: to help designers translate their work into stories recruiters actually understand. Your portfolio isn't just a showcase — it's your story, told right. By the end, you won't just have better projects, you'll have a narrative that truly sells you.</p>
                     </div>
