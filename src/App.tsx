@@ -503,7 +503,10 @@ function App() {
               </div>
 
               {/* Right: Image/Video */}
-              <div className="order-1 md:order-2 bg-gradient-to-br from-[#F4E04D]/20 to-[#B8A8D8]/20 flex items-center justify-center p-8">
+              <div 
+                className="order-1 md:order-2 flex items-center justify-center p-8 bg-cover bg-center bg-no-repeat"
+                style={{ backgroundImage: 'url(/mentorbg.png)' }}
+              >
                 {currentMentor === 0 ? (
                   <video
                     src="/shai-mentor-hi.mp4"
