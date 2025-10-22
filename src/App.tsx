@@ -461,17 +461,20 @@ function App() {
                 ) : (
                   <div data-testid="mentor-content-1">
                     <h3 className="text-2xl font-bold text-[#1A1A2E] mb-3">
-                      Nandini Sharma
+                      📨 A Note from Nandini Singh
                     </h3>
                     <p className="text-[#1A1A2E]/60 text-sm mb-4">
-                      Lead UX Researcher & Career Coach
+                      Top 0.1% Career Coach on Topmate | Ex-HR @ Unacademy, SugarFit (Cult), Wakefit
                     </p>
-                    <p className="text-[#1A1A2E]/70 text-base leading-relaxed mb-6">
-                      Nandini brings a unique blend of research expertise and career coaching to the program. Having navigated the UX job market across multiple countries, she understands what it takes to stand out in competitive markets. Her specialty is helping designers craft compelling narratives around their work and communicate their value with confidence. Students love her encouraging approach and practical insights on resume optimization and interview preparation.
-                    </p>
-                    <div className="flex items-center gap-2 text-sm text-[#1A1A2E]/60">
-                      <span className="px-3 py-1 bg-[#F4E04D] rounded-full text-[#1A1A2E] font-medium">Career Coaching</span>
-                      <span className="px-3 py-1 bg-[#F4E04D] rounded-full text-[#1A1A2E] font-medium">Interview Prep</span>
+                    
+                    <div className="space-y-3 text-[#1A1A2E]/70 text-sm leading-relaxed mb-6">
+                      <p className="font-bold italic">While there are thousands of openings today, each attracts twice as many applicants — making it harder than ever to stand out. It's time to stop relying on luck and start ranking smarter.</p>
+                      <p>Having mentored hundreds of designers, I've seen how the right strategy, clarity, and preparation can completely change your job-hunt outcome. My mission is simple — to help you navigate hiring systems with confidence and land opportunities that truly fit you.</p>
+                    </div>
+                    
+                    <div className="flex flex-wrap items-center gap-2 text-sm text-[#1A1A2E]/60">
+                      <span className="px-3 py-1 bg-[#D9F0FF] rounded-full text-[#1A1A2E] font-medium">Career Coaching</span>
+                      <span className="px-3 py-1 bg-[#FFE5F0] rounded-full text-[#1A1A2E] font-medium">Interview Prep</span>
                     </div>
                   </div>
                 )}
