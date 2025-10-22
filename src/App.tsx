@@ -564,11 +564,11 @@ function App() {
                       onClick={() => setIframeUrl('https://pooja-yerne.designfolio.me/project/68e7779dcb2d80278cace1a2')}
                     >
                       {/* Real Thumbnail */}
-                      <div className="w-full h-48 p-3 flex items-center justify-center bg-[#E8E4D9]">
+                      <div className="w-full h-48 overflow-hidden">
                         <img 
                           src="/pooja-uxproject.jpeg" 
                           alt="Pooja Yerne Case Study" 
-                          className="w-full h-full object-contain border-2 border-[#1A1A2E]/10 rounded"
+                          className="w-full h-full object-cover border-b-2 border-[#1A1A2E]/10"
                         />
                       </div>
                       
