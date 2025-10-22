@@ -975,78 +975,75 @@ function App() {
         </div>
       </section>
 
-      {/* Next Batch Card */}
-      <section className="px-6 py-16">
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-[#F4E04D] rounded-3xl p-10 md:p-16 overflow-hidden">
-            {/* Heading */}
-            <h2 className="text-4xl font-bold mb-10 text-[#1A1A2E] text-center">
-              Next batch starts soon
-            </h2>
-            
-            {/* Clean Info Row */}
-            <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-4 mb-8 text-[#1A1A2E]/80 text-lg">
-              <div className="flex items-baseline gap-2">
-                <span className="text-sm">Batch:</span>
-                <span className="font-bold text-[#1A1A2E]" data-testid="text-batch-date">15th Nov'25</span>
+      {/* Next Batch Section */}
+      <section className="border-t border-[#1A1A2E]/10">
+        <div className="max-w-6xl mx-auto px-6 py-20">
+          {/* Main Content */}
+          <div className="grid md:grid-cols-3 gap-12 items-center mb-16">
+            {/* Left: Headline */}
+            <div>
+              <h2 className="text-4xl font-bold text-[#1A1A2E] mb-2">
+                Next batch starts soon
+              </h2>
+              <p className="text-[#1A1A2E]/60">Limited seats available</p>
+            </div>
+
+            {/* Center: Stats */}
+            <div className="flex items-center justify-center gap-6 text-center">
+              <div>
+                <p className="text-xs text-[#1A1A2E]/50 mb-1 uppercase tracking-wide">Batch</p>
+                <p className="text-lg font-bold text-[#1A1A2E]" data-testid="text-batch-date">15th Nov'25</p>
               </div>
-              <div className="hidden md:block text-[#1A1A2E]/40">•</div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-sm">Seats:</span>
-                <span className="font-bold text-[#1A1A2E]" data-testid="text-seats-left">4/20</span>
+              <div className="h-12 w-px bg-[#1A1A2E]/10"></div>
+              <div>
+                <p className="text-xs text-[#1A1A2E]/50 mb-1 uppercase tracking-wide">Seats</p>
+                <p className="text-lg font-bold text-[#1A1A2E]" data-testid="text-seats-left">4/20</p>
               </div>
-              <div className="hidden md:block text-[#1A1A2E]/40">•</div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-sm">Duration:</span>
-                <span className="font-bold text-[#1A1A2E]" data-testid="text-duration">2 Weeks</span>
+              <div className="h-12 w-px bg-[#1A1A2E]/10"></div>
+              <div>
+                <p className="text-xs text-[#1A1A2E]/50 mb-1 uppercase tracking-wide">Duration</p>
+                <p className="text-lg font-bold text-[#1A1A2E]" data-testid="text-duration">2 Weeks</p>
               </div>
             </div>
 
-            {/* Pricing */}
-            <div className="text-center mb-8">
-              <p className="text-2xl font-bold text-[#1A1A2E]">
-                ₹8,999 <span className="text-lg text-[#1A1A2E]/40 line-through ml-2">₹11,000</span>
+            {/* Right: CTA */}
+            <div className="text-center md:text-right">
+              <p className="text-2xl font-bold text-[#1A1A2E] mb-1">
+                ₹8,999 <span className="text-base text-[#1A1A2E]/40 line-through ml-1">₹11,000</span>
               </p>
-              <p className="text-[#1A1A2E]/60 text-sm mt-1">(Early bird for first 7 designers)</p>
-            </div>
-
-            {/* CTA Button */}
-            <div className="text-center mb-12">
+              <p className="text-xs text-[#1A1A2E]/50 mb-4">Early bird pricing</p>
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="px-8 py-3 bg-[#1A1A2E] text-[#F4E04D] rounded-lg hover:bg-[#1A1A2E]/90 transition font-semibold inline-flex items-center gap-2"
+                className="px-6 py-2.5 bg-[#1A1A2E] text-white rounded-md hover:bg-[#1A1A2E]/90 transition font-medium text-sm shadow-sm"
                 data-testid="button-join-now-footer"
               >
                 Join Now →
               </button>
             </div>
+          </div>
 
-            {/* Scrolling Mentee Photos with Fade */}
-            <div className="relative overflow-hidden">
-              {/* Fade gradients on edges */}
-              <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#F4E04D] to-transparent z-10 pointer-events-none"></div>
-              <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#F4E04D] to-transparent z-10 pointer-events-none"></div>
-              
-              <div className="flex gap-3 animate-scroll justify-center">
-                {/* First set of images */}
-                <img src="/harshita.png" alt="Harshita" className="w-12 h-12 rounded-full border-2 border-[#1A1A2E] flex-shrink-0 object-cover" />
-                <img src="/madhulika_1761106014792.png" alt="Madhulika" className="w-12 h-12 rounded-full border-2 border-[#1A1A2E] flex-shrink-0 object-cover" />
-                <img src="/satvik_1761115411601.png" alt="Satvik" className="w-12 h-12 rounded-full border-2 border-[#1A1A2E] flex-shrink-0 object-cover" />
-                <img src="/komal_1761106764386.png" alt="Komal" className="w-12 h-12 rounded-full border-2 border-[#1A1A2E] flex-shrink-0 object-cover" />
-                <img src="/jai_1761117846125.png" alt="Jai" className="w-12 h-12 rounded-full border-2 border-[#1A1A2E] flex-shrink-0 object-cover" />
-                <img src="/sundar.png" alt="Sundar" className="w-12 h-12 rounded-full border-2 border-[#1A1A2E] flex-shrink-0 object-cover" />
-                <img src="/arun.png" alt="Arun" className="w-12 h-12 rounded-full border-2 border-[#1A1A2E] flex-shrink-0 object-cover" />
-                <img src="/sanket.png" alt="Sanket" className="w-12 h-12 rounded-full border-2 border-[#1A1A2E] flex-shrink-0 object-cover" />
-                {/* Duplicate set for seamless loop */}
-                <img src="/harshita.png" alt="Harshita" className="w-12 h-12 rounded-full border-2 border-[#1A1A2E] flex-shrink-0 object-cover" />
-                <img src="/madhulika_1761106014792.png" alt="Madhulika" className="w-12 h-12 rounded-full border-2 border-[#1A1A2E] flex-shrink-0 object-cover" />
-                <img src="/satvik_1761115411601.png" alt="Satvik" className="w-12 h-12 rounded-full border-2 border-[#1A1A2E] flex-shrink-0 object-cover" />
-                <img src="/komal_1761106764386.png" alt="Komal" className="w-12 h-12 rounded-full border-2 border-[#1A1A2E] flex-shrink-0 object-cover" />
-                <img src="/jai_1761117846125.png" alt="Jai" className="w-12 h-12 rounded-full border-2 border-[#1A1A2E] flex-shrink-0 object-cover" />
-                <img src="/sundar.png" alt="Sundar" className="w-12 h-12 rounded-full border-2 border-[#1A1A2E] flex-shrink-0 object-cover" />
-                <img src="/arun.png" alt="Arun" className="w-12 h-12 rounded-full border-2 border-[#1A1A2E] flex-shrink-0 object-cover" />
-                <img src="/sanket.png" alt="Sanket" className="w-12 h-12 rounded-full border-2 border-[#1A1A2E] flex-shrink-0 object-cover" />
-              </div>
+          {/* Bottom: Mentee Photos */}
+          <div className="relative overflow-hidden pt-8 border-t border-[#1A1A2E]/5">
+            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#E8E4D9] to-transparent z-10 pointer-events-none"></div>
+            <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#E8E4D9] to-transparent z-10 pointer-events-none"></div>
+            
+            <div className="flex gap-3 animate-scroll">
+              <img src="/harshita.png" alt="Harshita" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/madhulika_1761106014792.png" alt="Madhulika" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/satvik_1761115411601.png" alt="Satvik" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/komal_1761106764386.png" alt="Komal" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/jai_1761117846125.png" alt="Jai" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/sundar.png" alt="Sundar" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/arun.png" alt="Arun" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/sanket.png" alt="Sanket" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/harshita.png" alt="Harshita" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/madhulika_1761106014792.png" alt="Madhulika" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/satvik_1761115411601.png" alt="Satvik" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/komal_1761106764386.png" alt="Komal" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/jai_1761117846125.png" alt="Jai" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/sundar.png" alt="Sundar" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/arun.png" alt="Arun" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/sanket.png" alt="Sanket" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
             </div>
           </div>
         </div>
