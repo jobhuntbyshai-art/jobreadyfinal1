@@ -57,14 +57,6 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
-  // Auto-advance case studies carousel (2 slides total, showing 2 cards each)
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentCaseStudy((prev) => (prev + 1) % 2);
-    }, 4000); // Change every 4 seconds
-
-    return () => clearInterval(interval);
-  }, [currentCaseStudy]); // Reset timer when slide changes
 
   return (
     <div className="min-h-screen bg-[#E8E4D9] text-[#1A1A2E]">
@@ -572,11 +564,11 @@ function App() {
                       onClick={() => setIframeUrl('https://pooja-yerne.designfolio.me/project/68e7779dcb2d80278cace1a2')}
                     >
                       {/* Real Thumbnail */}
-                      <div className="w-full h-32 overflow-hidden">
+                      <div className="w-full h-48 p-3 flex items-center justify-center bg-[#E8E4D9]">
                         <img 
                           src="/pooja-uxproject.jpeg" 
                           alt="Pooja Yerne Case Study" 
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain border-2 border-[#1A1A2E]/10 rounded"
                         />
                       </div>
                       
@@ -609,7 +601,7 @@ function App() {
                       data-testid="card-case-study-1"
                     >
                       {/* Placeholder Image */}
-                      <div className="w-full h-32 bg-gradient-to-br from-[#F4E04D] via-[#B8A8D8] to-[#FFB6C1] flex items-center justify-center">
+                      <div className="w-full h-48 bg-gradient-to-br from-[#F4E04D] via-[#B8A8D8] to-[#FFB6C1] flex items-center justify-center">
                         <div className="text-[#1A1A2E]/20 font-bold text-xl">
                           Case Study 2
                         </div>
@@ -661,7 +653,7 @@ function App() {
                         data-testid={`card-case-study-${index + 2}`}
                       >
                         {/* Leaner Image */}
-                        <div className="w-full h-32 bg-gradient-to-br from-[#F4E04D] via-[#B8A8D8] to-[#FFB6C1] flex items-center justify-center">
+                        <div className="w-full h-48 bg-gradient-to-br from-[#F4E04D] via-[#B8A8D8] to-[#FFB6C1] flex items-center justify-center">
                           <div className="text-[#1A1A2E]/20 font-bold text-xl">
                             Case Study {index + 3}
                           </div>
