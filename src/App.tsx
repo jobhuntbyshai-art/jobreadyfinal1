@@ -718,6 +718,37 @@ function App() {
               </div>
             </div>
           </div>
+
+          {/* Sundar's Testimonial */}
+          <div 
+            className="bg-[#E5F9F0] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+            style={{
+              clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
+            }}
+            data-testid="testimonial-sundar"
+          >
+            <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
+            <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+              This program has truly boosted my confidence. It's pushed me to refine my work and understand the finer, industry-level nuances of presenting it effectively. <span className="relative inline-block px-1">
+                <span className="relative z-10">I've learned how to prepare for interviews, build strong supporting assets, and position myself to stand out.</span>
+                <span className="absolute bottom-0 left-0 w-full h-3 bg-[#A8E6CF] -rotate-1"></span>
+              </span>
+              <br/><br/>
+              It's been a valuable and insightful journey in every aspect of job hunting.
+            </p>
+            <div className="flex items-center gap-3">
+              <img 
+                src="/sundaraganapthy.png" 
+                alt="Sundar" 
+                className="w-10 h-10 rounded-full object-cover"
+                data-testid="img-sundar"
+              />
+              <div>
+                <div className="text-sm font-medium text-[#1A1A2E]">Sundar</div>
+                <div className="text-xs text-[#1A1A2E]/50">UI UX Designer</div>
+              </div>
+            </div>
+          </div>
         </div>
         </div>
       </section>
