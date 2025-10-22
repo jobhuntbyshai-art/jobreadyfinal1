@@ -934,18 +934,18 @@ function App() {
         {/* Testimonials Carousel */}
         <div className="relative">
           {/* Carousel Container */}
-          <div className="overflow-hidden">
+          <div className="overflow-hidden px-1">
             {/* Desktop: 3 slides with 2 testimonials each */}
             <div 
               className="hidden md:flex transition-transform duration-500 ease-in-out"
               style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
             >
               {/* Slide 1: Harshita & Madhulika */}
-              <div className="w-full flex-shrink-0">
+              <div className="w-full flex-shrink-0 px-1">
                 <div className="grid grid-cols-2 gap-8">
           {/* Harshita's Testimonial */}
           <div 
-            className="bg-[#D9F0FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+            className="bg-[#D9F0FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
@@ -977,7 +977,7 @@ function App() {
 
           {/* Madhulika's Testimonial */}
           <div 
-            className="bg-[#FFE5F0] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+            className="bg-[#FFE5F0] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
@@ -1011,11 +1011,11 @@ function App() {
               </div>
 
               {/* Slide 2: Komalpreet & Sundar */}
-              <div className="w-full flex-shrink-0">
+              <div className="w-full flex-shrink-0 px-1">
                 <div className="grid grid-cols-2 gap-8">
           {/* Komalpreet's Testimonial */}
           <div 
-            className="bg-[#FFF9E5] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+            className="bg-[#FFF9E5] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
@@ -1048,7 +1048,7 @@ function App() {
 
           {/* Sundar's Testimonial */}
           <div 
-            className="bg-[#E5F9F0] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+            className="bg-[#E5F9F0] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
@@ -1080,11 +1080,11 @@ function App() {
               </div>
 
               {/* Slide 3: Satvik & Jai */}
-              <div className="w-full flex-shrink-0">
+              <div className="w-full flex-shrink-0 px-1">
                 <div className="grid grid-cols-2 gap-8">
           {/* Satvik's Testimonial */}
           <div 
-            className="bg-[#F0E5FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+            className="bg-[#F0E5FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
@@ -1115,7 +1115,7 @@ function App() {
 
           {/* Jai's Testimonial */}
           <div 
-            className="bg-[#FFE5D9] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+            className="bg-[#FFE5D9] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
@@ -1157,7 +1157,7 @@ function App() {
               {/* Mobile Slide 1: Harshita */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#D9F0FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+                  className="bg-[#D9F0FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
@@ -1191,7 +1191,7 @@ function App() {
               {/* Mobile Slide 2: Madhulika */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#FFE5F0] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+                  className="bg-[#FFE5F0] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
@@ -1225,7 +1225,7 @@ function App() {
               {/* Mobile Slide 3: Komalpreet */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#FFF9E5] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+                  className="bg-[#FFF9E5] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
@@ -1259,7 +1259,7 @@ function App() {
               {/* Mobile Slide 4: Sundar */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#E5F9F0] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+                  className="bg-[#E5F9F0] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
@@ -1291,7 +1291,7 @@ function App() {
               {/* Mobile Slide 5: Satvik */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#F0E5FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+                  className="bg-[#F0E5FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
@@ -1323,7 +1323,7 @@ function App() {
               {/* Mobile Slide 6: Jai */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#FFE5D9] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+                  className="bg-[#FFE5D9] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
