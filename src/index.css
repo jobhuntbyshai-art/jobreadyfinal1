@@ -22,6 +22,15 @@
   }
 }
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
 .animate-tilt {
   animation: tilt 2s ease-in-out infinite;
 }
@@ -29,4 +38,8 @@
 .animate-highlight {
   animation: highlight 0.8s ease-out 1s forwards;
   transform: scaleX(0) rotate(-1deg);
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
 }

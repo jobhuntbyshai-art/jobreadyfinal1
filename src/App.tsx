@@ -977,61 +977,81 @@ function App() {
 
       {/* Next Batch Card */}
       <section className="px-6 py-16">
-        <div className="max-w-6xl mx-auto">
-          <div className="bg-[#F4E04D] rounded-3xl p-8 md:p-16 overflow-hidden">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              {/* Left Side - Content */}
-              <div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#1A1A2E] leading-tight">
-                  Next batch starts soon.
-                </h2>
-                
-                <div className="space-y-3 mb-8 text-[#1A1A2E]/80 text-lg">
-                  <p><span className="font-semibold text-[#1A1A2E]">Batch:</span> 15th Nov'25</p>
-                  <p><span className="font-semibold text-[#1A1A2E]">Seats left:</span> 4/20</p>
-                  <p><span className="font-semibold text-[#1A1A2E]">Duration:</span> 2 Weeks</p>
-                  <p className="text-2xl font-bold text-[#1A1A2E] pt-2">
-                    ₹7,999 <span className="text-lg line-through opacity-60">₹11,000</span>
-                  </p>
-                  <p className="text-sm text-[#1A1A2E]/70">(Early bird for first 7 designers)</p>
-                </div>
-
-                <button
-                  onClick={() => setIsModalOpen(true)}
-                  className="px-8 py-4 bg-[#1A1A2E] text-[#F4E04D] rounded-lg hover:bg-[#1A1A2E]/90 transition font-semibold text-lg"
-                  data-testid="button-join-now-footer"
-                >
-                  Join Now →
-                </button>
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-[#1A1A2E] rounded-3xl p-8 md:p-12 overflow-hidden">
+            {/* Center aligned content */}
+            <div className="text-center">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#1A1A2E]/50 border border-[#F4E04D]/30 rounded-full mb-6">
+                <Star className="w-4 h-4 text-[#F4E04D]" />
+                <span className="text-[#F4E04D] text-sm font-medium">JOIN US NOW</span>
               </div>
 
-              {/* Right Side - Mentee Photos Carousel */}
-              <div className="flex justify-center items-center">
-                <div className="relative w-64 h-64">
-                  {/* Circular avatars arranged in a pattern */}
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full border-4 border-[#1A1A2E] overflow-hidden shadow-lg animate-bounce">
-                    <img src="/harshita.png" alt="Harshita" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="absolute top-1/4 right-0 w-16 h-16 rounded-full border-4 border-[#1A1A2E] overflow-hidden shadow-lg animate-pulse" style={{ animationDelay: '0.2s' }}>
-                    <img src="/madhulika_1761106014792.png" alt="Madhulika" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="absolute bottom-1/4 right-0 w-16 h-16 rounded-full border-4 border-[#1A1A2E] overflow-hidden shadow-lg animate-pulse" style={{ animationDelay: '0.4s' }}>
-                    <img src="/satvik_1761115411601.png" alt="Satvik" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full border-4 border-[#1A1A2E] overflow-hidden shadow-lg animate-bounce" style={{ animationDelay: '0.6s' }}>
-                    <img src="/komal_1761106764386.png" alt="Komal" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="absolute bottom-1/4 left-0 w-16 h-16 rounded-full border-4 border-[#1A1A2E] overflow-hidden shadow-lg animate-pulse" style={{ animationDelay: '0.8s' }}>
-                    <img src="/jai_1761117846125.png" alt="Jai" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="absolute top-1/4 left-0 w-16 h-16 rounded-full border-4 border-[#1A1A2E] overflow-hidden shadow-lg animate-pulse" style={{ animationDelay: '1s' }}>
-                    <img src="/sundar.png" alt="Sundar" className="w-full h-full object-cover" />
-                  </div>
-                  
-                  {/* Center Circle */}
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-[#1A1A2E] flex items-center justify-center shadow-xl">
-                    <span className="text-[#F4E04D] font-bold text-sm text-center">100+<br/>Designers</span>
-                  </div>
+              {/* Heading */}
+              <h2 className="text-4xl md:text-5xl font-bold mb-12 text-white leading-tight">
+                Next batch starts soon
+              </h2>
+              
+              {/* Info Cards Row */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                {/* Next Batch */}
+                <div className="bg-[#2A2A3E] rounded-2xl p-6">
+                  <p className="text-3xl md:text-4xl font-bold text-white mb-2" data-testid="text-batch-date">15th Nov'25</p>
+                  <p className="text-white/60 text-sm">Next Batch</p>
+                </div>
+                
+                {/* Seats Left */}
+                <div className="bg-[#2A2A3E] rounded-2xl p-6">
+                  <p className="text-3xl md:text-4xl font-bold text-white mb-2" data-testid="text-seats-left">4/20</p>
+                  <p className="text-white/60 text-sm">Seats left</p>
+                </div>
+                
+                {/* Duration */}
+                <div className="bg-[#2A2A3E] rounded-2xl p-6">
+                  <p className="text-3xl md:text-4xl font-bold text-white mb-2" data-testid="text-duration">2 Weeks</p>
+                  <p className="text-white/60 text-sm">Duration</p>
+                </div>
+              </div>
+
+              {/* Pricing */}
+              <div className="mb-8">
+                <p className="text-3xl font-bold text-[#F4E04D] mb-2">
+                  ₹7,999 <span className="text-xl text-white/40 line-through ml-2">₹11,000</span>
+                </p>
+                <p className="text-white/60 text-sm">(Early bird for first 7 designers)</p>
+              </div>
+
+              {/* CTA Button */}
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="px-10 py-4 bg-[#F4E04D] text-[#1A1A2E] rounded-full hover:bg-[#F4E04D]/90 transition font-semibold text-lg mb-12 inline-flex items-center gap-2"
+                data-testid="button-join-now-footer"
+              >
+                Join Now
+                <ChevronRight className="w-5 h-5" />
+              </button>
+
+              {/* Scrolling Mentee Photos */}
+              <div className="relative overflow-hidden">
+                <div className="flex gap-4 animate-scroll">
+                  {/* First set of images */}
+                  <img src="/harshita.png" alt="Harshita" className="w-16 h-16 rounded-full border-2 border-[#F4E04D] flex-shrink-0 object-cover" />
+                  <img src="/madhulika_1761106014792.png" alt="Madhulika" className="w-16 h-16 rounded-full border-2 border-[#F4E04D] flex-shrink-0 object-cover" />
+                  <img src="/satvik_1761115411601.png" alt="Satvik" className="w-16 h-16 rounded-full border-2 border-[#F4E04D] flex-shrink-0 object-cover" />
+                  <img src="/komal_1761106764386.png" alt="Komal" className="w-16 h-16 rounded-full border-2 border-[#F4E04D] flex-shrink-0 object-cover" />
+                  <img src="/jai_1761117846125.png" alt="Jai" className="w-16 h-16 rounded-full border-2 border-[#F4E04D] flex-shrink-0 object-cover" />
+                  <img src="/sundar.png" alt="Sundar" className="w-16 h-16 rounded-full border-2 border-[#F4E04D] flex-shrink-0 object-cover" />
+                  <img src="/arun.png" alt="Arun" className="w-16 h-16 rounded-full border-2 border-[#F4E04D] flex-shrink-0 object-cover" />
+                  <img src="/sanket.png" alt="Sanket" className="w-16 h-16 rounded-full border-2 border-[#F4E04D] flex-shrink-0 object-cover" />
+                  {/* Duplicate set for seamless loop */}
+                  <img src="/harshita.png" alt="Harshita" className="w-16 h-16 rounded-full border-2 border-[#F4E04D] flex-shrink-0 object-cover" />
+                  <img src="/madhulika_1761106014792.png" alt="Madhulika" className="w-16 h-16 rounded-full border-2 border-[#F4E04D] flex-shrink-0 object-cover" />
+                  <img src="/satvik_1761115411601.png" alt="Satvik" className="w-16 h-16 rounded-full border-2 border-[#F4E04D] flex-shrink-0 object-cover" />
+                  <img src="/komal_1761106764386.png" alt="Komal" className="w-16 h-16 rounded-full border-2 border-[#F4E04D] flex-shrink-0 object-cover" />
+                  <img src="/jai_1761117846125.png" alt="Jai" className="w-16 h-16 rounded-full border-2 border-[#F4E04D] flex-shrink-0 object-cover" />
+                  <img src="/sundar.png" alt="Sundar" className="w-16 h-16 rounded-full border-2 border-[#F4E04D] flex-shrink-0 object-cover" />
+                  <img src="/arun.png" alt="Arun" className="w-16 h-16 rounded-full border-2 border-[#F4E04D] flex-shrink-0 object-cover" />
+                  <img src="/sanket.png" alt="Sanket" className="w-16 h-16 rounded-full border-2 border-[#F4E04D] flex-shrink-0 object-cover" />
                 </div>
               </div>
             </div>
