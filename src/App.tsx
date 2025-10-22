@@ -5,6 +5,7 @@ function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [currentMentor, setCurrentMentor] = useState(0);
   const [currentCaseStudy, setCurrentCaseStudy] = useState(0);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [iframeUrl, setIframeUrl] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showAllSchedule, setShowAllSchedule] = useState(false);
@@ -930,8 +931,18 @@ function App() {
 
         <div className="max-w-4xl mx-auto">
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Testimonials Carousel */}
+        <div className="relative">
+          {/* Carousel Container */}
+          <div className="overflow-hidden">
+            {/* Desktop: 3 slides with 2 testimonials each */}
+            <div 
+              className="hidden md:flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
+            >
+              {/* Slide 1: Harshita & Madhulika */}
+              <div className="w-full flex-shrink-0">
+                <div className="grid grid-cols-2 gap-8">
           {/* Harshita's Testimonial */}
           <div 
             className="bg-[#D9F0FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
@@ -996,7 +1007,12 @@ function App() {
               </div>
             </div>
           </div>
+                </div>
+              </div>
 
+              {/* Slide 2: Komalpreet & Sundar */}
+              <div className="w-full flex-shrink-0">
+                <div className="grid grid-cols-2 gap-8">
           {/* Komalpreet's Testimonial */}
           <div 
             className="bg-[#FFF9E5] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
@@ -1060,7 +1076,12 @@ function App() {
               </div>
             </div>
           </div>
+                </div>
+              </div>
 
+              {/* Slide 3: Satvik & Jai */}
+              <div className="w-full flex-shrink-0">
+                <div className="grid grid-cols-2 gap-8">
           {/* Satvik's Testimonial */}
           <div 
             className="bg-[#F0E5FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
@@ -1123,6 +1144,262 @@ function App() {
                 <div className="text-xs text-[#1A1A2E]/50">Lead UX UI Designer</div>
               </div>
             </div>
+          </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile: 6 slides with 1 testimonial each */}
+            <div 
+              className="flex md:hidden transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentTestimonial * 100}%)` }}
+            >
+              {/* Mobile Slide 1: Harshita */}
+              <div className="w-full flex-shrink-0">
+                <div 
+                  className="bg-[#D9F0FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+                  style={{
+                    clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
+                  }}
+                  data-testid="testimonial-harshita-mobile"
+                >
+                  <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
+                  <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+                    It started off great for me, and I got a much-needed reality check on my existing work — which I see as a positive thing. Even senior designers rarely give such honest feedback, so that's really valuable.
+                    <br/><br/>
+                    Both Shai and Nandini have been very supportive throughout.
+                    <br/><br/>
+                    I'm trying to catch up with everything, and <span className="relative inline-block px-1">
+                      <span className="relative z-10">I even got two interview calls during the sessions</span>
+                      <span className="absolute bottom-0 left-0 w-full h-3 bg-[#A8D5F0] -rotate-1"></span>
+                    </span>. I haven't cleared them completely yet since I'm still learning, but I'm confident that I'll land a good opportunity within the next 2–3 months.
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src="/harshita.png" 
+                      alt="Harshita Gautam" 
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <div className="text-sm font-medium text-[#1A1A2E]">Harshita Gautam</div>
+                      <div className="text-xs text-[#1A1A2E]/50">Product Designer</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile Slide 2: Madhulika */}
+              <div className="w-full flex-shrink-0">
+                <div 
+                  className="bg-[#FFE5F0] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+                  style={{
+                    clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
+                  }}
+                  data-testid="testimonial-madhulika-mobile"
+                >
+                  <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
+                  <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+                    The program has been incredibly helpful. I'd spent weeks refining my case study but was never fully satisfied. <span className="relative inline-block px-1">
+                      <span className="relative z-10">Session 1 with Shai brought complete clarity—within two days, I felt confident about my case study.</span>
+                      <span className="absolute bottom-0 left-0 w-full h-3 bg-[#FFB6D9] -rotate-1"></span>
+                    </span>
+                    <br/><br/>
+                    Session 2 gave deeper insights into Shai's process and how to connect design decisions to real outcomes. The resume session was highly actionable—I learned small mistakes that could've affected my ATS ranking. Nandini's session was clear, structured, and easy to apply.
+                    <br/><br/>
+                    Overall, I'm very happy with the program. Great work, team!
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src="/madhulika_1761106014792.png" 
+                      alt="Madhulika" 
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <div className="text-sm font-medium text-[#1A1A2E]">Madhulika</div>
+                      <div className="text-xs text-[#1A1A2E]/50">UX UI Designer</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile Slide 3: Komalpreet */}
+              <div className="w-full flex-shrink-0">
+                <div 
+                  className="bg-[#FFF9E5] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+                  style={{
+                    clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
+                  }}
+                  data-testid="testimonial-komalpreet-mobile"
+                >
+                  <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
+                  <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+                    The sprint has been incredible. Shai explained everything clearly and handled every doubt with patience and genuine dedication. While applying his feedback, I could see my case study completely transform. <span className="relative inline-block px-1">
+                      <span className="relative z-10">His detailed feedback—complete with examples for every section—was beyond what I expected.</span>
+                      <span className="absolute bottom-0 left-0 w-full h-3 bg-[#F4E04D] -rotate-1"></span>
+                    </span>
+                    <br/><br/>
+                    Nandini's session completely changed my perspective on resumes. She explained how ATS works, how to validate resumes, and how small details make a big difference. Her clarity and structured approach made everything click.
+                    <br/><br/>
+                    I'm confident that after this 2-week sprint, I'll start getting more HR callbacks and even inbound opportunities. Thank you, Shai and Nandini!
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src="/komal_1761106764386.png" 
+                      alt="Komalpreet Kaur" 
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <div className="text-sm font-medium text-[#1A1A2E]">Komalpreet Kaur</div>
+                      <div className="text-xs text-[#1A1A2E]/50">UX Designer</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile Slide 4: Sundar */}
+              <div className="w-full flex-shrink-0">
+                <div 
+                  className="bg-[#E5F9F0] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+                  style={{
+                    clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
+                  }}
+                  data-testid="testimonial-sundar-mobile"
+                >
+                  <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
+                  <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+                    This program has truly boosted my confidence. It's pushed me to refine my work and understand the finer, industry-level nuances of presenting it effectively. <span className="relative inline-block px-1">
+                      <span className="relative z-10">I've learned how to prepare for interviews, build strong supporting assets, and position myself to stand out.</span>
+                      <span className="absolute bottom-0 left-0 w-full h-3 bg-[#A8E6CF] -rotate-1"></span>
+                    </span>
+                    <br/><br/>
+                    It's been a valuable and insightful journey in every aspect of job hunting.
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src="/sundaraganapthy.png" 
+                      alt="Sundar" 
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <div className="text-sm font-medium text-[#1A1A2E]">Sundar</div>
+                      <div className="text-xs text-[#1A1A2E]/50">UI UX Designer</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile Slide 5: Satvik */}
+              <div className="w-full flex-shrink-0">
+                <div 
+                  className="bg-[#F0E5FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+                  style={{
+                    clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
+                  }}
+                  data-testid="testimonial-satvik-mobile"
+                >
+                  <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
+                  <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+                    When I joined this program, my goal was to understand what recruiters truly look for. Even with solid projects and a good portfolio, I hadn't received interview calls for over a month — until I joined Shai's Job Ready Program. <span className="relative inline-block px-1">
+                      <span className="relative z-10">It turned out to be a game-changer, helping me craft an ATS-friendly résumé and build a strong case study from a project I had once overlooked.</span>
+                      <span className="absolute bottom-0 left-0 w-full h-3 bg-[#D4B5FF] -rotate-1"></span>
+                    </span>
+                    <br/><br/>
+                    Nandini's LinkedIn Masterclass was equally transformative — after implementing her tips, I started receiving inbound interest from companies like SuperMoney, PhonePe, and Juspay. I'm deeply grateful to Shai and Nandini!
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src="/satvik_1761115411601.png" 
+                      alt="Satvik" 
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <div className="text-sm font-medium text-[#1A1A2E]">Satvik</div>
+                      <div className="text-xs text-[#1A1A2E]/50">Product Designer, NxtWave</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile Slide 6: Jai */}
+              <div className="w-full flex-shrink-0">
+                <div 
+                  className="bg-[#FFE5D9] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+                  style={{
+                    clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
+                  }}
+                  data-testid="testimonial-jai-mobile"
+                >
+                  <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
+                  <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+                    For the past year, my biggest hurdle was building a portfolio. I kept overthinking layouts and spending endless hours chasing perfection. <span className="relative inline-block px-1">
+                      <span className="relative z-10">Thanks to Job Ready and the Designfolio template, that struggle is finally over.</span>
+                      <span className="absolute bottom-0 left-0 w-full h-3 bg-[#FFCCB3] -rotate-1"></span>
+                    </span>
+                    <br/><br/>
+                    The program gave me a clear, structured way to present my work — letting me focus on the story, not the design. The hesitation is gone, and I now have a professional UI/UX portfolio that I'm genuinely proud of. I'm confident it will help me land my next opportunity.
+                    <br/><br/>
+                    A huge thank you to the Job Ready B2 program for empowering me! 💪🏻✨
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <img 
+                      src="/jai_1761117846125.png" 
+                      alt="Jai Sankhla" 
+                      className="w-10 h-10 rounded-full object-cover"
+                    />
+                    <div>
+                      <div className="text-sm font-medium text-[#1A1A2E]">Jai Sankhla</div>
+                      <div className="text-xs text-[#1A1A2E]/50">Lead UX UI Designer</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Navigation - Desktop (3 slides) */}
+          <div className="hidden md:flex items-center justify-center gap-4 mt-8">
+            <button
+              onClick={() => setCurrentTestimonial((prev) => (prev - 1 + 3) % 3)}
+              className="p-2 rounded-full border-2 border-[#1A1A2E] transition hover:bg-[#F4E04D] cursor-pointer"
+              data-testid="button-prev-testimonial"
+              aria-label="Previous testimonials"
+            >
+              <ChevronLeft className="w-5 h-5 text-[#1A1A2E]" />
+            </button>
+            <button
+              onClick={() => setCurrentTestimonial((prev) => (prev + 1) % 3)}
+              className="p-2 rounded-full border-2 border-[#1A1A2E] transition hover:bg-[#F4E04D] cursor-pointer"
+              data-testid="button-next-testimonial"
+              aria-label="Next testimonials"
+            >
+              <ChevronRight className="w-5 h-5 text-[#1A1A2E]" />
+            </button>
+            <span className="text-sm text-[#1A1A2E]/60">
+              {currentTestimonial + 1} of 3
+            </span>
+          </div>
+
+          {/* Navigation - Mobile (6 slides) */}
+          <div className="flex md:hidden items-center justify-center gap-4 mt-8">
+            <button
+              onClick={() => setCurrentTestimonial((prev) => (prev - 1 + 6) % 6)}
+              className="p-2 rounded-full border-2 border-[#1A1A2E] transition hover:bg-[#F4E04D] cursor-pointer"
+              data-testid="button-prev-testimonial-mobile"
+              aria-label="Previous testimonial"
+            >
+              <ChevronLeft className="w-5 h-5 text-[#1A1A2E]" />
+            </button>
+            <button
+              onClick={() => setCurrentTestimonial((prev) => (prev + 1) % 6)}
+              className="p-2 rounded-full border-2 border-[#1A1A2E] transition hover:bg-[#F4E04D] cursor-pointer"
+              data-testid="button-next-testimonial-mobile"
+              aria-label="Next testimonial"
+            >
+              <ChevronRight className="w-5 h-5 text-[#1A1A2E]" />
+            </button>
+            <span className="text-sm text-[#1A1A2E]/60">
+              {currentTestimonial + 1} of 6
+            </span>
           </div>
         </div>
         </div>
