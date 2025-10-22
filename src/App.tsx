@@ -595,28 +595,31 @@ function App() {
                       </div>
                     </div>
 
-                    {/* Second Card - Placeholder */}
+                    {/* Madhulika's Real Case Study */}
                     <div 
-                      className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+                      className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
                       data-testid="card-case-study-1"
+                      onClick={() => setIframeUrl('https://madhulikak.framer.website/')}
                     >
-                      {/* Placeholder Image */}
-                      <div className="w-full h-48 bg-gradient-to-br from-[#F4E04D] via-[#B8A8D8] to-[#FFB6C1] flex items-center justify-center">
-                        <div className="text-[#1A1A2E]/20 font-bold text-xl">
-                          Case Study 2
-                        </div>
+                      {/* Real Thumbnail */}
+                      <div className="w-full h-48 overflow-hidden">
+                        <img 
+                          src="/madhulika-uxproject.png" 
+                          alt="Madhulika Case Study" 
+                          className="w-full h-full object-cover border-b-2 border-[#1A1A2E]/10"
+                        />
                       </div>
                       
                       {/* Content */}
                       <div className="p-4">
-                        <h3 className="font-bold text-lg text-[#1A1A2E] mb-1">
-                          E-Commerce Checkout Flow
+                        <h3 className="font-bold text-lg text-[#1A1A2E] mb-1 line-clamp-2">
+                          Designing AI Mentor experience from 0→1 for the first 50,000 learners
                         </h3>
                         <p className="text-[#1A1A2E]/60 text-sm mb-0.5">
-                          Flipkart Case Study
+                          AI Mentor Platform
                         </p>
                         <p className="text-[#1A1A2E]/80 text-sm mb-3">
-                          by Rahul Mehta
+                          by Madhulika
                         </p>
                         
                         {/* View Button */}
