@@ -448,18 +448,13 @@ function App() {
                     
                     <div className="mb-4 p-4 bg-[#F4E04D]/30 rounded-lg border-l-4 border-[#1A1A2E]">
                       <p className="text-[#1A1A2E] text-base font-semibold italic">
-                        "Great designers — despite how good they are at work — fail to showcase their work the best."
+                        "Great designers — despite how good they are — often fail to showcase their work the best."
                       </p>
                     </div>
 
                     <div className="space-y-3 text-[#1A1A2E]/70 text-sm leading-relaxed mb-6">
-                      <p>Last year, I ran a campaign where I reviewed over 200+ portfolios.</p>
-                      <p>And the pattern was painfully clear — most designers weren't bad at design, they were bad at storytelling their design.</p>
-                      <p>I could see brilliant work hidden under cluttered layouts, weak narratives, and forgotten impact metrics.</p>
-                      <p>That's when I decided to turn this into a mission — to help designers translate their work into a story recruiters can actually understand and remember.</p>
-                      <p className="font-semibold text-[#1A1A2E]">The truth is, your portfolio isn't a mirror of your skill; it's a reflection of how you communicate your skill.</p>
-                      <p>We'll dig deep into how to position yourself, how to make your projects speak outcomes (not features), and how to create a structure that makes recruiters stop scrolling.</p>
-                      <p className="font-semibold text-[#1A1A2E]">By the end, you won't just have a better portfolio — you'll have a narrative that sells you.</p>
+                      <p>Last year, I reviewed over 200+ portfolios and realized most weren't bad at design — just bad at storytelling. Brilliant work often gets lost in cluttered layouts and weak narratives.</p>
+                      <p>That's why I built this program: to help designers translate their work into stories recruiters actually understand. Your portfolio isn't just a showcase — it's your story, told right. By the end, you won't just have better projects, you'll have a narrative that truly sells you.</p>
                     </div>
                     
                     <div className="flex flex-wrap items-center gap-2 text-sm text-[#1A1A2E]/60">
