@@ -1023,11 +1023,12 @@ function App() {
           </div>
 
           {/* Bottom: Mentee Photos */}
-          <div className="relative overflow-hidden pt-8 border-t border-[#1A1A2E]/5">
+          <div className="relative overflow-hidden pt-8 border-t border-[#1A1A2E]/5 flex justify-center">
             <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-[#E8E4D9] to-transparent z-10 pointer-events-none"></div>
             <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-[#E8E4D9] to-transparent z-10 pointer-events-none"></div>
             
-            <div className="flex gap-3 animate-scroll">
+            <div className="flex gap-3 animate-scroll-seamless">
+              {/* First set */}
               <img src="/harshita.png" alt="Harshita" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
               <img src="/madhulika_1761106014792.png" alt="Madhulika" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
               <img src="/satvik_1761115411601.png" alt="Satvik" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
@@ -1036,6 +1037,16 @@ function App() {
               <img src="/sundar.png" alt="Sundar" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
               <img src="/arun.png" alt="Arun" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
               <img src="/sanket.png" alt="Sanket" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              {/* Second set for seamless loop */}
+              <img src="/harshita.png" alt="Harshita" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/madhulika_1761106014792.png" alt="Madhulika" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/satvik_1761115411601.png" alt="Satvik" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/komal_1761106764386.png" alt="Komal" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/jai_1761117846125.png" alt="Jai" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/sundar.png" alt="Sundar" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/arun.png" alt="Arun" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              <img src="/sanket.png" alt="Sanket" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
+              {/* Third set for smooth continuous loop */}
               <img src="/harshita.png" alt="Harshita" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
               <img src="/madhulika_1761106014792.png" alt="Madhulika" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
               <img src="/satvik_1761115411601.png" alt="Satvik" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />

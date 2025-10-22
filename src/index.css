@@ -31,6 +31,15 @@
   }
 }
 
+@keyframes scroll-seamless {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% / 3));
+  }
+}
+
 .animate-tilt {
   animation: tilt 2s ease-in-out infinite;
 }
@@ -42,4 +51,8 @@
 
 .animate-scroll {
   animation: scroll 20s linear infinite;
+}
+
+.animate-scroll-seamless {
+  animation: scroll-seamless 30s linear infinite;
 }
