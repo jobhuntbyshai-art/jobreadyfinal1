@@ -780,6 +780,39 @@ function App() {
               </div>
             </div>
           </div>
+
+          {/* Jai's Testimonial */}
+          <div 
+            className="bg-[#FFE5D9] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+            style={{
+              clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
+            }}
+            data-testid="testimonial-jai"
+          >
+            <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
+            <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+              For the past year, my biggest hurdle was building a portfolio. I kept overthinking layouts and spending endless hours chasing perfection. <span className="relative inline-block px-1">
+                <span className="relative z-10">Thanks to Job Ready and the Designfolio template, that struggle is finally over.</span>
+                <span className="absolute bottom-0 left-0 w-full h-3 bg-[#FFCCB3] -rotate-1"></span>
+              </span>
+              <br/><br/>
+              The program gave me a clear, structured way to present my work — letting me focus on the story, not the design. The hesitation is gone, and I now have a professional UI/UX portfolio that I'm genuinely proud of. I'm confident it will help me land my next opportunity.
+              <br/><br/>
+              A huge thank you to the Job Ready B2 program for empowering me! 💪🏻✨
+            </p>
+            <div className="flex items-center gap-3">
+              <img 
+                src="/jai_1761117846125.png" 
+                alt="Jai Sankhla" 
+                className="w-10 h-10 rounded-full object-cover"
+                data-testid="img-jai"
+              />
+              <div>
+                <div className="text-sm font-medium text-[#1A1A2E]">Jai Sankhla</div>
+                <div className="text-xs text-[#1A1A2E]/50">Lead UX UI Designer</div>
+              </div>
+            </div>
+          </div>
         </div>
         </div>
       </section>
