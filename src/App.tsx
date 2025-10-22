@@ -747,6 +747,62 @@ function App() {
         </div>
       </section>
 
+      {/* A Note from Shai Krishna */}
+      <section className="px-6 py-16 bg-gradient-to-br from-[#F4E04D]/20 to-[#FFB6D9]/20">
+        <div className="max-w-3xl mx-auto">
+          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl border-2 border-[#1A1A2E]/10">
+            <h2 className="text-2xl md:text-3xl font-bold mb-3 text-[#1A1A2E]">
+              📨 A Note from Shai Krishna
+            </h2>
+            <p className="text-[#1A1A2E]/60 text-sm md:text-base mb-8">
+              Staff Product Designer @Sense | Ex-Freshworks | Founder @Designfolio
+            </p>
+            
+            <div className="mb-6 p-6 bg-[#F4E04D]/30 rounded-lg border-l-4 border-[#1A1A2E]">
+              <p className="text-[#1A1A2E] text-lg md:text-xl font-semibold italic">
+                "Great designers — despite how good they are at work — fail to showcase their work the best."
+              </p>
+            </div>
+
+            <div className="space-y-4 text-[#1A1A2E]/80 text-base leading-relaxed">
+              <p>
+                Last year, I ran a campaign where I reviewed over 200+ portfolios.
+              </p>
+              <p>
+                And the pattern was painfully clear — most designers weren't bad at design, they were bad at storytelling their design.
+              </p>
+              <p>
+                I could see brilliant work hidden under cluttered layouts, weak narratives, and forgotten impact metrics.
+              </p>
+              <p>
+                That's when I decided to turn this into a mission — to help designers translate their work into a story recruiters can actually understand and remember.
+              </p>
+              <p className="font-semibold text-[#1A1A2E]">
+                The truth is, your portfolio isn't a mirror of your skill; it's a reflection of how you communicate your skill.
+              </p>
+              <p>
+                We'll dig deep into how to position yourself, how to make your projects speak outcomes (not features), and how to create a structure that makes recruiters stop scrolling.
+              </p>
+              <p className="font-semibold text-[#1A1A2E] text-lg">
+                By the end, you won't just have a better portfolio — you'll have a narrative that sells you.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap items-center gap-2 mt-8 pt-6 border-t border-[#1A1A2E]/10">
+              <span className="px-4 py-2 bg-[#D9F0FF] rounded-full text-[#1A1A2E] text-sm font-medium">
+                Portfolio Storytelling
+              </span>
+              <span className="px-4 py-2 bg-[#FFE5F0] rounded-full text-[#1A1A2E] text-sm font-medium">
+                UX Whiteboarding
+              </span>
+              <span className="px-4 py-2 bg-[#D4B5FF] rounded-full text-[#1A1A2E] text-sm font-medium">
+                Personal Branding for Designers
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section className="px-6 pt-16 pb-24">
         <div className="text-center mb-16 max-w-4xl mx-auto">
