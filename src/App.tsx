@@ -977,53 +977,63 @@ function App() {
 
       {/* Next Batch Card */}
       <section className="px-6 py-16">
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-white border-2 border-[#1A1A2E] rounded-lg p-8 md:p-12 shadow-lg">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-[#1A1A2E]">
-              Next batch starts soon
-            </h2>
-            
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              {/* Next Batch */}
-              <div className="text-center p-4 bg-[#D9F0FF] rounded-lg">
-                <p className="text-sm text-[#1A1A2E]/60 mb-2">Next Batch</p>
-                <p className="text-xl font-bold text-[#1A1A2E]" data-testid="text-batch-date">15th Nov'25</p>
-              </div>
-              
-              {/* Seats Left */}
-              <div className="text-center p-4 bg-[#FFE5F0] rounded-lg">
-                <p className="text-sm text-[#1A1A2E]/60 mb-2">Seats left</p>
-                <p className="text-xl font-bold text-[#1A1A2E]" data-testid="text-seats-left">4/20</p>
-              </div>
-              
-              {/* Duration */}
-              <div className="text-center p-4 bg-[#D4B5FF] rounded-lg">
-                <p className="text-sm text-[#1A1A2E]/60 mb-2">Duration</p>
-                <p className="text-xl font-bold text-[#1A1A2E]" data-testid="text-duration">2 Weeks</p>
-              </div>
-            </div>
-
-            {/* Pricing */}
-            <div className="text-center mb-8">
-              <div className="inline-block p-6 bg-[#F4E04D]/30 rounded-lg border-2 border-[#F4E04D]">
-                <p className="text-sm text-[#1A1A2E]/60 mb-2">Early bird</p>
-                <div className="flex items-center justify-center gap-3">
-                  <p className="text-3xl md:text-4xl font-bold text-[#1A1A2E]" data-testid="text-price-early">₹7,999</p>
-                  <p className="text-xl text-[#1A1A2E]/40 line-through" data-testid="text-price-original">₹11,000</p>
+        <div className="max-w-6xl mx-auto">
+          <div className="bg-[#F4E04D] rounded-3xl p-8 md:p-16 overflow-hidden">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              {/* Left Side - Content */}
+              <div>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-[#1A1A2E] leading-tight">
+                  Next batch starts soon.
+                </h2>
+                
+                <div className="space-y-3 mb-8 text-[#1A1A2E]/80 text-lg">
+                  <p><span className="font-semibold text-[#1A1A2E]">Batch:</span> 15th Nov'25</p>
+                  <p><span className="font-semibold text-[#1A1A2E]">Seats left:</span> 4/20</p>
+                  <p><span className="font-semibold text-[#1A1A2E]">Duration:</span> 2 Weeks</p>
+                  <p className="text-2xl font-bold text-[#1A1A2E] pt-2">
+                    ₹7,999 <span className="text-lg line-through opacity-60">₹11,000</span>
+                  </p>
+                  <p className="text-sm text-[#1A1A2E]/70">(Early bird for first 7 designers)</p>
                 </div>
-                <p className="text-xs text-[#1A1A2E]/60 mt-2">(Only for first 7 Designers)</p>
-              </div>
-            </div>
 
-            {/* CTA Button */}
-            <div className="text-center">
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="px-10 py-4 bg-[#1A1A2E] text-[#E8E4D9] rounded-lg hover:bg-[#1A1A2E]/90 transition font-semibold text-lg"
-                data-testid="button-join-now-footer"
-              >
-                Join Now
-              </button>
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  className="px-8 py-4 bg-[#1A1A2E] text-[#F4E04D] rounded-lg hover:bg-[#1A1A2E]/90 transition font-semibold text-lg"
+                  data-testid="button-join-now-footer"
+                >
+                  Join Now →
+                </button>
+              </div>
+
+              {/* Right Side - Mentee Photos Carousel */}
+              <div className="flex justify-center items-center">
+                <div className="relative w-64 h-64">
+                  {/* Circular avatars arranged in a pattern */}
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full border-4 border-[#1A1A2E] overflow-hidden shadow-lg animate-bounce">
+                    <img src="/harshita.png" alt="Harshita" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="absolute top-1/4 right-0 w-16 h-16 rounded-full border-4 border-[#1A1A2E] overflow-hidden shadow-lg animate-pulse" style={{ animationDelay: '0.2s' }}>
+                    <img src="/madhulika_1761106014792.png" alt="Madhulika" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="absolute bottom-1/4 right-0 w-16 h-16 rounded-full border-4 border-[#1A1A2E] overflow-hidden shadow-lg animate-pulse" style={{ animationDelay: '0.4s' }}>
+                    <img src="/satvik_1761115411601.png" alt="Satvik" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-20 rounded-full border-4 border-[#1A1A2E] overflow-hidden shadow-lg animate-bounce" style={{ animationDelay: '0.6s' }}>
+                    <img src="/komal_1761106764386.png" alt="Komal" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="absolute bottom-1/4 left-0 w-16 h-16 rounded-full border-4 border-[#1A1A2E] overflow-hidden shadow-lg animate-pulse" style={{ animationDelay: '0.8s' }}>
+                    <img src="/jai_1761117846125.png" alt="Jai" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="absolute top-1/4 left-0 w-16 h-16 rounded-full border-4 border-[#1A1A2E] overflow-hidden shadow-lg animate-pulse" style={{ animationDelay: '1s' }}>
+                    <img src="/sundar.png" alt="Sundar" className="w-full h-full object-cover" />
+                  </div>
+                  
+                  {/* Center Circle */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-[#1A1A2E] flex items-center justify-center shadow-xl">
+                    <span className="text-[#F4E04D] font-bold text-sm text-center">100+<br/>Designers</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
