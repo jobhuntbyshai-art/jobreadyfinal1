@@ -63,7 +63,7 @@ function App() {
     }, 4000); // Change every 4 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [currentCaseStudy]); // Reset timer when slide changes
 
   return (
     <div className="min-h-screen bg-[#E8E4D9] text-[#1A1A2E]">
