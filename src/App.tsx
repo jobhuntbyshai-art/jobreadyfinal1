@@ -1,10 +1,11 @@
-import { Star, FileText, ChevronRight, ChevronLeft } from 'lucide-react';
+import { Star, FileText, ChevronRight, ChevronLeft, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [currentMentor, setCurrentMentor] = useState(0);
   const [currentCaseStudy, setCurrentCaseStudy] = useState(0);
+  const [iframeUrl, setIframeUrl] = useState<string | null>(null);
 
   const testimonials = [
     {
@@ -564,53 +565,78 @@ function App() {
                 {/* Slide 1: First 2 cards */}
                 <div className="w-full flex-shrink-0">
                   <div className="grid md:grid-cols-2 gap-6">
-                    {[
-                      {
-                        name: 'Priya Sharma',
-                        title: 'Food Delivery App Redesign',
-                        company: 'Swiggy Case Study'
-                      },
-                      {
-                        name: 'Rahul Mehta',
-                        title: 'E-Commerce Checkout Flow',
-                        company: 'Flipkart Case Study'
-                      }
-                    ].map((caseStudy, index) => (
-                      <div 
-                        key={index}
-                        className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
-                        data-testid={`card-case-study-${index}`}
-                      >
-                        {/* Leaner Image */}
-                        <div className="w-full h-32 bg-gradient-to-br from-[#F4E04D] via-[#B8A8D8] to-[#FFB6C1] flex items-center justify-center">
-                          <div className="text-[#1A1A2E]/20 font-bold text-xl">
-                            Case Study {index + 1}
-                          </div>
-                        </div>
+                    {/* Pooja's Real Case Study */}
+                    <div 
+                      className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+                      data-testid="card-case-study-0"
+                      onClick={() => setIframeUrl('https://pooja-yerne.designfolio.me/project/68e7779dcb2d80278cace1a2')}
+                    >
+                      {/* Real Thumbnail */}
+                      <div className="w-full h-32 overflow-hidden">
+                        <img 
+                          src="/pooja-uxproject.jpeg" 
+                          alt="Pooja Yerne Case Study" 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      
+                      {/* Content */}
+                      <div className="p-4">
+                        <h3 className="font-bold text-lg text-[#1A1A2E] mb-1 line-clamp-2">
+                          Increased User Engagement by 20% on AI Fashion Assistant
+                        </h3>
+                        <p className="text-[#1A1A2E]/60 text-sm mb-0.5">
+                          AI Assistant
+                        </p>
+                        <p className="text-[#1A1A2E]/80 text-sm mb-3">
+                          by Pooja Yerne
+                        </p>
                         
-                        {/* Leaner Content */}
-                        <div className="p-4">
-                          <h3 className="font-bold text-lg text-[#1A1A2E] mb-1">
-                            {caseStudy.title}
-                          </h3>
-                          <p className="text-[#1A1A2E]/60 text-sm mb-0.5">
-                            {caseStudy.company}
-                          </p>
-                          <p className="text-[#1A1A2E]/80 text-sm mb-3">
-                            by {caseStudy.name}
-                          </p>
-                          
-                          {/* View Button */}
-                          <button 
-                            className="inline-flex items-center gap-2 text-[#1A1A2E] font-semibold text-sm hover:gap-3 transition-all"
-                            data-testid={`button-view-case-${index}`}
-                          >
-                            View Case Study
-                            <ChevronRight className="w-4 h-4" />
-                          </button>
+                        {/* View Button */}
+                        <button 
+                          className="inline-flex items-center gap-2 text-[#1A1A2E] font-semibold text-sm hover:gap-3 transition-all"
+                          data-testid="button-view-case-0"
+                        >
+                          View Case Study
+                          <ChevronRight className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Second Card - Placeholder */}
+                    <div 
+                      className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+                      data-testid="card-case-study-1"
+                    >
+                      {/* Placeholder Image */}
+                      <div className="w-full h-32 bg-gradient-to-br from-[#F4E04D] via-[#B8A8D8] to-[#FFB6C1] flex items-center justify-center">
+                        <div className="text-[#1A1A2E]/20 font-bold text-xl">
+                          Case Study 2
                         </div>
                       </div>
-                    ))}
+                      
+                      {/* Content */}
+                      <div className="p-4">
+                        <h3 className="font-bold text-lg text-[#1A1A2E] mb-1">
+                          E-Commerce Checkout Flow
+                        </h3>
+                        <p className="text-[#1A1A2E]/60 text-sm mb-0.5">
+                          Flipkart Case Study
+                        </p>
+                        <p className="text-[#1A1A2E]/80 text-sm mb-3">
+                          by Rahul Mehta
+                        </p>
+                        
+                        {/* View Button */}
+                        <button 
+                          className="inline-flex items-center gap-2 text-[#1A1A2E] font-semibold text-sm hover:gap-3 transition-all"
+                          data-testid="button-view-case-1"
+                        >
+                          View Case Study
+                          <ChevronRight className="w-4 h-4" />
+                        </button>
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -910,6 +936,38 @@ function App() {
       <footer className="px-6 py-12 text-center text-[#1A1A2E]/40 text-sm">
         <p>© 2024 Digital Product Platform. All rights reserved.</p>
       </footer>
+
+      {/* Iframe Modal Popup */}
+      {iframeUrl && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
+          onClick={() => setIframeUrl(null)}
+          data-testid="iframe-modal-overlay"
+        >
+          <div 
+            className="relative w-full h-full max-w-7xl max-h-[90vh] bg-white rounded-lg overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close Button */}
+            <button
+              onClick={() => setIframeUrl(null)}
+              className="absolute top-4 right-4 z-10 p-2 bg-[#1A1A2E] hover:bg-[#F4E04D] text-white hover:text-[#1A1A2E] rounded-full transition-all shadow-lg"
+              data-testid="button-close-iframe"
+              aria-label="Close"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Iframe */}
+            <iframe
+              src={iframeUrl}
+              className="w-full h-full border-0"
+              title="Case Study Viewer"
+              data-testid="iframe-case-study"
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
