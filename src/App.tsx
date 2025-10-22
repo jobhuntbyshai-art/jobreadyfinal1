@@ -521,11 +521,14 @@ function App() {
                     data-testid="video-mentor-0"
                   />
                 ) : (
-                  <img
-                    src="/sundaraganapthy.png"
-                    alt="Nandini Sharma"
+                  <video
+                    src="/uxmentor2.mp4"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
                     className="w-full h-full object-cover rounded-lg"
-                    data-testid="img-mentor-1"
+                    data-testid="video-mentor-1"
                   />
                 )}
               </div>
