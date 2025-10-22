@@ -679,6 +679,39 @@ function App() {
               </div>
             </div>
           </div>
+
+          {/* Komalpreet's Testimonial */}
+          <div 
+            className="bg-[#FFF9E5] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 hover:rotate-0"
+            style={{
+              clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
+            }}
+            data-testid="testimonial-komalpreet"
+          >
+            <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
+            <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+              The sprint has been incredible. Shai explained everything clearly and handled every doubt with patience and genuine dedication. While applying his feedback, I could see my case study completely transform. <span className="relative inline-block px-1">
+                <span className="relative z-10">His detailed feedback—complete with examples for every section—was beyond what I expected.</span>
+                <span className="absolute bottom-0 left-0 w-full h-3 bg-[#F4E04D] -rotate-1"></span>
+              </span>
+              <br/><br/>
+              Nandini's session completely changed my perspective on resumes. She explained how ATS works, how to validate resumes, and how small details make a big difference. Her clarity and structured approach made everything click.
+              <br/><br/>
+              I'm confident that after this 2-week sprint, I'll start getting more HR callbacks and even inbound opportunities. Thank you, Shai and Nandini!
+            </p>
+            <div className="flex items-center gap-3">
+              <img 
+                src="/komal_1761106764386.png" 
+                alt="Komalpreet Kaur" 
+                className="w-10 h-10 rounded-full object-cover"
+                data-testid="img-komalpreet"
+              />
+              <div>
+                <div className="text-sm font-medium text-[#1A1A2E]">Komalpreet Kaur</div>
+                <div className="text-xs text-[#1A1A2E]/50">UX Designer</div>
+              </div>
+            </div>
+          </div>
         </div>
         </div>
       </section>
