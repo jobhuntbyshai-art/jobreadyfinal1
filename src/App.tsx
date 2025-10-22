@@ -7,6 +7,7 @@ function App() {
   const [currentCaseStudy, setCurrentCaseStudy] = useState(0);
   const [iframeUrl, setIframeUrl] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showAllSchedule, setShowAllSchedule] = useState(false);
 
   const testimonials = [
     {
@@ -362,7 +363,7 @@ function App() {
             { day: 'Day 12', topic: 'Submit your optimized LinkedIn and get Feedback', type: 'Review', color: 'bg-[#FFB6C1]' },
             { day: 'Day 13', topic: 'Learn - How to Crack the HR Interview', type: 'Live Session', color: 'bg-[#F4E04D]' },
             { day: 'Day 14', topic: 'Ask me Anything - QA on Discord (Text Communication)', type: 'AMA', color: 'bg-[#D4A574]' },
-          ].map((item, i) => (
+          ].slice(0, showAllSchedule ? 15 : 6).map((item, i) => (
             <div key={i} className="border-2 border-[#1A1A2E] rounded-lg p-4 bg-white">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-sm font-bold text-[#1A1A2E]">{item.day}</span>
@@ -373,6 +374,16 @@ function App() {
               <p className="text-sm text-[#1A1A2E]">{item.topic}</p>
             </div>
           ))}
+          
+          {!showAllSchedule && (
+            <button
+              onClick={() => setShowAllSchedule(true)}
+              className="w-full py-3 px-4 bg-[#1A1A2E] text-white rounded-lg hover:bg-[#1A1A2E]/90 transition font-medium text-sm"
+              data-testid="button-view-more-schedule"
+            >
+              View More Days →
+            </button>
+          )}
           </div>
         </div>
       </section>
@@ -381,7 +392,7 @@ function App() {
       <section className="py-16 px-6 bg-[#E8E4D9]">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-[#1A1A2E]">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-[#1A1A2E]">
               Turn 2 weeks into a complete career upgrade.
             </h2>
           </div>
@@ -570,13 +581,14 @@ function App() {
           <div className="relative">
             {/* Carousel Container */}
             <div className="overflow-hidden">
+              {/* Desktop: 2 slides with 2 cards each */}
               <div 
-                className="flex transition-transform duration-500 ease-in-out"
+                className="hidden md:flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentCaseStudy * 100}%)` }}
               >
                 {/* Slide 1: First 2 cards */}
                 <div className="w-full flex-shrink-0">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-2 gap-6">
                     {/* Pooja's Real Case Study */}
                     <div 
                       className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
@@ -657,7 +669,7 @@ function App() {
 
                 {/* Slide 2: Second 2 cards */}
                 <div className="w-full flex-shrink-0">
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-2 gap-6">
                     {/* Shreshth's Real Case Study */}
                     <div 
                       className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
@@ -736,10 +748,128 @@ function App() {
                   </div>
                 </div>
               </div>
+
+              {/* Mobile: 4 slides with 1 card each */}
+              <div 
+                className="flex md:hidden transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentCaseStudy * 100}%)` }}
+              >
+                {/* Slide 1: Pooja */}
+                <div className="w-full flex-shrink-0">
+                  <div 
+                    className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+                    data-testid="card-case-study-mobile-0"
+                    onClick={() => setIframeUrl('https://pooja-yerne.designfolio.me/project/68e7779dcb2d80278cace1a2')}
+                  >
+                    <div className="w-full h-48 overflow-hidden">
+                      <img 
+                        src="/pooja-uxproject.jpeg" 
+                        alt="Pooja Yerne Case Study" 
+                        className="w-full h-full object-cover border-b-2 border-[#1A1A2E]/10"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-bold text-lg text-[#1A1A2E] mb-1 line-clamp-2">
+                        Increased User Engagement by 20% on AI Fashion Assistant
+                      </h3>
+                      <p className="text-[#1A1A2E]/60 text-sm mb-0.5">AI Assistant</p>
+                      <p className="text-[#1A1A2E]/80 text-sm mb-3">by Pooja Yerne</p>
+                      <button className="inline-flex items-center gap-2 text-[#1A1A2E] font-semibold text-sm hover:gap-3 transition-all">
+                        View Case Study
+                        <ChevronRight className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Slide 2: Madhulika */}
+                <div className="w-full flex-shrink-0">
+                  <div 
+                    className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+                    data-testid="card-case-study-mobile-1"
+                    onClick={() => setIframeUrl('https://madhulikak.framer.website/')}
+                  >
+                    <div className="w-full h-48 overflow-hidden">
+                      <img 
+                        src="/madhulika-uxproject.png" 
+                        alt="Madhulika Case Study" 
+                        className="w-full h-full object-cover border-b-2 border-[#1A1A2E]/10"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-bold text-lg text-[#1A1A2E] mb-1 line-clamp-2">
+                        Designing AI Mentor experience from 0→1 for the first 50,000 learners
+                      </h3>
+                      <p className="text-[#1A1A2E]/60 text-sm mb-0.5">AI Mentor Platform</p>
+                      <p className="text-[#1A1A2E]/80 text-sm mb-3">by Madhulika</p>
+                      <button className="inline-flex items-center gap-2 text-[#1A1A2E] font-semibold text-sm hover:gap-3 transition-all">
+                        View Case Study
+                        <ChevronRight className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Slide 3: Shreshth */}
+                <div className="w-full flex-shrink-0">
+                  <div 
+                    className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+                    data-testid="card-case-study-mobile-2"
+                    onClick={() => setIframeUrl('https://shreshth.designfolio.me/project/68b2eae4c864c84e8c17dc12')}
+                  >
+                    <div className="w-full h-48 overflow-hidden">
+                      <img 
+                        src="/shreshth-uxproject.jpeg" 
+                        alt="Shreshth Case Study" 
+                        className="w-full h-full object-cover border-b-2 border-[#1A1A2E]/10"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-bold text-lg text-[#1A1A2E] mb-1 line-clamp-2">
+                        Redesigning University Living's Listing Page experience for 2M+ international students
+                      </h3>
+                      <p className="text-[#1A1A2E]/60 text-sm mb-0.5">Stay Aggregator Platform</p>
+                      <p className="text-[#1A1A2E]/80 text-sm mb-3">by Shreshth</p>
+                      <button className="inline-flex items-center gap-2 text-[#1A1A2E] font-semibold text-sm hover:gap-3 transition-all">
+                        View Case Study
+                        <ChevronRight className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Slide 4: Sundar */}
+                <div className="w-full flex-shrink-0">
+                  <div 
+                    className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+                    data-testid="card-case-study-mobile-3"
+                    onClick={() => setIframeUrl('https://sundaraganapathyv.designfolio.me/project/68e665aecb2d80278caaeb83')}
+                  >
+                    <div className="w-full h-48 overflow-hidden">
+                      <img 
+                        src="/sundaruxcasestudy.png" 
+                        alt="Sundar Case Study" 
+                        className="w-full h-full object-cover border-b-2 border-[#1A1A2E]/10"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-bold text-lg text-[#1A1A2E] mb-1 line-clamp-2">
+                        Redesigning LinkedIn's Comment Section UX to Cut "Time to Insight" by 66%
+                      </h3>
+                      <p className="text-[#1A1A2E]/60 text-sm mb-0.5">Linkedin - Comment Section</p>
+                      <p className="text-[#1A1A2E]/80 text-sm mb-3">by Sundar</p>
+                      <button className="inline-flex items-center gap-2 text-[#1A1A2E] font-semibold text-sm hover:gap-3 transition-all">
+                        View Case Study
+                        <ChevronRight className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            {/* Navigation - Matching Mentor Section Style */}
-            <div className="flex items-center justify-center gap-4 mt-8">
+            {/* Navigation - Desktop (2 slides) */}
+            <div className="hidden md:flex items-center justify-center gap-4 mt-8">
               <button
                 onClick={() => setCurrentCaseStudy((prev) => (prev - 1 + 2) % 2)}
                 className="p-2 rounded-full border-2 border-[#1A1A2E] transition hover:bg-[#F4E04D] cursor-pointer"
@@ -758,6 +888,29 @@ function App() {
               </button>
               <span className="text-sm text-[#1A1A2E]/60">
                 {currentCaseStudy + 1} of 2
+              </span>
+            </div>
+
+            {/* Navigation - Mobile (4 slides) */}
+            <div className="flex md:hidden items-center justify-center gap-4 mt-8">
+              <button
+                onClick={() => setCurrentCaseStudy((prev) => (prev - 1 + 4) % 4)}
+                className="p-2 rounded-full border-2 border-[#1A1A2E] transition hover:bg-[#F4E04D] cursor-pointer"
+                data-testid="button-prev-case-study-mobile"
+                aria-label="Previous case study"
+              >
+                <ChevronLeft className="w-5 h-5 text-[#1A1A2E]" />
+              </button>
+              <button
+                onClick={() => setCurrentCaseStudy((prev) => (prev + 1) % 4)}
+                className="p-2 rounded-full border-2 border-[#1A1A2E] transition hover:bg-[#F4E04D] cursor-pointer"
+                data-testid="button-next-case-study-mobile"
+                aria-label="Next case study"
+              >
+                <ChevronRight className="w-5 h-5 text-[#1A1A2E]" />
+              </button>
+              <span className="text-sm text-[#1A1A2E]/60">
+                {currentCaseStudy + 1} of 4
               </span>
             </div>
           </div>
