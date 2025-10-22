@@ -56,10 +56,10 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
-  // Auto-advance case studies carousel
+  // Auto-advance case studies carousel (2 slides total, showing 2 cards each)
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentCaseStudy((prev) => (prev + 1) % 4);
+      setCurrentCaseStudy((prev) => (prev + 1) % 2);
     }, 4000); // Change every 4 seconds
 
     return () => clearInterval(interval);
@@ -555,109 +555,141 @@ function App() {
 
           {/* Case Studies Carousel */}
           <div className="relative">
-            {/* Chevron Left */}
-            <button
-              onClick={() => setCurrentCaseStudy((prev) => (prev - 1 + 4) % 4)}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 z-10 bg-[#F4E04D] hover:bg-[#F4E04D]/90 p-3 rounded-full shadow-lg transition-all hover:scale-110"
-              data-testid="button-prev-case-study"
-              aria-label="Previous case study"
-            >
-              <ChevronLeft className="w-5 h-5 text-[#1A1A2E]" />
-            </button>
-
             {/* Carousel Container */}
             <div className="overflow-hidden">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentCaseStudy * 100}%)` }}
               >
-                {[
-                  {
-                    name: 'Priya Sharma',
-                    title: 'Food Delivery App Redesign',
-                    company: 'Swiggy Case Study'
-                  },
-                  {
-                    name: 'Rahul Mehta',
-                    title: 'E-Commerce Checkout Flow',
-                    company: 'Flipkart Case Study'
-                  },
-                  {
-                    name: 'Anjali Verma',
-                    title: 'Banking App UX Improvement',
-                    company: 'HDFC Bank Case Study'
-                  },
-                  {
-                    name: 'Karthik Reddy',
-                    title: 'Ed-Tech Learning Platform',
-                    company: 'BYJU\'S Case Study'
-                  }
-                ].map((caseStudy, index) => (
-                  <div 
-                    key={index}
-                    className="w-full flex-shrink-0 px-2"
-                    data-testid={`card-case-study-${index}`}
-                  >
-                    <div className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow mx-auto max-w-2xl">
-                      {/* Leaner Image */}
-                      <div className="w-full h-32 bg-gradient-to-br from-[#F4E04D] via-[#B8A8D8] to-[#FFB6C1] flex items-center justify-center">
-                        <div className="text-[#1A1A2E]/20 font-bold text-xl">
-                          Case Study {index + 1}
+                {/* Slide 1: First 2 cards */}
+                <div className="w-full flex-shrink-0">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {[
+                      {
+                        name: 'Priya Sharma',
+                        title: 'Food Delivery App Redesign',
+                        company: 'Swiggy Case Study'
+                      },
+                      {
+                        name: 'Rahul Mehta',
+                        title: 'E-Commerce Checkout Flow',
+                        company: 'Flipkart Case Study'
+                      }
+                    ].map((caseStudy, index) => (
+                      <div 
+                        key={index}
+                        className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+                        data-testid={`card-case-study-${index}`}
+                      >
+                        {/* Leaner Image */}
+                        <div className="w-full h-32 bg-gradient-to-br from-[#F4E04D] via-[#B8A8D8] to-[#FFB6C1] flex items-center justify-center">
+                          <div className="text-[#1A1A2E]/20 font-bold text-xl">
+                            Case Study {index + 1}
+                          </div>
+                        </div>
+                        
+                        {/* Leaner Content */}
+                        <div className="p-4">
+                          <h3 className="font-bold text-lg text-[#1A1A2E] mb-1">
+                            {caseStudy.title}
+                          </h3>
+                          <p className="text-[#1A1A2E]/60 text-sm mb-0.5">
+                            {caseStudy.company}
+                          </p>
+                          <p className="text-[#1A1A2E]/80 text-sm mb-3">
+                            by {caseStudy.name}
+                          </p>
+                          
+                          {/* View Button */}
+                          <button 
+                            className="inline-flex items-center gap-2 text-[#1A1A2E] font-semibold text-sm hover:gap-3 transition-all"
+                            data-testid={`button-view-case-${index}`}
+                          >
+                            View Case Study
+                            <ChevronRight className="w-4 h-4" />
+                          </button>
                         </div>
                       </div>
-                      
-                      {/* Leaner Content */}
-                      <div className="p-4">
-                        <h3 className="font-bold text-lg text-[#1A1A2E] mb-1">
-                          {caseStudy.title}
-                        </h3>
-                        <p className="text-[#1A1A2E]/60 text-sm mb-0.5">
-                          {caseStudy.company}
-                        </p>
-                        <p className="text-[#1A1A2E]/80 text-sm mb-3">
-                          by {caseStudy.name}
-                        </p>
-                        
-                        {/* View Button */}
-                        <button 
-                          className="inline-flex items-center gap-2 text-[#1A1A2E] font-semibold text-sm hover:gap-3 transition-all"
-                          data-testid={`button-view-case-${index}`}
-                        >
-                          View Case Study
-                          <ChevronRight className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+
+                {/* Slide 2: Second 2 cards */}
+                <div className="w-full flex-shrink-0">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {[
+                      {
+                        name: 'Anjali Verma',
+                        title: 'Banking App UX Improvement',
+                        company: 'HDFC Bank Case Study'
+                      },
+                      {
+                        name: 'Karthik Reddy',
+                        title: 'Ed-Tech Learning Platform',
+                        company: 'BYJU\'S Case Study'
+                      }
+                    ].map((caseStudy, index) => (
+                      <div 
+                        key={index + 2}
+                        className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden hover:shadow-lg transition-shadow"
+                        data-testid={`card-case-study-${index + 2}`}
+                      >
+                        {/* Leaner Image */}
+                        <div className="w-full h-32 bg-gradient-to-br from-[#F4E04D] via-[#B8A8D8] to-[#FFB6C1] flex items-center justify-center">
+                          <div className="text-[#1A1A2E]/20 font-bold text-xl">
+                            Case Study {index + 3}
+                          </div>
+                        </div>
+                        
+                        {/* Leaner Content */}
+                        <div className="p-4">
+                          <h3 className="font-bold text-lg text-[#1A1A2E] mb-1">
+                            {caseStudy.title}
+                          </h3>
+                          <p className="text-[#1A1A2E]/60 text-sm mb-0.5">
+                            {caseStudy.company}
+                          </p>
+                          <p className="text-[#1A1A2E]/80 text-sm mb-3">
+                            by {caseStudy.name}
+                          </p>
+                          
+                          {/* View Button */}
+                          <button 
+                            className="inline-flex items-center gap-2 text-[#1A1A2E] font-semibold text-sm hover:gap-3 transition-all"
+                            data-testid={`button-view-case-${index + 2}`}
+                          >
+                            View Case Study
+                            <ChevronRight className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Chevron Right */}
-            <button
-              onClick={() => setCurrentCaseStudy((prev) => (prev + 1) % 4)}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 z-10 bg-[#F4E04D] hover:bg-[#F4E04D]/90 p-3 rounded-full shadow-lg transition-all hover:scale-110"
-              data-testid="button-next-case-study"
-              aria-label="Next case study"
-            >
-              <ChevronRight className="w-5 h-5 text-[#1A1A2E]" />
-            </button>
-
-            {/* Carousel Indicators */}
-            <div className="flex justify-center gap-2 mt-6">
-              {[0, 1, 2, 3].map((index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentCaseStudy(index)}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    currentCaseStudy === index 
-                      ? 'bg-[#1A1A2E] w-6' 
-                      : 'bg-[#1A1A2E]/30'
-                  }`}
-                  data-testid={`indicator-case-study-${index}`}
-                  aria-label={`Go to case study ${index + 1}`}
-                />
-              ))}
+            {/* Navigation - Matching Mentor Section Style */}
+            <div className="flex items-center justify-center gap-4 mt-8">
+              <button
+                onClick={() => setCurrentCaseStudy((prev) => (prev - 1 + 2) % 2)}
+                className="p-2 rounded-full border-2 border-[#1A1A2E] transition hover:bg-[#F4E04D] cursor-pointer"
+                data-testid="button-prev-case-study"
+                aria-label="Previous case studies"
+              >
+                <ChevronLeft className="w-5 h-5 text-[#1A1A2E]" />
+              </button>
+              <button
+                onClick={() => setCurrentCaseStudy((prev) => (prev + 1) % 2)}
+                className="p-2 rounded-full border-2 border-[#1A1A2E] transition hover:bg-[#F4E04D] cursor-pointer"
+                data-testid="button-next-case-study"
+                aria-label="Next case studies"
+              >
+                <ChevronRight className="w-5 h-5 text-[#1A1A2E]" />
+              </button>
+              <span className="text-sm text-[#1A1A2E]/60">
+                {currentCaseStudy + 1} of 2
+              </span>
             </div>
           </div>
         </div>
