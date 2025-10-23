@@ -40,30 +40,131 @@
   }
 }
 
-@keyframes fadeInUp {
+/* Modern Reveal Animations */
+@keyframes reveal-blur {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    filter: blur(10px);
+    transform: translateY(40px) scale(0.95);
   }
   to {
     opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes rise-tilt {
+  from {
+    opacity: 0;
+    transform: translateY(60px) rotate(-2deg) scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes slide-reveal-left {
+  from {
+    opacity: 0;
+    transform: translateX(-80px) scale(0.9);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes slide-reveal-right {
+  from {
+    opacity: 0;
+    transform: translateX(80px) scale(0.9);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    filter: blur(0px);
+  }
+}
+
+@keyframes pop-scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) rotate(-8deg);
+  }
+  70% {
+    transform: scale(1.05) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes elastic-up {
+  0% {
+    opacity: 0;
+    transform: translateY(100px) scaleY(0.8);
+  }
+  60% {
+    transform: translateY(-10px) scaleY(1.05);
+  }
+  80% {
+    transform: translateY(5px) scaleY(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+@keyframes mask-sweep-up {
+  from {
+    opacity: 0;
+    clip-path: inset(100% 0% 0% 0%);
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0% 0% 0% 0%);
     transform: translateY(0);
   }
 }
 
-@keyframes fadeIn {
+@keyframes depth-lift {
   from {
     opacity: 0;
+    transform: translateY(50px) translateZ(-100px) rotateX(15deg);
+    filter: blur(8px) brightness(0.8);
   }
   to {
     opacity: 1;
+    transform: translateY(0) translateZ(0) rotateX(0deg);
+    filter: blur(0px) brightness(1);
   }
 }
 
-@keyframes slideInLeft {
+@keyframes spotlight {
+  0% {
+    opacity: 0;
+    transform: scale(0.85);
+    box-shadow: 0 0 0 rgba(26, 26, 46, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 20px 60px rgba(26, 26, 46, 0.15);
+  }
+}
+
+@keyframes counter-slide-odd {
   from {
     opacity: 0;
-    transform: translateX(-30px);
+    transform: translateX(-60px);
   }
   to {
     opacity: 1;
@@ -71,10 +172,10 @@
   }
 }
 
-@keyframes slideInRight {
+@keyframes counter-slide-even {
   from {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(60px);
   }
   to {
     opacity: 1;
@@ -99,47 +200,97 @@
   animation: scroll-seamless 30s linear infinite;
 }
 
+/* Modern Animation Classes - Initial states (no animation until triggered) */
+.animate-reveal-blur,
+.animate-rise-tilt,
+.animate-slide-left,
+.animate-slide-right,
+.animate-pop-scale,
+.animate-elastic-up,
+.animate-mask-sweep,
+.animate-depth-lift,
+.animate-spotlight,
+.animate-counter-odd,
+.animate-counter-even {
+  opacity: 0;
+}
+
+/* Animations trigger only when .visible is added by IntersectionObserver */
+.animate-on-scroll.visible.animate-reveal-blur {
+  animation: reveal-blur 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-on-scroll.visible.animate-rise-tilt {
+  animation: rise-tilt 0.85s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-on-scroll.visible.animate-slide-left {
+  animation: slide-reveal-left 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-on-scroll.visible.animate-slide-right {
+  animation: slide-reveal-right 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-on-scroll.visible.animate-pop-scale {
+  animation: pop-scale 0.7s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.animate-on-scroll.visible.animate-elastic-up {
+  animation: elastic-up 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+.animate-on-scroll.visible.animate-mask-sweep {
+  animation: mask-sweep-up 0.9s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+.animate-on-scroll.visible.animate-depth-lift {
+  animation: depth-lift 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  perspective: 1000px;
+}
+
+.animate-on-scroll.visible.animate-spotlight {
+  animation: spotlight 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+.animate-on-scroll.visible.animate-counter-odd {
+  animation: counter-slide-odd 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-on-scroll.visible.animate-counter-even {
+  animation: counter-slide-even 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Stagger Delays - More varied timing */
+.stagger-1 { animation-delay: 0.12s; }
+.stagger-2 { animation-delay: 0.24s; }
+.stagger-3 { animation-delay: 0.36s; }
+.stagger-4 { animation-delay: 0.48s; }
+.stagger-5 { animation-delay: 0.6s; }
+.stagger-6 { animation-delay: 0.72s; }
+.stagger-7 { animation-delay: 0.84s; }
+.stagger-8 { animation-delay: 0.96s; }
+
+/* Scroll-triggered base class */
 .animate-on-scroll {
   opacity: 0;
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .animate-on-scroll.visible {
-  animation: fadeInUp 0.8s ease-out forwards;
+  /* Opacity will be set by individual animations */
 }
 
-.stagger-1 {
-  animation-delay: 0.1s;
-}
-
-.stagger-2 {
-  animation-delay: 0.2s;
-}
-
-.stagger-3 {
-  animation-delay: 0.3s;
-}
-
-.stagger-4 {
-  animation-delay: 0.4s;
-}
-
-.stagger-5 {
-  animation-delay: 0.5s;
-}
-
-.stagger-6 {
-  animation-delay: 0.6s;
-}
-
-.fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.slide-in-left {
-  animation: slideInLeft 0.8s ease-out forwards;
-}
-
-.slide-in-right {
-  animation: slideInRight 0.8s ease-out forwards;
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .animate-on-scroll {
+    opacity: 1 !important;
+  }
 }
