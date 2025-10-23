@@ -1649,8 +1649,8 @@ function App() {
         target="_blank"
         rel="noopener noreferrer"
         className="fixed z-40 flex items-center gap-3 bg-white shadow-2xl hover:shadow-xl transition-all
-                   md:bottom-8 md:right-8 md:rounded-full md:hover:scale-105 md:p-3 md:pr-5 md:border-2 md:border-[#F4E04D]
-                   bottom-0 left-0 right-0 p-4 border-t-2 border-[#F4E04D] justify-center"
+                   bottom-0 left-0 right-0 p-4 border-t-2 border-[#F4E04D] justify-center
+                   md:bottom-8 md:right-8 md:left-auto md:rounded-full md:hover:scale-105 md:p-3 md:pr-5 md:border-2 md:border-t-0 md:justify-start"
         data-testid="floating-whatsapp-widget"
       >
         <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden border-2 border-[#F4E04D] flex-shrink-0">
