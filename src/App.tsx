@@ -402,7 +402,10 @@ function App() {
                   >
                     {/* Vertical Line between cards */}
                     {!isLastItem && (
-                      <div className="absolute left-1/2 -translate-x-1/2 -bottom-6 w-1 h-6 bg-gradient-to-b from-white/20 to-white/10"></div>
+                      <div 
+                        className="absolute left-1/2 -translate-x-1/2 -bottom-6 w-0.5 h-6 bg-gradient-to-b from-white/10 to-white/5 animate-on-scroll animate-reveal-blur"
+                        style={{ animationDelay: `${index * 30}ms` }}
+                      ></div>
                     )}
                     
                     {/* Timeline Item */}
