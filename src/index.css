@@ -174,10 +174,10 @@
 
 @keyframes twinkle {
   0%, 100% {
-    opacity: 0.1;
+    opacity: 0.15;
   }
   50% {
-    opacity: 0.4;
+    opacity: 0.5;
   }
 }
 
