@@ -367,145 +367,80 @@ function App() {
       {/* Program Schedule Section */}
       <section 
         id="syllabus" 
-        className="py-24 bg-gradient-to-b from-[#FDF9F0] to-[#E8E4D9]"
+        className="py-24 bg-[#1A1A2E]"
       >
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16 animate-on-scroll animate-rise-tilt">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#1A1A2E]">Your 14-Day Journey</h2>
-            <p className="text-[#1A1A2E]/60 text-base md:text-lg max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">Your 14-Day Journey</h2>
+            <p className="text-white/60 text-base md:text-lg max-w-2xl mx-auto">
               A structured path to transform your portfolio and land interviews
             </p>
           </div>
 
-          {/* Week 1: Portfolio & Case Study Mastery */}
-          <div className="mb-12 animate-on-scroll animate-slide-left">
-            <div className="bg-[#F4E04D] inline-block px-4 py-2 rounded-lg mb-6">
-              <h3 className="font-bold text-[#1A1A2E] text-lg">Week 1: Portfolio & Case Study Mastery</h3>
-            </div>
-            <div className="space-y-4">
-              {scheduleData.slice(0, 7).map((item) => (
-                <div 
-                  key={item.day}
-                  className="bg-white border-l-4 border-[#F4E04D] rounded-lg p-5 hover:shadow-lg transition-shadow cursor-pointer"
-                  onClick={() => setExpandedDay(expandedDay === item.day ? null : item.day)}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#1A1A2E] text-white flex items-center justify-center font-bold text-sm">
-                      {item.day}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-3 mb-2 flex-wrap">
-                        <h4 className="font-bold text-[#1A1A2E] text-base">{item.title}</h4>
-                        <span className={`text-xs font-semibold px-2 py-1 rounded ${item.color} text-[#1A1A2E]`}>
-                          {item.type}
-                        </span>
-                      </div>
-                      {expandedDay === item.day && (
-                        <ul className="mt-3 space-y-2 text-sm text-[#1A1A2E]/70">
-                          {item.details.map((detail, i) => (
-                            <li key={i} className="flex items-start gap-2">
-                              <span className="text-[#F4E04D] mt-0.5">●</span>
-                              <span>{detail}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                    <ChevronDown 
-                      className={`w-5 h-5 text-[#1A1A2E]/40 transition-transform flex-shrink-0 ${
-                        expandedDay === item.day ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          {/* Timeline Pathway */}
+          <div className="relative max-w-3xl mx-auto">
+            {/* Vertical Line */}
+            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-white/10"></div>
 
-          {/* Week 2: Resume Perfection */}
-          <div className="mb-12 animate-on-scroll animate-slide-left stagger-2">
-            <div className="bg-[#B8A8D8] inline-block px-4 py-2 rounded-lg mb-6">
-              <h3 className="font-bold text-[#1A1A2E] text-lg">Week 2: Resume Perfection</h3>
-            </div>
-            <div className="space-y-4">
-              {scheduleData.slice(7, 10).map((item) => (
+            {/* Timeline Items */}
+            <div className="space-y-0">
+              {scheduleData.map((item, index) => (
                 <div 
                   key={item.day}
-                  className="bg-white border-l-4 border-[#B8A8D8] rounded-lg p-5 hover:shadow-lg transition-shadow cursor-pointer"
-                  onClick={() => setExpandedDay(expandedDay === item.day ? null : item.day)}
+                  className="relative animate-on-scroll animate-reveal-blur"
+                  style={{ animationDelay: `${index * 30}ms` }}
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#1A1A2E] text-white flex items-center justify-center font-bold text-sm">
-                      {item.day}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-3 mb-2 flex-wrap">
-                        <h4 className="font-bold text-[#1A1A2E] text-base">{item.title}</h4>
-                        <span className={`text-xs font-semibold px-2 py-1 rounded ${item.color} text-[#1A1A2E]`}>
-                          {item.type}
-                        </span>
+                  {/* Timeline Item */}
+                  <div 
+                    className="flex gap-6 md:gap-8 cursor-pointer group pb-6"
+                    onClick={() => setExpandedDay(expandedDay === item.day ? null : item.day)}
+                  >
+                    {/* Icon Circle */}
+                    <div className="relative flex-shrink-0">
+                      <div className={`w-12 h-12 rounded-full ${item.color} flex items-center justify-center font-bold text-[#1A1A2E] text-base shadow-lg z-10 relative`}>
+                        {item.day}
                       </div>
-                      {expandedDay === item.day && (
-                        <ul className="mt-3 space-y-2 text-sm text-[#1A1A2E]/70">
-                          {item.details.map((detail, i) => (
-                            <li key={i} className="flex items-start gap-2">
-                              <span className="text-[#F4E04D] mt-0.5">●</span>
-                              <span>{detail}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
                     </div>
-                    <ChevronDown 
-                      className={`w-5 h-5 text-[#1A1A2E]/40 transition-transform flex-shrink-0 ${
-                        expandedDay === item.day ? 'rotate-180' : ''
-                      }`}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
 
-          {/* Week 2: Visibility & Interview Prep */}
-          <div className="animate-on-scroll animate-slide-left stagger-4">
-            <div className="bg-[#FFB6C1] inline-block px-4 py-2 rounded-lg mb-6">
-              <h3 className="font-bold text-[#1A1A2E] text-lg">Week 2: Visibility & Interview Prep</h3>
-            </div>
-            <div className="space-y-4">
-              {scheduleData.slice(10, 15).map((item) => (
-                <div 
-                  key={item.day}
-                  className="bg-white border-l-4 border-[#FFB6C1] rounded-lg p-5 hover:shadow-lg transition-shadow cursor-pointer"
-                  onClick={() => setExpandedDay(expandedDay === item.day ? null : item.day)}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-[#1A1A2E] text-white flex items-center justify-center font-bold text-sm">
-                      {item.day}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-3 mb-2 flex-wrap">
-                        <h4 className="font-bold text-[#1A1A2E] text-base">{item.title}</h4>
-                        <span className={`text-xs font-semibold px-2 py-1 rounded ${item.color} text-[#1A1A2E]`}>
-                          {item.type}
-                        </span>
+                    {/* Content */}
+                    <div className="flex-1 pb-2">
+                      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all">
+                        <div className="flex items-start justify-between gap-4">
+                          <div className="flex-1">
+                            <div className="flex items-center gap-3 mb-2 flex-wrap">
+                              <h3 className="font-bold text-white text-base md:text-lg">{item.title}</h3>
+                              <span className="text-xs px-3 py-1 rounded-full bg-white/10 text-white/80 font-medium">
+                                Day {item.day}
+                              </span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <span className={`text-xs font-semibold px-3 py-1 rounded-full ${item.color} text-[#1A1A2E]`}>
+                                {item.type}
+                              </span>
+                            </div>
+                          </div>
+                          <ChevronDown 
+                            className={`w-5 h-5 text-white/40 transition-transform flex-shrink-0 ${
+                              expandedDay === item.day ? 'rotate-180' : ''
+                            }`}
+                          />
+                        </div>
+
+                        {/* Expanded Details */}
+                        {expandedDay === item.day && (
+                          <div className="mt-4 pt-4 border-t border-white/10">
+                            <ul className="space-y-2.5 text-sm text-white/70">
+                              {item.details.map((detail, i) => (
+                                <li key={i} className="flex items-start gap-3">
+                                  <span className="text-[#F4E04D] mt-0.5 flex-shrink-0">●</span>
+                                  <span>{detail}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </div>
-                      {expandedDay === item.day && (
-                        <ul className="mt-3 space-y-2 text-sm text-[#1A1A2E]/70">
-                          {item.details.map((detail, i) => (
-                            <li key={i} className="flex items-start gap-2">
-                              <span className="text-[#F4E04D] mt-0.5">●</span>
-                              <span>{detail}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
                     </div>
-                    <ChevronDown 
-                      className={`w-5 h-5 text-[#1A1A2E]/40 transition-transform flex-shrink-0 ${
-                        expandedDay === item.day ? 'rotate-180' : ''
-                      }`}
-                    />
                   </div>
                 </div>
               ))}
