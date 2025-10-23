@@ -329,7 +329,7 @@ function App() {
             </span>
           </h1>
           <p className="text-[#1A1A2E]/60 text-base md:text-lg mb-8 animate-on-scroll animate-reveal-blur stagger-1">
-            In 2 weeks, get hands-on training, live mentorship, and ready-to-use templates to stand out and land UX interviews.
+            In 2 weeks, get hands-on training, live mentorship, and feedbacks to stand out and land UX interviews.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8 animate-on-scroll animate-elastic-up stagger-2">
             <button 
