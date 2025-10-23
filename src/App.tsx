@@ -8,6 +8,7 @@ function App() {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [iframeUrl, setIframeUrl] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showAllSchedule, setShowAllSchedule] = useState(false);
   const [expandedDay, setExpandedDay] = useState<number | null>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
 
@@ -380,11 +381,11 @@ function App() {
           {/* Timeline Pathway */}
           <div className="relative max-w-3xl mx-auto">
             {/* Vertical Line */}
-            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-white/10"></div>
+            <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-white/10 hidden md:block"></div>
 
             {/* Timeline Items */}
-            <div className="space-y-0">
-              {scheduleData.map((item, index) => (
+            <div className="space-y-0 mb-8">
+              {scheduleData.slice(0, showAllSchedule ? 15 : 7).map((item, index) => (
                 <div 
                   key={item.day}
                   className="relative animate-on-scroll animate-reveal-blur"
@@ -392,19 +393,19 @@ function App() {
                 >
                   {/* Timeline Item */}
                   <div 
-                    className="flex gap-6 md:gap-8 cursor-pointer group pb-6"
+                    className="flex gap-4 md:gap-8 cursor-pointer group pb-6"
                     onClick={() => setExpandedDay(expandedDay === item.day ? null : item.day)}
                   >
-                    {/* Icon Circle */}
-                    <div className="relative flex-shrink-0">
-                      <div className={`w-12 h-12 rounded-full ${item.color} flex items-center justify-center font-bold text-[#1A1A2E] text-base shadow-lg z-10 relative`}>
+                    {/* Icon Circle - Hidden on Mobile */}
+                    <div className="relative flex-shrink-0 hidden md:block">
+                      <div className={`w-10 h-10 rounded-full ${item.color} flex items-center justify-center font-bold text-[#1A1A2E] text-sm shadow-lg z-10 relative`}>
                         {item.day}
                       </div>
                     </div>
 
                     {/* Content */}
                     <div className="flex-1 pb-2">
-                      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all">
+                      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 md:p-5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all">
                         <div className="flex items-start justify-between gap-4">
                           <div className="flex-1">
                             <div className="flex items-center gap-3 mb-2 flex-wrap">
@@ -444,6 +445,17 @@ function App() {
                   </div>
                 </div>
               ))}
+            </div>
+
+            {/* View More/Less Button */}
+            <div className="text-center">
+              <button
+                onClick={() => setShowAllSchedule(!showAllSchedule)}
+                className="px-8 py-3 bg-white/10 hover:bg-white/20 text-white rounded-xl transition font-semibold text-sm border border-white/20 hover:border-white/30"
+                data-testid="button-toggle-schedule"
+              >
+                {showAllSchedule ? '← View Less' : 'View More Days →'}
+              </button>
             </div>
           </div>
         </div>
