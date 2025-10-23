@@ -276,8 +276,18 @@
   opacity: 0;
 }
 
+/* Simple fade-in for elements without specific animation class */
 .animate-on-scroll.visible {
-  /* Opacity will be set by individual animations */
+  animation: simple-fade-in 0.6s ease-out forwards;
+}
+
+@keyframes simple-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Reduced motion support */
