@@ -1648,12 +1648,12 @@ function App() {
         href="https://chat.whatsapp.com/IOcvgOE9VRfHFIFjJShBty"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed z-40 flex items-center gap-3 bg-white shadow-2xl hover:shadow-xl transition-all
-                   bottom-0 left-0 right-0 p-4 border-t-2 border-[#F4E04D] justify-center
-                   md:bottom-8 md:right-8 md:left-auto md:rounded-full md:hover:scale-105 md:p-3 md:pr-5 md:border-2 md:border-t-0 md:justify-start"
+        className="fixed z-40 flex items-center gap-2 bg-white shadow-lg hover:shadow-xl transition-all
+                   bottom-0 left-0 right-0 py-2.5 px-4 border-t-2 border-[#F4E04D] justify-center
+                   md:bottom-6 md:right-6 md:left-auto md:rounded-full md:hover:scale-105 md:py-2 md:pl-2 md:pr-4 md:border-2 md:border-t-2 md:justify-start"
         data-testid="floating-whatsapp-widget"
       >
-        <div className="w-12 h-12 md:w-14 md:h-14 rounded-full overflow-hidden border-2 border-[#F4E04D] flex-shrink-0">
+        <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-[#F4E04D] flex-shrink-0">
           <video
             src="/shai.mp4"
             autoPlay
@@ -1664,8 +1664,8 @@ function App() {
           />
         </div>
         <div className="text-left">
-          <p className="text-xs text-[#1A1A2E]/60 font-medium">Chat with</p>
-          <p className="text-sm font-bold text-[#1A1A2E]">Shai on WhatsApp</p>
+          <p className="text-[10px] text-[#1A1A2E]/60 font-medium leading-tight">Chat with</p>
+          <p className="text-xs font-bold text-[#1A1A2E] leading-tight">Shai on WhatsApp</p>
         </div>
       </a>
     </div>
