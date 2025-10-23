@@ -1,5 +1,5 @@
 import { Star, FileText, ChevronRight, ChevronLeft, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -9,6 +9,7 @@ function App() {
   const [iframeUrl, setIframeUrl] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showAllSchedule, setShowAllSchedule] = useState(false);
+  const observerRef = useRef<IntersectionObserver | null>(null);
 
   const testimonials = [
     {
@@ -58,6 +59,31 @@ function App() {
     }, 50);
 
     return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px',
+      }
+    );
+
+    const elements = document.querySelectorAll('.animate-on-scroll');
+    elements.forEach((el) => observerRef.current?.observe(el));
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
   }, []);
 
 
@@ -124,16 +150,16 @@ function App() {
 
         {/* Hero Section */}
         <div className="text-center mb-16">
-          <h1 className="text-3xl md:text-6xl font-bold mb-6 leading-tight">
+          <h1 className="text-3xl md:text-6xl font-bold mb-6 leading-tight animate-on-scroll">
             The <span className="relative inline-block px-2">
               <span className="relative z-10">2-week</span>
               <span className="absolute bottom-1 left-0 w-full h-5 bg-[#F4E04D] -rotate-1 animate-highlight"></span>
             </span> playbook top designers use to land real interviews.
           </h1>
-          <p className="text-[#1A1A2E]/60 text-base md:text-lg mb-8">
+          <p className="text-[#1A1A2E]/60 text-base md:text-lg mb-8 animate-on-scroll stagger-1">
             Standing out in a crowded UX market isn't that hard!
           </p>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8 animate-on-scroll stagger-2">
             <button 
               onClick={() => setIsModalOpen(true)}
               className="w-full md:w-auto px-8 py-4 bg-[#1A1A2E] text-[#E8E4D9] rounded-lg hover:bg-[#1A1A2E]/90 transition font-semibold"
@@ -151,7 +177,7 @@ function App() {
           </div>
 
           {/* Rating */}
-          <div className="flex items-center justify-center gap-2 mb-12">
+          <div className="flex items-center justify-center gap-2 mb-12 animate-on-scroll stagger-3">
             <div className="flex gap-1">
               {[...Array(5)].map((_, i) => (
                 <Star key={i} className="w-4 h-4 fill-yellow-500 text-yellow-500" />
@@ -164,7 +190,7 @@ function App() {
       </section>
 
       {/* Image with fade effect */}
-      <div className="max-w-4xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-6 animate-on-scroll">
         <div className="overflow-hidden relative">
           <div className="absolute inset-0 pointer-events-none z-10">
             <div className="absolute top-0 bottom-0 left-0 w-16 bg-gradient-to-r from-[#E8E4D9] to-transparent"></div>
@@ -185,14 +211,14 @@ function App() {
         style={{ backgroundImage: 'url(/ux-background.png)' }}
       >
         <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 animate-on-scroll">
             <h2 className="text-2xl md:text-4xl font-bold mb-4">Your 14-Day Journey</h2>
             <p className="text-[#1A1A2E]/60 text-sm md:text-lg">
               A structured path to transform your portfolio and land interviews
             </p>
           </div>
 
-          <div className="border-4 border-[#1A1A2E] rounded-lg overflow-hidden bg-white hidden md:block">
+          <div className="border-4 border-[#1A1A2E] rounded-lg overflow-hidden bg-white hidden md:block animate-on-scroll stagger-1">
           <table className="w-full table-fixed">
             <colgroup>
               <col style={{ width: '12%' }} />
@@ -347,7 +373,7 @@ function App() {
           </div>
 
           {/* Mobile Cards View */}
-          <div className="md:hidden space-y-4">
+          <div className="md:hidden space-y-4 animate-on-scroll stagger-1">
           {[
             { day: 'Day 0', topic: 'Learn to Whiteboard', type: 'Live Session', color: 'bg-[#F4E04D]' },
             { day: 'Day 1', topic: 'Learn - How to Build a Perfect UX Case Study', type: 'Live Session', color: 'bg-[#F4E04D]' },
@@ -392,7 +418,7 @@ function App() {
       {/* How It Works Section */}
       <section className="py-16 px-6 bg-[#E8E4D9]">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 animate-on-scroll">
             <h2 className="text-2xl md:text-4xl font-bold mb-4 text-[#1A1A2E]">
               Turn 2 weeks into a complete career upgrade.
             </h2>
@@ -401,7 +427,7 @@ function App() {
           {/* Process Flow */}
           <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-6 mb-12">
             {/* Step 1 */}
-            <div className="flex flex-col items-center text-center flex-1" data-testid="step-live-session">
+            <div className="flex flex-col items-center text-center flex-1 animate-on-scroll stagger-1" data-testid="step-live-session">
               <div className="w-32 h-32 mb-4 flex items-center justify-center">
                 <img src="/live-3d.png" alt="Live Session" className="w-full h-full object-contain" />
               </div>
@@ -412,7 +438,7 @@ function App() {
             <div className="hidden md:block text-[#1A1A2E]/40 text-2xl -mt-12">→</div>
 
             {/* Step 2 */}
-            <div className="flex flex-col items-center text-center flex-1" data-testid="step-assignment">
+            <div className="flex flex-col items-center text-center flex-1 animate-on-scroll stagger-2" data-testid="step-assignment">
               <div className="w-32 h-32 mb-4 flex items-center justify-center">
                 <img src="/assignment-3d.png" alt="Assignment" className="w-full h-full object-contain" />
               </div>
@@ -423,7 +449,7 @@ function App() {
             <div className="hidden md:block text-[#1A1A2E]/40 text-2xl -mt-12">→</div>
 
             {/* Step 3 */}
-            <div className="flex flex-col items-center text-center flex-1" data-testid="step-review">
+            <div className="flex flex-col items-center text-center flex-1 animate-on-scroll stagger-3" data-testid="step-review">
               <div className="w-32 h-32 mb-4 flex items-center justify-center">
                 <img src="/personal-review.png" alt="Personal Review" className="w-full h-full object-contain" />
               </div>
@@ -432,7 +458,7 @@ function App() {
           </div>
 
           {/* Description */}
-          <div className="text-center max-w-2xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto animate-on-scroll stagger-4">
             <p className="text-[#1A1A2E]/70 text-base leading-relaxed">
               We break down every concept in simple, actionable ways during live sessions.
               You then put that learning to work through focused assignments — and get a personal review on your submission so you can refine, improve, and actually see progress each week.
@@ -444,7 +470,7 @@ function App() {
       {/* Meet Your Mentors Section */}
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 animate-on-scroll">
             <h2 className="text-2xl md:text-4xl font-bold mb-4 text-[#1A1A2E]">
               Meet Your Mentors
             </h2>
@@ -454,7 +480,7 @@ function App() {
           </div>
 
           {/* Mentor Card */}
-          <div className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden">
+          <div className="bg-white border-2 border-[#1A1A2E] rounded-lg overflow-hidden animate-on-scroll stagger-1">
             <div className="grid md:grid-cols-2 gap-0">
               {/* Left: Content */}
               <div className="p-8 md:p-12 flex flex-col justify-center order-2 md:order-1">
@@ -920,7 +946,7 @@ function App() {
 
       {/* Testimonials Section */}
       <section className="px-6 pt-16 pb-24">
-        <div className="text-center mb-16 max-w-4xl mx-auto">
+        <div className="text-center mb-16 max-w-4xl mx-auto animate-on-scroll">
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
             Don't just take our word for it — real students, real results.
           </h2>
@@ -1409,7 +1435,7 @@ function App() {
       <section className="border-t border-[#1A1A2E]/10">
         <div className="max-w-6xl mx-auto px-6 py-20">
           {/* Main Content */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start md:items-center mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start md:items-center mb-16 animate-on-scroll">
             {/* Left: Headline */}
             <div className="text-left">
               <h2 className="text-2xl md:text-4xl font-bold text-[#1A1A2E] mb-2">
