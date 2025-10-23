@@ -402,7 +402,7 @@ function App() {
                 {/* Seats */}
                 <div className="flex-1 text-center px-4">
                   <p className="text-xs text-white/40 mb-2 uppercase tracking-wide">Seats</p>
-                  <p className="text-sm md:text-base font-bold text-white">4/20</p>
+                  <p className="text-sm md:text-base font-bold text-white">16/20</p>
                 </div>
 
                 {/* Duration */}
@@ -1529,7 +1529,7 @@ function App() {
               <div className="h-12 w-px bg-[#1A1A2E]/10"></div>
               <div>
                 <p className="text-xs text-[#1A1A2E]/50 mb-1 uppercase tracking-wide">Seats</p>
-                <p className="text-lg font-bold text-[#1A1A2E]" data-testid="text-seats-left">4/20</p>
+                <p className="text-lg font-bold text-[#1A1A2E]" data-testid="text-seats-left">16/20</p>
               </div>
               <div className="h-12 w-px bg-[#1A1A2E]/10"></div>
               <div>
