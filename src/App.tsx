@@ -323,13 +323,13 @@ function App() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-3xl md:text-6xl font-bold mb-6 leading-tight animate-on-scroll animate-reveal-blur">
-            The <span className="relative inline-block px-2">
-              <span className="relative z-10">2-week</span>
+            Learn everything you need to Land Your <span className="relative inline-block px-2">
+              <span className="relative z-10">Dream UX Job</span>
               <span className="absolute bottom-1 left-0 w-full h-5 bg-[#F4E04D] -rotate-1 animate-highlight"></span>
-            </span> playbook top designers use to land real interviews.
+            </span> — Fast
           </h1>
           <p className="text-[#1A1A2E]/60 text-base md:text-lg mb-8 animate-on-scroll animate-reveal-blur stagger-1">
-            Standing out in a crowded UX market isn't that hard!
+            In 2 weeks, follow a hands-on curriculum with live mentor sessions, ready-to-use templates, and guided reviews — everything you need to stand out and land real UX interviews.
           </p>
           <div className="flex flex-col md:flex-row items-center justify-center gap-4 mb-8 animate-on-scroll animate-elastic-up stagger-2">
             <button 
