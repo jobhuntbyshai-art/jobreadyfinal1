@@ -1498,6 +1498,59 @@ function App() {
         </div>
       </section>
 
+      {/* Real Feelings Section */}
+      <section className="border-t border-[#1A1A2E]/10">
+        <div className="max-w-5xl mx-auto px-6 py-20">
+          <div className="text-center mb-12 animate-on-scroll animate-rise-tilt">
+            <h2 className="text-2xl md:text-4xl font-bold text-[#1A1A2E] mb-3">
+              💬 10 Real Feelings Designers Have Before Joining
+            </h2>
+            <p className="text-[#1A1A2E]/60 text-sm md:text-base max-w-2xl mx-auto">
+              If any of these resonate with you, this program is designed to help
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            {[
+              "Not sure if my portfolio explains my thought process clearly.",
+              "I don't know if my resume is formatted the right way for ATS.",
+              "I have projects, but I'm not sure which ones to showcase.",
+              "I've done the work — I just don't know how to present it well.",
+              "I keep second-guessing my case study structure.",
+              "I feel stuck rewriting my portfolio again and again.",
+              "I'm not confident my portfolio would impress a recruiter.",
+              "I've applied to jobs, but rarely hear back.",
+              "I'm not sure what \"good\" looks like anymore.",
+              "I just want clarity on how to make my work look professional and job-ready."
+            ].map((feeling, index) => (
+              <div 
+                key={index}
+                className="group p-5 bg-white/50 border border-[#1A1A2E]/10 rounded-lg hover:border-[#F4E04D] hover:bg-white transition-all animate-on-scroll animate-reveal-blur"
+                style={{ animationDelay: `${index * 0.05}s` }}
+              >
+                <div className="flex items-start gap-3">
+                  <span className="text-[#F4E04D] font-bold text-lg flex-shrink-0 mt-0.5">
+                    {String(index + 1).padStart(2, '0')}
+                  </span>
+                  <p className="text-[#1A1A2E]/80 text-sm md:text-base leading-relaxed">
+                    {feeling}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12 animate-on-scroll animate-elastic-up">
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="px-8 py-4 bg-[#1A1A2E] text-[#E8E4D9] rounded-lg hover:bg-[#1A1A2E]/90 transition font-semibold text-sm md:text-base shadow-sm"
+            >
+              Get the Clarity You Need →
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="px-6 pt-8 pb-12 text-left md:text-center text-[#1A1A2E]/40 text-sm">
         <p>© 2025 Job Ready By Designfolio. All rights reserved.</p>
