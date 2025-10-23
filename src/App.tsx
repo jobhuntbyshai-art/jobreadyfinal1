@@ -1520,15 +1520,6 @@ function App() {
               <img src="/sundar.png" alt="Sundar" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
               <img src="/arun.png" alt="Arun" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
               <img src="/sanket.png" alt="Sanket" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
-              {/* Third set for smooth continuous loop */}
-              <img src="/harshita.png" alt="Harshita" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
-              <img src="/madhulika_1761106014792.png" alt="Madhulika" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
-              <img src="/satvik_1761115411601.png" alt="Satvik" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
-              <img src="/komal_1761106764386.png" alt="Komal" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
-              <img src="/jai_1761117846125.png" alt="Jai" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
-              <img src="/sundar.png" alt="Sundar" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
-              <img src="/arun.png" alt="Arun" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
-              <img src="/sanket.png" alt="Sanket" className="w-10 h-10 rounded-full border border-[#1A1A2E]/20 flex-shrink-0 object-cover opacity-80" />
             </div>
           </div>
         </div>
