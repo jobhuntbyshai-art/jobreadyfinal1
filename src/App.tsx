@@ -390,8 +390,8 @@ function App() {
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                animation: `twinkle ${5 + Math.random() * 3}s ease-in-out infinite`,
-                animationDelay: `${Math.random() * 6}s`,
+                animation: 'twinkle 8s ease-in-out infinite',
+                animationDelay: `${(i * 0.2)}s`,
               }}
             />
           ))}
