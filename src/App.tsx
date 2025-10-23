@@ -1449,55 +1449,6 @@ function App() {
         </div>
       </section>
 
-      {/* Next Batch Section */}
-      <section className="border-t border-[#1A1A2E]/10">
-        <div className="max-w-6xl mx-auto px-6 py-20 pb-12">
-          {/* Main Content */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start md:items-center mb-16 animate-on-scroll animate-depth-lift">
-            {/* Left: Headline */}
-            <div className="text-left">
-              <h2 className="text-2xl md:text-4xl font-bold text-[#1A1A2E] mb-2">
-                Next batch starts soon
-              </h2>
-              <p className="text-[#1A1A2E]/60 text-sm md:text-base">Limited seats available</p>
-            </div>
-
-            {/* Center: Stats */}
-            <div className="flex items-center justify-start md:justify-center gap-6 text-left md:text-center">
-              <div>
-                <p className="text-xs text-[#1A1A2E]/50 mb-1 uppercase tracking-wide">Batch</p>
-                <p className="text-lg font-bold text-[#1A1A2E]" data-testid="text-batch-date">15th Nov'25</p>
-              </div>
-              <div className="h-12 w-px bg-[#1A1A2E]/10"></div>
-              <div>
-                <p className="text-xs text-[#1A1A2E]/50 mb-1 uppercase tracking-wide">Seats</p>
-                <p className="text-lg font-bold text-[#1A1A2E]" data-testid="text-seats-left">4/20</p>
-              </div>
-              <div className="h-12 w-px bg-[#1A1A2E]/10"></div>
-              <div>
-                <p className="text-xs text-[#1A1A2E]/50 mb-1 uppercase tracking-wide">Duration</p>
-                <p className="text-lg font-bold text-[#1A1A2E]" data-testid="text-duration">2 Weeks</p>
-              </div>
-            </div>
-
-            {/* Right: CTA */}
-            <div className="text-left md:text-right">
-              <p className="text-2xl font-bold text-[#1A1A2E] mb-1">
-                ₹8,999 <span className="text-base text-[#1A1A2E]/40 line-through ml-1">₹11,000</span>
-              </p>
-              <p className="text-xs text-[#1A1A2E]/50 mb-4">Early bird pricing</p>
-              <button
-                onClick={() => setIsModalOpen(true)}
-                className="w-full md:w-auto px-6 py-2.5 bg-[#1A1A2E] text-white rounded-md hover:bg-[#1A1A2E]/90 transition font-medium text-sm shadow-sm"
-                data-testid="button-join-now-footer"
-              >
-                Join Now →
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Real Feelings Section */}
       <section className="border-t border-[#1A1A2E]/10">
         <div className="max-w-5xl mx-auto px-6 py-20">
@@ -1547,6 +1498,55 @@ function App() {
             >
               Get the Clarity You Need →
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Next Batch Section */}
+      <section className="border-t border-[#1A1A2E]/10">
+        <div className="max-w-6xl mx-auto px-6 py-20 pb-12">
+          {/* Main Content */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start md:items-center mb-16 animate-on-scroll animate-depth-lift">
+            {/* Left: Headline */}
+            <div className="text-left">
+              <h2 className="text-2xl md:text-4xl font-bold text-[#1A1A2E] mb-2">
+                Next batch starts soon
+              </h2>
+              <p className="text-[#1A1A2E]/60 text-sm md:text-base">Limited seats available</p>
+            </div>
+
+            {/* Center: Stats */}
+            <div className="flex items-center justify-start md:justify-center gap-6 text-left md:text-center">
+              <div>
+                <p className="text-xs text-[#1A1A2E]/50 mb-1 uppercase tracking-wide">Batch</p>
+                <p className="text-lg font-bold text-[#1A1A2E]" data-testid="text-batch-date">15th Nov'25</p>
+              </div>
+              <div className="h-12 w-px bg-[#1A1A2E]/10"></div>
+              <div>
+                <p className="text-xs text-[#1A1A2E]/50 mb-1 uppercase tracking-wide">Seats</p>
+                <p className="text-lg font-bold text-[#1A1A2E]" data-testid="text-seats-left">4/20</p>
+              </div>
+              <div className="h-12 w-px bg-[#1A1A2E]/10"></div>
+              <div>
+                <p className="text-xs text-[#1A1A2E]/50 mb-1 uppercase tracking-wide">Duration</p>
+                <p className="text-lg font-bold text-[#1A1A2E]" data-testid="text-duration">2 Weeks</p>
+              </div>
+            </div>
+
+            {/* Right: CTA */}
+            <div className="text-left md:text-right">
+              <p className="text-2xl font-bold text-[#1A1A2E] mb-1">
+                ₹8,999 <span className="text-base text-[#1A1A2E]/40 line-through ml-1">₹11,000</span>
+              </p>
+              <p className="text-xs text-[#1A1A2E]/50 mb-4">Early bird pricing</p>
+              <button
+                onClick={() => setIsModalOpen(true)}
+                className="w-full md:w-auto px-6 py-2.5 bg-[#1A1A2E] text-white rounded-md hover:bg-[#1A1A2E]/90 transition font-medium text-sm shadow-sm"
+                data-testid="button-join-now-footer"
+              >
+                Join Now →
+              </button>
+            </div>
           </div>
         </div>
       </section>
