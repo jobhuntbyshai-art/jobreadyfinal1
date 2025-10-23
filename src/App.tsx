@@ -1454,7 +1454,7 @@ function App() {
         <div className="max-w-5xl mx-auto px-6 py-20">
           <div className="text-center mb-12 animate-on-scroll animate-rise-tilt">
             <h2 className="text-2xl md:text-4xl font-bold text-[#1A1A2E] mb-3">
-              💬 10 Real Feelings Designers Have Before Joining
+              You're not the ONLY one Feeling this way
             </h2>
             <p className="text-[#1A1A2E]/60 text-sm md:text-base max-w-2xl mx-auto">
               If any of these resonate with you, this program is designed to help
@@ -1496,8 +1496,9 @@ function App() {
               onClick={() => setIsModalOpen(true)}
               className="px-8 py-4 bg-[#1A1A2E] text-[#E8E4D9] rounded-lg hover:bg-[#1A1A2E]/90 transition font-semibold text-sm md:text-base shadow-sm"
             >
-              Get the Clarity You Need →
+              Chat with Shai for clarity →
             </button>
+            <p className="text-[#1A1A2E]/40 text-xs mt-3">Figure out what's Missing</p>
           </div>
         </div>
       </section>
