@@ -98,7 +98,7 @@ function App() {
             className="h-8 w-auto animate-tilt"
             data-testid="img-logo"
           />
-          <span className="text-lg font-semibold text-[#1A1A2E]">UX jobready</span>
+          <span className="text-lg font-semibold text-[#1A1A2E]">UX Job Ready</span>
         </div>
         <button 
           onClick={() => setIsModalOpen(true)}
