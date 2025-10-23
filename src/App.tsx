@@ -1001,14 +1001,13 @@ function App() {
                 <div className="grid grid-cols-2 gap-8">
           {/* Harshita's Testimonial */}
           <div 
-            className="bg-[#D9F0FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
+            className="bg-[#D9F0FF] rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#A8D5F0] relative"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
             data-testid="testimonial-harshita"
           >
-            <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
-            <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+            <p className="text-[#1A1A2E]/80 text-sm mb-6 leading-relaxed italic">
               It started off great for me, and I got a much-needed reality check on my existing work — which I see as a positive thing. Even senior designers rarely give such honest feedback, so that's really valuable.
               <br/><br/>
               Both Shai and Nandini have been very supportive throughout.
@@ -1033,14 +1032,13 @@ function App() {
 
           {/* Madhulika's Testimonial */}
           <div 
-            className="bg-[#FFE5F0] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
+            className="bg-[#FFE5F0] -rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#FFB6D9] relative"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
             data-testid="testimonial-madhulika"
           >
-            <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
-            <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+            <p className="text-[#1A1A2E]/80 text-sm mb-6 leading-relaxed italic">
               The program has been incredibly helpful. I'd spent weeks refining my case study but was never fully satisfied. <span className="relative inline-block px-1">
                 <span className="relative z-10">Session 1 with Shai brought complete clarity—within two days, I felt confident about my case study.</span>
                 <span className="absolute bottom-0 left-0 w-full h-3 bg-[#FFB6D9] -rotate-1"></span>
@@ -1071,14 +1069,13 @@ function App() {
                 <div className="grid grid-cols-2 gap-8">
           {/* Komalpreet's Testimonial */}
           <div 
-            className="bg-[#FFF9E5] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
+            className="bg-[#FFF9E5] rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#F4E04D] relative"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
             data-testid="testimonial-komalpreet"
           >
-            <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
-            <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+            <p className="text-[#1A1A2E]/80 text-sm mb-6 leading-relaxed italic">
               The sprint has been incredible. Shai explained everything clearly and handled every doubt with patience and genuine dedication. While applying his feedback, I could see my case study completely transform. <span className="relative inline-block px-1">
                 <span className="relative z-10">His detailed feedback—complete with examples for every section—was beyond what I expected.</span>
                 <span className="absolute bottom-0 left-0 w-full h-3 bg-[#F4E04D] -rotate-1"></span>
@@ -1104,14 +1101,13 @@ function App() {
 
           {/* Sundar's Testimonial */}
           <div 
-            className="bg-[#E5F9F0] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
+            className="bg-[#E5F9F0] -rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#A8E6CF] relative"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
             data-testid="testimonial-sundar"
           >
-            <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
-            <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+            <p className="text-[#1A1A2E]/80 text-sm mb-6 leading-relaxed italic">
               This program has truly boosted my confidence. It's pushed me to refine my work and understand the finer, industry-level nuances of presenting it effectively. <span className="relative inline-block px-1">
                 <span className="relative z-10">I've learned how to prepare for interviews, build strong supporting assets, and position myself to stand out.</span>
                 <span className="absolute bottom-0 left-0 w-full h-3 bg-[#A8E6CF] -rotate-1"></span>
@@ -1140,14 +1136,13 @@ function App() {
                 <div className="grid grid-cols-2 gap-8">
           {/* Satvik's Testimonial */}
           <div 
-            className="bg-[#F0E5FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
+            className="bg-[#F0E5FF] rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#D4B5FF] relative"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
             data-testid="testimonial-satvik"
           >
-            <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
-            <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+            <p className="text-[#1A1A2E]/80 text-sm mb-6 leading-relaxed italic">
               When I joined this program, my goal was to understand what recruiters truly look for. Even with solid projects and a good portfolio, I hadn't received interview calls for over a month — until I joined Shai's Job Ready Program. <span className="relative inline-block px-1">
                 <span className="relative z-10">It turned out to be a game-changer, helping me craft an ATS-friendly résumé and build a strong case study from a project I had once overlooked.</span>
                 <span className="absolute bottom-0 left-0 w-full h-3 bg-[#D4B5FF] -rotate-1"></span>
@@ -1171,14 +1166,13 @@ function App() {
 
           {/* Jai's Testimonial */}
           <div 
-            className="bg-[#FFE5D9] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
+            className="bg-[#FFE5D9] -rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#FFCCB3] relative"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
             data-testid="testimonial-jai"
           >
-            <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
-            <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+            <p className="text-[#1A1A2E]/80 text-sm mb-6 leading-relaxed italic">
               For the past year, my biggest hurdle was building a portfolio. I kept overthinking layouts and spending endless hours chasing perfection. <span className="relative inline-block px-1">
                 <span className="relative z-10">Thanks to Job Ready and the Designfolio template, that struggle is finally over.</span>
                 <span className="absolute bottom-0 left-0 w-full h-3 bg-[#FFCCB3] -rotate-1"></span>
@@ -1213,14 +1207,13 @@ function App() {
               {/* Mobile Slide 1: Harshita */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#D9F0FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
+                  className="bg-[#D9F0FF] rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#A8D5F0] relative"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
                   data-testid="testimonial-harshita-mobile"
                 >
-                  <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
-                  <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+                  <p className="text-[#1A1A2E]/80 text-sm mb-6 leading-relaxed italic">
                     It started off great for me, and I got a much-needed reality check on my existing work — which I see as a positive thing. Even senior designers rarely give such honest feedback, so that's really valuable.
                     <br/><br/>
                     Both Shai and Nandini have been very supportive throughout.
@@ -1247,14 +1240,13 @@ function App() {
               {/* Mobile Slide 2: Madhulika */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#FFE5F0] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
+                  className="bg-[#FFE5F0] -rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#FFB6D9] relative"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
                   data-testid="testimonial-madhulika-mobile"
                 >
-                  <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
-                  <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+                  <p className="text-[#1A1A2E]/80 text-sm mb-6 leading-relaxed italic">
                     The program has been incredibly helpful. I'd spent weeks refining my case study but was never fully satisfied. <span className="relative inline-block px-1">
                       <span className="relative z-10">Session 1 with Shai brought complete clarity—within two days, I felt confident about my case study.</span>
                       <span className="absolute bottom-0 left-0 w-full h-3 bg-[#FFB6D9] -rotate-1"></span>
@@ -1281,14 +1273,13 @@ function App() {
               {/* Mobile Slide 3: Komalpreet */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#FFF9E5] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
+                  className="bg-[#FFF9E5] rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#F4E04D] relative"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
                   data-testid="testimonial-komalpreet-mobile"
                 >
-                  <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
-                  <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+                  <p className="text-[#1A1A2E]/80 text-sm mb-6 leading-relaxed italic">
                     The sprint has been incredible. Shai explained everything clearly and handled every doubt with patience and genuine dedication. While applying his feedback, I could see my case study completely transform. <span className="relative inline-block px-1">
                       <span className="relative z-10">His detailed feedback—complete with examples for every section—was beyond what I expected.</span>
                       <span className="absolute bottom-0 left-0 w-full h-3 bg-[#F4E04D] -rotate-1"></span>
@@ -1315,14 +1306,13 @@ function App() {
               {/* Mobile Slide 4: Sundar */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#E5F9F0] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
+                  className="bg-[#E5F9F0] -rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#A8E6CF] relative"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
                   data-testid="testimonial-sundar-mobile"
                 >
-                  <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
-                  <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+                  <p className="text-[#1A1A2E]/80 text-sm mb-6 leading-relaxed italic">
                     This program has truly boosted my confidence. It's pushed me to refine my work and understand the finer, industry-level nuances of presenting it effectively. <span className="relative inline-block px-1">
                       <span className="relative z-10">I've learned how to prepare for interviews, build strong supporting assets, and position myself to stand out.</span>
                       <span className="absolute bottom-0 left-0 w-full h-3 bg-[#A8E6CF] -rotate-1"></span>
@@ -1347,14 +1337,13 @@ function App() {
               {/* Mobile Slide 5: Satvik */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#F0E5FF] rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
+                  className="bg-[#F0E5FF] rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#D4B5FF] relative"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
                   data-testid="testimonial-satvik-mobile"
                 >
-                  <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
-                  <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+                  <p className="text-[#1A1A2E]/80 text-sm mb-6 leading-relaxed italic">
                     When I joined this program, my goal was to understand what recruiters truly look for. Even with solid projects and a good portfolio, I hadn't received interview calls for over a month — until I joined Shai's Job Ready Program. <span className="relative inline-block px-1">
                       <span className="relative z-10">It turned out to be a game-changer, helping me craft an ATS-friendly résumé and build a strong case study from a project I had once overlooked.</span>
                       <span className="absolute bottom-0 left-0 w-full h-3 bg-[#D4B5FF] -rotate-1"></span>
@@ -1379,14 +1368,13 @@ function App() {
               {/* Mobile Slide 6: Jai */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#FFE5D9] -rotate-1 p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:rotate-0"
+                  className="bg-[#FFE5D9] -rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#FFCCB3] relative"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
                   data-testid="testimonial-jai-mobile"
                 >
-                  <div className="text-[#1A1A2E] text-sm font-bold mb-4">★</div>
-                  <p className="text-[#1A1A2E]/70 text-sm mb-6 leading-relaxed">
+                  <p className="text-[#1A1A2E]/80 text-sm mb-6 leading-relaxed italic">
                     For the past year, my biggest hurdle was building a portfolio. I kept overthinking layouts and spending endless hours chasing perfection. <span className="relative inline-block px-1">
                       <span className="relative z-10">Thanks to Job Ready and the Designfolio template, that struggle is finally over.</span>
                       <span className="absolute bottom-0 left-0 w-full h-3 bg-[#FFCCB3] -rotate-1"></span>
