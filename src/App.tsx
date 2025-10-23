@@ -383,7 +383,7 @@ function App() {
       >
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16 animate-on-scroll animate-rise-tilt">
-            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">Your 14-Day Journey</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">Your 14-day journey to Land Real UX Interviews</h2>
             <p className="text-white/60 text-base md:text-lg max-w-2xl mx-auto">
               A structured path to transform your portfolio and land interviews
             </p>
