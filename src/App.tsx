@@ -464,8 +464,12 @@ function App() {
                         </div>
 
                         {/* Expanded Details */}
-                        {expandedDay === item.day && (
-                          <div className="mt-4 pt-4 border-t border-white/10">
+                        <div 
+                          className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                            expandedDay === item.day ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0 mt-0'
+                          }`}
+                        >
+                          <div className="pt-4 border-t border-white/10">
                             <ul className="space-y-2.5 text-sm text-white/70">
                               {item.details.map((detail, i) => (
                                 <li key={i} className="flex items-start gap-3">
@@ -475,7 +479,7 @@ function App() {
                               ))}
                             </ul>
                           </div>
-                        )}
+                        </div>
                       </div>
                     </div>
                   </div>
