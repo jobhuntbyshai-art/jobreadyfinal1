@@ -1629,7 +1629,7 @@ function App() {
 
               {/* Title */}
               <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-[#1A1A2E]">
-                Ready to Get Started?
+                Let's Chat and get you Job Ready 👋
               </h2>
 
               {/* 3 Steps */}
@@ -1641,7 +1641,7 @@ function App() {
                   </div>
                   <div className="flex-1">
                     <p className="text-[#1A1A2E]/70 leading-relaxed">
-                      Join WhatsApp group:{" "}
+                      Join the WhatsApp group →{" "}
                       <a 
                         href="https://chat.whatsapp.com/IOcvgOE9VRfHFIFjJShBty"
                         target="_blank"
@@ -1649,7 +1649,7 @@ function App() {
                         className="text-[#1A1A2E] font-semibold underline hover:text-[#F4E04D] transition"
                         data-testid="link-whatsapp"
                       >
-                        Click here
+                        [Click here]
                       </a>
                     </p>
                   </div>
@@ -1662,7 +1662,7 @@ function App() {
                   </div>
                   <div className="flex-1">
                     <p className="text-[#1A1A2E]/70 leading-relaxed">
-                      Text there <span className="font-semibold text-[#1A1A2E]">"Job Ready"</span>
+                      Send a quick <span className="font-semibold text-[#1A1A2E]">"Job Ready"</span> message so we know it's you.
                     </p>
                   </div>
                 </div>
@@ -1674,7 +1674,7 @@ function App() {
                   </div>
                   <div className="flex-1">
                     <p className="text-[#1A1A2E]/70 leading-relaxed">
-                      Shai/Nandini will get in touch with you
+                      Shai or Nandini will connect with you for a quick conversation.
                     </p>
                   </div>
                 </div>
