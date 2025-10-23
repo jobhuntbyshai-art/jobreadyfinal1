@@ -1642,6 +1642,30 @@ function App() {
           </div>
         </div>
       )}
+
+      {/* Floating WhatsApp Widget */}
+      <a
+        href="https://chat.whatsapp.com/IOcvgOE9VRfHFIFjJShBty"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-8 right-8 z-40 flex items-center gap-3 bg-white rounded-full shadow-2xl hover:shadow-xl transition-all hover:scale-105 p-3 pr-5 border-2 border-[#F4E04D]"
+        data-testid="floating-whatsapp-widget"
+      >
+        <div className="w-14 h-14 rounded-full overflow-hidden border-2 border-[#F4E04D] flex-shrink-0">
+          <video
+            src="/shai.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="text-left hidden md:block">
+          <p className="text-xs text-[#1A1A2E]/60 font-medium">Chat with</p>
+          <p className="text-sm font-bold text-[#1A1A2E]">Shai on WhatsApp</p>
+        </div>
+      </a>
     </div>
   );
 }
