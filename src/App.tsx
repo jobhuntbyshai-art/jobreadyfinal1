@@ -978,7 +978,7 @@ function App() {
       <section className="px-6 pt-16 pb-24">
         <div className="text-center mb-16 max-w-4xl mx-auto animate-on-scroll animate-rise-tilt">
           <h2 className="text-2xl md:text-4xl font-bold mb-4">
-            Don't just take our word for it — real students, real results.
+            Don't just take our word for it
           </h2>
           <p className="text-[#1A1A2E]/60 text-sm md:text-base">
             Hear from designers who transformed their portfolios and landed interviews.
