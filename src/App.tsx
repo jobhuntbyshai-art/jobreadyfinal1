@@ -1001,7 +1001,7 @@ function App() {
                 <div className="grid grid-cols-2 gap-8">
           {/* Harshita's Testimonial */}
           <div 
-            className="bg-[#D9F0FF] rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#A8D5F0] relative"
+            className="bg-[#D9F0FF] p-6 shadow-md hover:shadow-2xl transition-all duration-300 rounded-sm border-t-4 border-[#A8D5F0] relative h-full"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
@@ -1032,7 +1032,7 @@ function App() {
 
           {/* Madhulika's Testimonial */}
           <div 
-            className="bg-[#FFE5F0] -rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#FFB6D9] relative"
+            className="bg-[#FFE5F0] p-6 shadow-md hover:shadow-2xl transition-all duration-300 rounded-sm border-t-4 border-[#FFB6D9] relative h-full"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
@@ -1069,7 +1069,7 @@ function App() {
                 <div className="grid grid-cols-2 gap-8">
           {/* Komalpreet's Testimonial */}
           <div 
-            className="bg-[#FFF9E5] rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#F4E04D] relative"
+            className="bg-[#FFF9E5] p-6 shadow-md hover:shadow-2xl transition-all duration-300 rounded-sm border-t-4 border-[#F4E04D] relative h-full"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
@@ -1101,7 +1101,7 @@ function App() {
 
           {/* Sundar's Testimonial */}
           <div 
-            className="bg-[#E5F9F0] -rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#A8E6CF] relative"
+            className="bg-[#E5F9F0] p-6 shadow-md hover:shadow-2xl transition-all duration-300 rounded-sm border-t-4 border-[#A8E6CF] relative h-full"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
@@ -1136,7 +1136,7 @@ function App() {
                 <div className="grid grid-cols-2 gap-8">
           {/* Satvik's Testimonial */}
           <div 
-            className="bg-[#F0E5FF] rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#D4B5FF] relative"
+            className="bg-[#F0E5FF] p-6 shadow-md hover:shadow-2xl transition-all duration-300 rounded-sm border-t-4 border-[#D4B5FF] relative h-full"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
@@ -1166,7 +1166,7 @@ function App() {
 
           {/* Jai's Testimonial */}
           <div 
-            className="bg-[#FFE5D9] -rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#FFCCB3] relative"
+            className="bg-[#FFE5D9] p-6 shadow-md hover:shadow-2xl transition-all duration-300 rounded-sm border-t-4 border-[#FFCCB3] relative h-full"
             style={{
               clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
             }}
@@ -1207,7 +1207,7 @@ function App() {
               {/* Mobile Slide 1: Harshita */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#D9F0FF] rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#A8D5F0] relative"
+                  className="bg-[#D9F0FF] p-6 shadow-md hover:shadow-2xl transition-all duration-300 rounded-sm border-t-4 border-[#A8D5F0] relative"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
@@ -1240,7 +1240,7 @@ function App() {
               {/* Mobile Slide 2: Madhulika */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#FFE5F0] -rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#FFB6D9] relative"
+                  className="bg-[#FFE5F0] p-6 shadow-md hover:shadow-2xl transition-all duration-300 rounded-sm border-t-4 border-[#FFB6D9] relative"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
@@ -1273,7 +1273,7 @@ function App() {
               {/* Mobile Slide 3: Komalpreet */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#FFF9E5] rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#F4E04D] relative"
+                  className="bg-[#FFF9E5] p-6 shadow-md hover:shadow-2xl transition-all duration-300 rounded-sm border-t-4 border-[#F4E04D] relative"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
@@ -1306,7 +1306,7 @@ function App() {
               {/* Mobile Slide 4: Sundar */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#E5F9F0] -rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#A8E6CF] relative"
+                  className="bg-[#E5F9F0] p-6 shadow-md hover:shadow-2xl transition-all duration-300 rounded-sm border-t-4 border-[#A8E6CF] relative"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
@@ -1337,7 +1337,7 @@ function App() {
               {/* Mobile Slide 5: Satvik */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#F0E5FF] rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#D4B5FF] relative"
+                  className="bg-[#F0E5FF] p-6 shadow-md hover:shadow-2xl transition-all duration-300 rounded-sm border-t-4 border-[#D4B5FF] relative"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
@@ -1368,7 +1368,7 @@ function App() {
               {/* Mobile Slide 6: Jai */}
               <div className="w-full flex-shrink-0">
                 <div 
-                  className="bg-[#FFE5D9] -rotate-1 p-6 shadow-md hover:shadow-2xl transition-all duration-300 hover:rotate-0 rounded-sm border-t-4 border-[#FFCCB3] relative"
+                  className="bg-[#FFE5D9] p-6 shadow-md hover:shadow-2xl transition-all duration-300 rounded-sm border-t-4 border-[#FFCCB3] relative"
                   style={{
                     clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%)'
                   }}
