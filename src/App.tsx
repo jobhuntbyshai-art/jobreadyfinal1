@@ -1451,7 +1451,7 @@ function App() {
 
       {/* Next Batch Section */}
       <section className="border-t border-[#1A1A2E]/10">
-        <div className="max-w-6xl mx-auto px-6 py-20">
+        <div className="max-w-6xl mx-auto px-6 py-20 pb-12">
           {/* Main Content */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 items-start md:items-center mb-16 animate-on-scroll animate-depth-lift">
             {/* Left: Headline */}
@@ -1499,7 +1499,7 @@ function App() {
       </section>
 
       {/* Footer */}
-      <footer className="px-6 py-12 text-left md:text-center text-[#1A1A2E]/40 text-sm">
+      <footer className="px-6 pt-8 pb-12 text-left md:text-center text-[#1A1A2E]/40 text-sm">
         <p>© 2025 Job Ready By Designfolio. All rights reserved.</p>
       </footer>
 
