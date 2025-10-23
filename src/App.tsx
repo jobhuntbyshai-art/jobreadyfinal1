@@ -368,120 +368,72 @@ function App() {
       {/* Program Schedule Section */}
       <section 
         id="syllabus" 
-        className="py-24 bg-[#1A1A2E]"
+        className="py-24 bg-white"
       >
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="text-center mb-12 animate-on-scroll animate-rise-tilt">
-            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">Your 14-Day Journey</h2>
-            <p className="text-white/60 text-sm md:text-lg">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16 animate-on-scroll animate-rise-tilt">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-[#1A1A2E]">Your 14-Day Journey</h2>
+            <p className="text-[#1A1A2E]/60 text-base md:text-xl max-w-2xl mx-auto">
               A structured path to transform your portfolio and land interviews
             </p>
           </div>
 
-          <div className="border-4 border-white rounded-lg overflow-hidden bg-white hidden md:block animate-on-scroll animate-depth-lift stagger-1">
-          <table className="w-full table-fixed">
-            <thead>
-              <tr className="border-b-2 border-[#1A1A2E] bg-[#F4E04D]">
-                <th className="px-4 py-4 text-left text-sm font-bold text-[#1A1A2E] w-24">Day</th>
-                <th className="px-4 py-4 text-left text-sm font-bold text-[#1A1A2E]">Topic</th>
-                <th className="px-4 py-4 text-left text-sm font-bold text-[#1A1A2E] w-40">Type</th>
-                <th className="px-4 py-4 w-12"></th>
-              </tr>
-            </thead>
-            <tbody>
-              {scheduleData.map((item, index) => (
-                <React.Fragment key={item.day}>
-                  <tr 
-                    className={`hover:bg-[#E8E4D9]/30 transition cursor-pointer ${
-                      index !== scheduleData.length - 1 ? 'border-b border-[#1A1A2E]' : ''
-                    }`}
-                    onClick={() => setExpandedDay(expandedDay === item.day ? null : item.day)}
-                  >
-                    <td className="px-4 py-4 align-middle">
-                      <span className="text-sm font-medium text-[#1A1A2E]">Day {item.day}</span>
-                    </td>
-                    <td className="px-4 py-4 text-sm text-[#1A1A2E] align-middle">{item.title}</td>
-                    <td className="px-4 py-4 align-middle">
-                      <span className={`text-xs font-semibold text-[#1A1A2E] ${item.color} px-3 py-1 rounded inline-block whitespace-nowrap`}>
-                        {item.type}
-                      </span>
-                    </td>
-                    <td className="px-4 py-4 text-center align-middle">
-                      <ChevronDown 
-                        className={`w-4 h-4 text-[#1A1A2E] transition-transform duration-200 inline-block ${
-                          expandedDay === item.day ? 'rotate-180' : ''
-                        }`}
-                      />
-                    </td>
-                  </tr>
-                  {expandedDay === item.day && (
-                    <tr className={`${index !== scheduleData.length - 1 ? 'border-b border-[#1A1A2E]' : ''}`}>
-                      <td colSpan={4} className="px-4 py-4 bg-[#E8E4D9]/20">
-                        <ul className="space-y-2 text-sm text-[#1A1A2E]/80">
-                          {item.details.map((detail, i) => (
-                            <li key={i} className="flex items-start gap-2">
-                              <span className="text-[#F4E04D] mt-1">●</span>
-                              <span>{detail}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </td>
-                    </tr>
-                  )}
-                </React.Fragment>
-              ))}
-            </tbody>
-          </table>
-          </div>
-
-          {/* Mobile Cards View */}
-          <div className="md:hidden space-y-4 animate-on-scroll animate-rise-tilt stagger-1">
-          {scheduleData.slice(0, showAllSchedule ? 15 : 6).map((item) => (
-            <div key={item.day} className="border-2 border-[#1A1A2E] rounded-lg bg-white overflow-hidden">
+          {/* Cards Grid - Desktop and Mobile */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {scheduleData.slice(0, showAllSchedule ? 15 : 6).map((item, index) => (
               <div 
-                className="p-4 cursor-pointer"
+                key={item.day}
+                className="group bg-white border-2 border-[#1A1A2E] rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer animate-on-scroll animate-pop-scale"
+                style={{ animationDelay: `${index * 50}ms` }}
                 onClick={() => setExpandedDay(expandedDay === item.day ? null : item.day)}
               >
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm font-bold text-[#1A1A2E]">Day {item.day}</span>
-                  <div className="flex items-center gap-2">
-                    <span className={`text-xs font-semibold text-[#1A1A2E] ${item.color} px-3 py-1 rounded`}>
+                <div className="flex items-start justify-between mb-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-[#F4E04D] flex items-center justify-center font-bold text-[#1A1A2E] text-lg">
+                      {item.day}
+                    </div>
+                    <span className={`text-xs font-semibold px-3 py-1.5 rounded-full ${item.color} text-[#1A1A2E]`}>
                       {item.type}
                     </span>
-                    <ChevronDown 
-                      className={`w-4 h-4 text-[#1A1A2E] transition-transform duration-200 ${
-                        expandedDay === item.day ? 'rotate-180' : ''
-                      }`}
-                    />
                   </div>
+                  <ChevronDown 
+                    className={`w-5 h-5 text-[#1A1A2E] transition-transform duration-200 flex-shrink-0 ${
+                      expandedDay === item.day ? 'rotate-180' : ''
+                    }`}
+                  />
                 </div>
-                <p className="text-sm text-[#1A1A2E]">{item.title}</p>
+                
+                <h3 className="text-base md:text-lg font-bold text-[#1A1A2E] mb-3 leading-tight">
+                  {item.title}
+                </h3>
+
+                {expandedDay === item.day && (
+                  <div className="mt-4 pt-4 border-t-2 border-[#E8E4D9]">
+                    <ul className="space-y-2 text-sm text-[#1A1A2E]/70">
+                      {item.details.map((detail, i) => (
+                        <li key={i} className="flex items-start gap-2">
+                          <span className="text-[#F4E04D] mt-0.5 flex-shrink-0">●</span>
+                          <span>{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
-              {expandedDay === item.day && (
-                <div className="px-4 pb-4 bg-[#E8E4D9]/20 border-t border-[#1A1A2E]">
-                  <ul className="space-y-2 text-sm text-[#1A1A2E]/80 mt-3">
-                    {item.details.map((detail, i) => (
-                      <li key={i} className="flex items-start gap-2">
-                        <span className="text-[#F4E04D] mt-1">●</span>
-                        <span>{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-          ))}
-          
-          {!showAllSchedule && (
-            <button
-              onClick={() => setShowAllSchedule(true)}
-              className="w-full py-3 px-4 bg-[#1A1A2E] text-white rounded-lg hover:bg-[#1A1A2E]/90 transition font-medium text-sm"
-              data-testid="button-view-more-schedule"
-            >
-              View More Days →
-            </button>
-          )}
+            ))}
           </div>
+
+          {!showAllSchedule && (
+            <div className="text-center mt-12">
+              <button
+                onClick={() => setShowAllSchedule(true)}
+                className="px-8 py-4 bg-[#1A1A2E] text-white rounded-xl hover:bg-[#1A1A2E]/90 transition font-bold text-base shadow-lg hover:shadow-xl"
+                data-testid="button-view-more-schedule"
+              >
+                View All 15 Days →
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
