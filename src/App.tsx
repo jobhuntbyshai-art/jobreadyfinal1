@@ -497,58 +497,6 @@ function App() {
         </div>
       </section>
 
-      {/* How It Works Section */}
-      <section className="py-16 px-6 bg-[#E8E4D9]">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16 animate-on-scroll animate-slide-left">
-            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-[#1A1A2E]">
-              Turn 2 weeks into a complete career upgrade.
-            </h2>
-          </div>
-
-          {/* Process Flow */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-6 mb-12">
-            {/* Step 1 */}
-            <div className="flex flex-col items-center text-center flex-1 animate-on-scroll animate-pop-scale stagger-2" data-testid="step-live-session">
-              <div className="w-32 h-32 mb-4 flex items-center justify-center">
-                <img src="/live-3d.png" alt="Live Session" className="w-full h-full object-contain" />
-              </div>
-              <h3 className="font-bold text-[#1A1A2E] text-lg mb-2">Live Session</h3>
-            </div>
-
-            {/* Arrow */}
-            <div className="hidden md:block text-[#1A1A2E]/40 text-2xl -mt-12">→</div>
-
-            {/* Step 2 */}
-            <div className="flex flex-col items-center text-center flex-1 animate-on-scroll animate-pop-scale stagger-4" data-testid="step-assignment">
-              <div className="w-32 h-32 mb-4 flex items-center justify-center">
-                <img src="/assignment-3d.png" alt="Assignment" className="w-full h-full object-contain" />
-              </div>
-              <h3 className="font-bold text-[#1A1A2E] text-lg mb-2">Assignment</h3>
-            </div>
-
-            {/* Arrow */}
-            <div className="hidden md:block text-[#1A1A2E]/40 text-2xl -mt-12">→</div>
-
-            {/* Step 3 */}
-            <div className="flex flex-col items-center text-center flex-1 animate-on-scroll animate-pop-scale stagger-6" data-testid="step-review">
-              <div className="w-32 h-32 mb-4 flex items-center justify-center">
-                <img src="/personal-review.png" alt="Personal Review" className="w-full h-full object-contain" />
-              </div>
-              <h3 className="font-bold text-[#1A1A2E] text-lg mb-2">Personal Review</h3>
-            </div>
-          </div>
-
-          {/* Description */}
-          <div className="text-center max-w-2xl mx-auto animate-on-scroll animate-reveal-blur stagger-7">
-            <p className="text-[#1A1A2E]/70 text-base leading-relaxed">
-              We break down every concept in simple, actionable ways during live sessions.
-              You then put that learning to work through focused assignments — and get a personal review on your submission so you can refine, improve, and actually see progress each week.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* Meet Your Mentors Section */}
       <section className="py-16 px-6">
         <div className="max-w-4xl mx-auto">
