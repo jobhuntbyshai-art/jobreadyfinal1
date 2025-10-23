@@ -1,5 +1,5 @@
-import { Star, FileText, ChevronRight, ChevronLeft, X } from 'lucide-react';
-import { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
+import { Star, FileText, ChevronRight, ChevronLeft, X, ChevronDown } from 'lucide-react';
 
 function App() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -9,7 +9,168 @@ function App() {
   const [iframeUrl, setIframeUrl] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showAllSchedule, setShowAllSchedule] = useState(false);
+  const [expandedDay, setExpandedDay] = useState<number | null>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
+
+  const scheduleData = [
+    {
+      day: 0,
+      title: 'Learn to Whiteboard',
+      type: 'Live Session',
+      color: 'bg-[#F4E04D]',
+      details: [
+        'Understand how to approach whiteboard challenges with structure',
+        'Learn frameworks to communicate design reasoning clearly',
+        'Build confidence for live design thinking rounds'
+      ]
+    },
+    {
+      day: 1,
+      title: 'Build a Winning UX Case Study',
+      type: 'Live Workshop',
+      color: 'bg-[#F4E04D]',
+      details: [
+        'Learn how to tell your design story with clarity and impact',
+        'Identify the "why" and "impact" behind your projects',
+        'Structure your case studies like top-hired designers'
+      ]
+    },
+    {
+      day: 2,
+      title: 'Refine & Polish Your Case Study',
+      type: 'Assignment',
+      color: 'bg-[#B8A8D8]',
+      details: [
+        'Apply the storytelling formula learned in Day 1',
+        'Focus on clarity, flow, and measurable outcomes',
+        'Make your visuals recruiter-friendly'
+      ]
+    },
+    {
+      day: 3,
+      title: 'Case Study Review & Feedback',
+      type: 'Review',
+      color: 'bg-[#FFB6C1]',
+      details: [
+        'Get direct mentor feedback on your case study',
+        'Learn how to improve your storytelling and visual flow'
+      ]
+    },
+    {
+      day: 4,
+      title: 'Build a Portfolio Deck for UX Case Studies',
+      type: 'Live Session',
+      color: 'bg-[#F4E04D]',
+      details: [
+        'Learn to turn your UX case study into a presentation deck',
+        'Understand what hiring panels expect in a portfolio round',
+        'Learn the structure and pacing of a strong portfolio pitch'
+      ]
+    },
+    {
+      day: 5,
+      title: 'Build Your Presentation Deck Using Templates',
+      type: 'Assignment',
+      color: 'bg-[#B8A8D8]',
+      details: [
+        'Use pre-built templates to save time and improve layout',
+        'Customize the deck with your own case study visuals'
+      ]
+    },
+    {
+      day: 6,
+      title: 'Portfolio Deck Review & Feedback',
+      type: 'Review',
+      color: 'bg-[#FFB6C1]',
+      details: [
+        'Get detailed mentor critique on your presentation deck',
+        'Refine storytelling for your next design interview'
+      ]
+    },
+    {
+      day: 7,
+      title: 'Build an ATS-Proof Resume (with Template)',
+      type: 'Live Session',
+      color: 'bg-[#F4E04D]',
+      details: [
+        'Write resumes that pass ATS scans and attract recruiters',
+        'Learn to highlight outcomes and measurable results',
+        'Use real examples from hired designers'
+      ]
+    },
+    {
+      day: 8,
+      title: 'Optimize and Build Your Resume',
+      type: 'Assignment',
+      color: 'bg-[#B8A8D8]',
+      details: [
+        'Refine your resume using mentor-tested methods',
+        'Add clarity, hierarchy, and action-driven impact lines'
+      ]
+    },
+    {
+      day: 9,
+      title: 'Resume Review & Feedback',
+      type: 'Review',
+      color: 'bg-[#FFB6C1]',
+      details: [
+        'Receive personal mentor feedback on your resume',
+        'Make your final job-ready version for applications'
+      ]
+    },
+    {
+      day: 10,
+      title: 'Build a High-Conversion LinkedIn Profile',
+      type: 'Live Session',
+      color: 'bg-[#F4E04D]',
+      details: [
+        'Learn how recruiters search and filter candidates',
+        'Optimize headline, summary, and experience to convert views',
+        'Understand how to create content that builds visibility'
+      ]
+    },
+    {
+      day: 11,
+      title: 'Optimize Your LinkedIn Profile',
+      type: 'Assignment',
+      color: 'bg-[#B8A8D8]',
+      details: [
+        'Apply real-world LinkedIn SEO strategies',
+        'Update sections to reflect your new portfolio and results'
+      ]
+    },
+    {
+      day: 12,
+      title: 'LinkedIn Profile Review & Feedback',
+      type: 'Review',
+      color: 'bg-[#FFB6C1]',
+      details: [
+        'Get personalized review of your LinkedIn profile',
+        'Learn quick tweaks that improve recruiter response rates'
+      ]
+    },
+    {
+      day: 13,
+      title: 'Crack the HR Interview',
+      type: 'Live Session',
+      color: 'bg-[#F4E04D]',
+      details: [
+        'Learn how to answer "Tell me about yourself" and tricky HR questions',
+        'Understand recruiter psychology and selection criteria',
+        'Master the balance of confidence and clarity'
+      ]
+    },
+    {
+      day: 14,
+      title: 'Ask Me Anything (QA on Discord)',
+      type: 'AMA',
+      color: 'bg-[#D4A574]',
+      details: [
+        'Clarify final doubts before job applications',
+        'Get personalized mentor insights on resumes, portfolios, and interviews'
+      ]
+    }
+  ];
 
   const testimonials = [
     {
@@ -219,186 +380,96 @@ function App() {
           </div>
 
           <div className="border-4 border-[#1A1A2E] rounded-lg overflow-hidden bg-white hidden md:block animate-on-scroll animate-depth-lift stagger-1">
-          <table className="w-full table-fixed">
-            <colgroup>
-              <col style={{ width: '12%' }} />
-              <col style={{ width: '60%' }} />
-              <col style={{ width: '28%' }} />
-            </colgroup>
+          <table className="w-full">
             <thead>
               <tr className="border-b-2 border-[#1A1A2E] bg-[#F4E04D]">
-                <th className="px-6 py-4 text-left text-sm font-bold text-[#1A1A2E]">Day</th>
+                <th className="px-6 py-4 text-left text-sm font-bold text-[#1A1A2E] w-20">Day</th>
                 <th className="px-6 py-4 text-left text-sm font-bold text-[#1A1A2E]">Topic</th>
-                <th className="px-6 py-4 text-left text-sm font-bold text-[#1A1A2E]">Type</th>
+                <th className="px-6 py-4 text-left text-sm font-bold text-[#1A1A2E] w-36">Type</th>
+                <th className="w-12"></th>
               </tr>
             </thead>
             <tbody>
-              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
-                <td className="px-6 py-4">
-                  <span className="text-sm font-medium text-[#1A1A2E]">Day 0</span>
-                </td>
-                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Learn to Whiteboard</td>
-                <td className="px-6 py-4">
-                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#F4E04D] px-3 py-1 rounded">Live Session</span>
-                </td>
-              </tr>
-              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
-                <td className="px-6 py-4">
-                  <span className="text-sm font-medium text-[#1A1A2E]">Day 1</span>
-                </td>
-                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Learn - How to Build a Perfect UX Case Study</td>
-                <td className="px-6 py-4">
-                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#F4E04D] px-3 py-1 rounded">Live Session</span>
-                </td>
-              </tr>
-              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
-                <td className="px-6 py-4">
-                  <span className="text-sm font-medium text-[#1A1A2E]">Day 2</span>
-                </td>
-                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Optimize your Perfect UX Case Study</td>
-                <td className="px-6 py-4">
-                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#B8A8D8] px-3 py-1 rounded">Assignment</span>
-                </td>
-              </tr>
-              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
-                <td className="px-6 py-4">
-                  <span className="text-sm font-medium text-[#1A1A2E]">Day 3</span>
-                </td>
-                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Submit the Optimized Case Study and get Feedback</td>
-                <td className="px-6 py-4">
-                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#FFB6C1] px-3 py-1 rounded">Review</span>
-                </td>
-              </tr>
-              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
-                <td className="px-6 py-4">
-                  <span className="text-sm font-medium text-[#1A1A2E]">Day 4</span>
-                </td>
-                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Learn - How to Build a Perfect Presentation deck of your UX Case Study for a Portfolio Round</td>
-                <td className="px-6 py-4">
-                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#F4E04D] px-3 py-1 rounded">Live Session</span>
-                </td>
-              </tr>
-              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
-                <td className="px-6 py-4">
-                  <span className="text-sm font-medium text-[#1A1A2E]">Day 5</span>
-                </td>
-                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Use the template to build your presentation deck for your UX Case study</td>
-                <td className="px-6 py-4">
-                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#B8A8D8] px-3 py-1 rounded">Assignment</span>
-                </td>
-              </tr>
-              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
-                <td className="px-6 py-4">
-                  <span className="text-sm font-medium text-[#1A1A2E]">Day 6</span>
-                </td>
-                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Submit your Pitch Deck and get Feedback</td>
-                <td className="px-6 py-4">
-                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#FFB6C1] px-3 py-1 rounded">Review</span>
-                </td>
-              </tr>
-              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
-                <td className="px-6 py-4">
-                  <span className="text-sm font-medium text-[#1A1A2E]">Day 7</span>
-                </td>
-                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Learn - Build Perfect Resume (with Template)</td>
-                <td className="px-6 py-4">
-                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#F4E04D] px-3 py-1 rounded">Live Session</span>
-                </td>
-              </tr>
-              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
-                <td className="px-6 py-4">
-                  <span className="text-sm font-medium text-[#1A1A2E]">Day 8</span>
-                </td>
-                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Optimize and build your resume</td>
-                <td className="px-6 py-4">
-                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#B8A8D8] px-3 py-1 rounded">Assignment</span>
-                </td>
-              </tr>
-              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
-                <td className="px-6 py-4">
-                  <span className="text-sm font-medium text-[#1A1A2E]">Day 9</span>
-                </td>
-                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Submit your resume and get feedback</td>
-                <td className="px-6 py-4">
-                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#FFB6C1] px-3 py-1 rounded">Review</span>
-                </td>
-              </tr>
-              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
-                <td className="px-6 py-4">
-                  <span className="text-sm font-medium text-[#1A1A2E]">Day 10</span>
-                </td>
-                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Learn - How to Build a Perfect LinkedIn</td>
-                <td className="px-6 py-4">
-                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#F4E04D] px-3 py-1 rounded">Live Session</span>
-                </td>
-              </tr>
-              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
-                <td className="px-6 py-4">
-                  <span className="text-sm font-medium text-[#1A1A2E]">Day 11</span>
-                </td>
-                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Optimize your LinkedIn</td>
-                <td className="px-6 py-4">
-                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#B8A8D8] px-3 py-1 rounded">Assignment</span>
-                </td>
-              </tr>
-              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
-                <td className="px-6 py-4">
-                  <span className="text-sm font-medium text-[#1A1A2E]">Day 12</span>
-                </td>
-                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Submit your optimized LinkedIn and get Feedback</td>
-                <td className="px-6 py-4">
-                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#FFB6C1] px-3 py-1 rounded">Review</span>
-                </td>
-              </tr>
-              <tr className="border-b border-[#1A1A2E] hover:bg-[#E8E4D9]/30 transition">
-                <td className="px-6 py-4">
-                  <span className="text-sm font-medium text-[#1A1A2E]">Day 13</span>
-                </td>
-                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Learn - How to Crack the HR Interview</td>
-                <td className="px-6 py-4">
-                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#F4E04D] px-3 py-1 rounded">Live Session</span>
-                </td>
-              </tr>
-              <tr className="hover:bg-[#E8E4D9]/30 transition">
-                <td className="px-6 py-4">
-                  <span className="text-sm font-medium text-[#1A1A2E]">Day 14</span>
-                </td>
-                <td className="px-6 py-4 text-sm text-[#1A1A2E]">Ask me Anything - QA on Discord (Text Communication)</td>
-                <td className="px-6 py-4">
-                  <span className="text-xs font-semibold text-[#1A1A2E] bg-[#D4A574] px-3 py-1 rounded">AMA</span>
-                </td>
-              </tr>
+              {scheduleData.map((item, index) => (
+                <React.Fragment key={item.day}>
+                  <tr 
+                    className={`hover:bg-[#E8E4D9]/30 transition cursor-pointer ${
+                      index !== scheduleData.length - 1 ? 'border-b border-[#1A1A2E]' : ''
+                    }`}
+                    onClick={() => setExpandedDay(expandedDay === item.day ? null : item.day)}
+                  >
+                    <td className="px-6 py-4">
+                      <span className="text-sm font-medium text-[#1A1A2E]">Day {item.day}</span>
+                    </td>
+                    <td className="px-6 py-4 text-sm text-[#1A1A2E]">{item.title}</td>
+                    <td className="px-6 py-4">
+                      <span className={`text-xs font-semibold text-[#1A1A2E] ${item.color} px-3 py-1 rounded`}>
+                        {item.type}
+                      </span>
+                    </td>
+                    <td className="px-6 py-4">
+                      <ChevronDown 
+                        className={`w-4 h-4 text-[#1A1A2E] transition-transform duration-200 ${
+                          expandedDay === item.day ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </td>
+                  </tr>
+                  {expandedDay === item.day && (
+                    <tr className={`${index !== scheduleData.length - 1 ? 'border-b border-[#1A1A2E]' : ''}`}>
+                      <td colSpan={4} className="px-6 py-4 bg-[#E8E4D9]/20">
+                        <ul className="space-y-2 text-sm text-[#1A1A2E]/80">
+                          {item.details.map((detail, i) => (
+                            <li key={i} className="flex items-start gap-2">
+                              <span className="text-[#F4E04D] mt-1">●</span>
+                              <span>{detail}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </td>
+                    </tr>
+                  )}
+                </React.Fragment>
+              ))}
             </tbody>
           </table>
           </div>
 
           {/* Mobile Cards View */}
           <div className="md:hidden space-y-4 animate-on-scroll animate-rise-tilt stagger-1">
-          {[
-            { day: 'Day 0', topic: 'Learn to Whiteboard', type: 'Live Session', color: 'bg-[#F4E04D]' },
-            { day: 'Day 1', topic: 'Learn - How to Build a Perfect UX Case Study', type: 'Live Session', color: 'bg-[#F4E04D]' },
-            { day: 'Day 2', topic: 'Optimize your Perfect UX Case Study', type: 'Assignment', color: 'bg-[#B8A8D8]' },
-            { day: 'Day 3', topic: 'Submit the Optimized Case Study and get Feedback', type: 'Review', color: 'bg-[#FFB6C1]' },
-            { day: 'Day 4', topic: 'Learn - How to Build a Perfect Presentation deck of your UX Case Study for a Portfolio Round', type: 'Live Session', color: 'bg-[#F4E04D]' },
-            { day: 'Day 5', topic: 'Use the template to build your presentation deck for your UX Case study', type: 'Assignment', color: 'bg-[#B8A8D8]' },
-            { day: 'Day 6', topic: 'Submit your Pitch Deck and get Feedback', type: 'Review', color: 'bg-[#FFB6C1]' },
-            { day: 'Day 7', topic: 'Learn - Build Perfect Resume (with Template)', type: 'Live Session', color: 'bg-[#F4E04D]' },
-            { day: 'Day 8', topic: 'Optimize and build your resume', type: 'Assignment', color: 'bg-[#B8A8D8]' },
-            { day: 'Day 9', topic: 'Submit your resume and get feedback', type: 'Review', color: 'bg-[#FFB6C1]' },
-            { day: 'Day 10', topic: 'Learn - How to Build a Perfect LinkedIn', type: 'Live Session', color: 'bg-[#F4E04D]' },
-            { day: 'Day 11', topic: 'Optimize your LinkedIn', type: 'Assignment', color: 'bg-[#B8A8D8]' },
-            { day: 'Day 12', topic: 'Submit your optimized LinkedIn and get Feedback', type: 'Review', color: 'bg-[#FFB6C1]' },
-            { day: 'Day 13', topic: 'Learn - How to Crack the HR Interview', type: 'Live Session', color: 'bg-[#F4E04D]' },
-            { day: 'Day 14', topic: 'Ask me Anything - QA on Discord (Text Communication)', type: 'AMA', color: 'bg-[#D4A574]' },
-          ].slice(0, showAllSchedule ? 15 : 6).map((item, i) => (
-            <div key={i} className="border-2 border-[#1A1A2E] rounded-lg p-4 bg-white">
-              <div className="flex items-center justify-between mb-3">
-                <span className="text-sm font-bold text-[#1A1A2E]">{item.day}</span>
-                <span className={`text-xs font-semibold text-[#1A1A2E] ${item.color} px-3 py-1 rounded`}>
-                  {item.type}
-                </span>
+          {scheduleData.slice(0, showAllSchedule ? 15 : 6).map((item) => (
+            <div key={item.day} className="border-2 border-[#1A1A2E] rounded-lg bg-white overflow-hidden">
+              <div 
+                className="p-4 cursor-pointer"
+                onClick={() => setExpandedDay(expandedDay === item.day ? null : item.day)}
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-sm font-bold text-[#1A1A2E]">Day {item.day}</span>
+                  <div className="flex items-center gap-2">
+                    <span className={`text-xs font-semibold text-[#1A1A2E] ${item.color} px-3 py-1 rounded`}>
+                      {item.type}
+                    </span>
+                    <ChevronDown 
+                      className={`w-4 h-4 text-[#1A1A2E] transition-transform duration-200 ${
+                        expandedDay === item.day ? 'rotate-180' : ''
+                      }`}
+                    />
+                  </div>
+                </div>
+                <p className="text-sm text-[#1A1A2E]">{item.title}</p>
               </div>
-              <p className="text-sm text-[#1A1A2E]">{item.topic}</p>
+              {expandedDay === item.day && (
+                <div className="px-4 pb-4 bg-[#E8E4D9]/20 border-t border-[#1A1A2E]">
+                  <ul className="space-y-2 text-sm text-[#1A1A2E]/80 mt-3">
+                    {item.details.map((detail, i) => (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-[#F4E04D] mt-1">●</span>
+                        <span>{detail}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           ))}
           
