@@ -392,61 +392,58 @@ function App() {
           {/* Timeline Pathway */}
           <div className="relative max-w-3xl mx-auto">
             {/* Timeline Items */}
-            <div className="space-y-0 mb-8">
+            <div className="space-y-6 mb-8">
               {scheduleData.slice(0, showAllSchedule ? scheduleData.length : 7).map((item, index, array) => {
                 const isLastItem = index === array.length - 1;
                 return (
                   <div 
                     key={item.day}
-                    className="relative pb-6"
+                    className="relative"
                   >
+                    {/* Vertical Line between cards */}
+                    {!isLastItem && (
+                      <div className="absolute left-1/2 -translate-x-1/2 -bottom-6 w-1 h-6 bg-gradient-to-b from-white/20 to-white/10"></div>
+                    )}
+                    
                     {/* Timeline Item */}
                     <div 
-                      className="cursor-pointer group animate-on-scroll animate-reveal-blur relative"
+                      className="cursor-pointer group animate-on-scroll animate-reveal-blur"
                       style={{ animationDelay: `${index * 30}ms` }}
                       onClick={() => setExpandedDay(expandedDay === item.day ? null : item.day)}
                     >
-                      {/* Content with integrated pathway */}
-                      <div className="relative">
-                        {/* Vertical Line running through cards */}
-                        {!isLastItem && (
-                          <div className="absolute left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-white/20 via-white/10 to-white/5"></div>
-                        )}
-                        
-                        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 md:p-5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all relative">
-                          <div className="flex items-start justify-between gap-4">
-                            <div className="flex-1">
-                              <h3 className="font-bold text-white text-base md:text-lg mb-3">{item.title}</h3>
-                              <div className="flex items-center gap-2 flex-wrap">
-                                <span className="text-xs px-3 py-1 rounded-full bg-white/10 text-white/80 font-medium">
-                                  Day {item.day}
-                                </span>
-                                <span className={`text-xs font-semibold px-3 py-1 rounded-full ${item.color} text-[#1A1A2E]`}>
-                                  {item.type}
-                                </span>
-                              </div>
+                      <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 md:p-5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all">
+                        <div className="flex items-start justify-between gap-4">
+                          <div className="flex-1">
+                            <h3 className="font-bold text-white text-base md:text-lg mb-3">{item.title}</h3>
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <span className="text-xs px-3 py-1 rounded-full bg-white/10 text-white/80 font-medium">
+                                Day {item.day}
+                              </span>
+                              <span className={`text-xs font-semibold px-3 py-1 rounded-full ${item.color} text-[#1A1A2E]`}>
+                                {item.type}
+                              </span>
                             </div>
-                            <ChevronDown 
-                              className={`w-5 h-5 text-white/40 transition-transform flex-shrink-0 ${
-                                expandedDay === item.day ? 'rotate-180' : ''
-                              }`}
-                            />
                           </div>
-
-                          {/* Expanded Details */}
-                          {expandedDay === item.day && (
-                            <div className="mt-4 pt-4 border-t border-white/10">
-                              <ul className="space-y-2.5 text-sm text-white/70">
-                                {item.details.map((detail, i) => (
-                                  <li key={i} className="flex items-start gap-3">
-                                    <span className="text-[#F4E04D] mt-0.5 flex-shrink-0">●</span>
-                                    <span>{detail}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
+                          <ChevronDown 
+                            className={`w-5 h-5 text-white/40 transition-transform flex-shrink-0 ${
+                              expandedDay === item.day ? 'rotate-180' : ''
+                            }`}
+                          />
                         </div>
+
+                        {/* Expanded Details */}
+                        {expandedDay === item.day && (
+                          <div className="mt-4 pt-4 border-t border-white/10">
+                            <ul className="space-y-2.5 text-sm text-white/70">
+                              {item.details.map((detail, i) => (
+                                <li key={i} className="flex items-start gap-3">
+                                  <span className="text-[#F4E04D] mt-0.5 flex-shrink-0">●</span>
+                                  <span>{detail}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </div>
                     </div>
                   </div>
