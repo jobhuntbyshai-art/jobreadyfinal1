@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { Star, FileText, ChevronRight, ChevronLeft, X, ChevronDown } from 'lucide-react';
 
 function App() {
@@ -11,6 +11,8 @@ function App() {
   const [showAllSchedule, setShowAllSchedule] = useState(false);
   const [expandedDay, setExpandedDay] = useState<number | null>(null);
   const observerRef = useRef<IntersectionObserver | null>(null);
+  const [showBottomBar, setShowBottomBar] = useState(true);
+  const lastScrollY = useRef(0);
 
   const scheduleData = [
     {
@@ -257,6 +259,28 @@ function App() {
       });
     }
   }, [showAllSchedule]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY < 10) {
+        setShowBottomBar(true);
+      } else if (currentScrollY < lastScrollY.current) {
+        setShowBottomBar(true);
+      } else if (currentScrollY > lastScrollY.current) {
+        setShowBottomBar(false);
+      }
+      
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
 
   return (
@@ -1706,9 +1730,10 @@ function App() {
         href="https://chat.whatsapp.com/IOcvgOE9VRfHFIFjJShBty"
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed z-40 flex items-center gap-2 bg-white shadow-lg hover:shadow-xl transition-all
+        className={`fixed z-40 flex items-center gap-2 bg-white shadow-lg hover:shadow-xl transition-all duration-300
                    bottom-0 left-0 right-0 py-2.5 px-4 border-t-2 border-[#F4E04D] justify-center
-                   md:bottom-6 md:right-6 md:left-auto md:rounded-full md:hover:scale-105 md:py-2 md:pl-2 md:pr-4 md:border-2 md:border-t-2 md:justify-start"
+                   md:bottom-6 md:right-6 md:left-auto md:rounded-full md:hover:scale-105 md:py-2 md:pl-2 md:pr-4 md:border-2 md:border-t-2 md:justify-start
+                   ${!showBottomBar ? 'translate-y-full md:translate-y-0' : 'translate-y-0'}`}
         data-testid="floating-whatsapp-widget"
       >
         <div className="w-10 h-10 md:w-12 md:h-12 rounded-full overflow-hidden border-2 border-[#F4E04D] flex-shrink-0">
