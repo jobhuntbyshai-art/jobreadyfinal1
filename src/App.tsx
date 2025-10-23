@@ -368,25 +368,24 @@ function App() {
       {/* Program Schedule Section */}
       <section 
         id="syllabus" 
-        className="py-24 bg-cover bg-center bg-no-repeat" 
-        style={{ backgroundImage: 'url(/ux-background.png)' }}
+        className="py-24 bg-[#1A1A2E]"
       >
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-12 animate-on-scroll animate-rise-tilt">
-            <h2 className="text-2xl md:text-4xl font-bold mb-4">Your 14-Day Journey</h2>
-            <p className="text-[#1A1A2E]/60 text-sm md:text-lg">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">Your 14-Day Journey</h2>
+            <p className="text-white/60 text-sm md:text-lg">
               A structured path to transform your portfolio and land interviews
             </p>
           </div>
 
-          <div className="border-4 border-[#1A1A2E] rounded-lg overflow-hidden bg-white hidden md:block animate-on-scroll animate-depth-lift stagger-1">
-          <table className="w-full">
+          <div className="border-4 border-white rounded-lg overflow-hidden bg-white hidden md:block animate-on-scroll animate-depth-lift stagger-1">
+          <table className="w-full table-fixed">
             <thead>
               <tr className="border-b-2 border-[#1A1A2E] bg-[#F4E04D]">
-                <th className="px-6 py-4 text-left text-sm font-bold text-[#1A1A2E] w-20">Day</th>
-                <th className="px-6 py-4 text-left text-sm font-bold text-[#1A1A2E]">Topic</th>
-                <th className="px-6 py-4 text-left text-sm font-bold text-[#1A1A2E] w-36">Type</th>
-                <th className="w-12"></th>
+                <th className="px-4 py-4 text-left text-sm font-bold text-[#1A1A2E] w-24">Day</th>
+                <th className="px-4 py-4 text-left text-sm font-bold text-[#1A1A2E]">Topic</th>
+                <th className="px-4 py-4 text-left text-sm font-bold text-[#1A1A2E] w-40">Type</th>
+                <th className="px-4 py-4 w-12"></th>
               </tr>
             </thead>
             <tbody>
@@ -398,18 +397,18 @@ function App() {
                     }`}
                     onClick={() => setExpandedDay(expandedDay === item.day ? null : item.day)}
                   >
-                    <td className="px-6 py-4">
+                    <td className="px-4 py-4 align-middle">
                       <span className="text-sm font-medium text-[#1A1A2E]">Day {item.day}</span>
                     </td>
-                    <td className="px-6 py-4 text-sm text-[#1A1A2E]">{item.title}</td>
-                    <td className="px-6 py-4">
-                      <span className={`text-xs font-semibold text-[#1A1A2E] ${item.color} px-3 py-1 rounded`}>
+                    <td className="px-4 py-4 text-sm text-[#1A1A2E] align-middle">{item.title}</td>
+                    <td className="px-4 py-4 align-middle">
+                      <span className={`text-xs font-semibold text-[#1A1A2E] ${item.color} px-3 py-1 rounded inline-block whitespace-nowrap`}>
                         {item.type}
                       </span>
                     </td>
-                    <td className="px-6 py-4">
+                    <td className="px-4 py-4 text-center align-middle">
                       <ChevronDown 
-                        className={`w-4 h-4 text-[#1A1A2E] transition-transform duration-200 ${
+                        className={`w-4 h-4 text-[#1A1A2E] transition-transform duration-200 inline-block ${
                           expandedDay === item.day ? 'rotate-180' : ''
                         }`}
                       />
@@ -417,7 +416,7 @@ function App() {
                   </tr>
                   {expandedDay === item.day && (
                     <tr className={`${index !== scheduleData.length - 1 ? 'border-b border-[#1A1A2E]' : ''}`}>
-                      <td colSpan={4} className="px-6 py-4 bg-[#E8E4D9]/20">
+                      <td colSpan={4} className="px-4 py-4 bg-[#E8E4D9]/20">
                         <ul className="space-y-2 text-sm text-[#1A1A2E]/80">
                           {item.details.map((detail, i) => (
                             <li key={i} className="flex items-start gap-2">
