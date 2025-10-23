@@ -389,6 +389,31 @@ function App() {
             </p>
           </div>
 
+          {/* Program Info Bar */}
+          <div className="max-w-3xl mx-auto mb-12 animate-on-scroll animate-rise-tilt">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-white/10">
+              <div className="flex items-center justify-around divide-x divide-white/10">
+                {/* Start Date */}
+                <div className="flex-1 text-center px-4">
+                  <p className="text-xs text-white/40 mb-2 uppercase tracking-wide">Start Date</p>
+                  <p className="text-sm md:text-base font-bold text-white">15th Nov'25</p>
+                </div>
+
+                {/* Seats */}
+                <div className="flex-1 text-center px-4">
+                  <p className="text-xs text-white/40 mb-2 uppercase tracking-wide">Seats</p>
+                  <p className="text-sm md:text-base font-bold text-white">4/20</p>
+                </div>
+
+                {/* Duration */}
+                <div className="flex-1 text-center px-4">
+                  <p className="text-xs text-white/40 mb-2 uppercase tracking-wide">Duration</p>
+                  <p className="text-sm md:text-base font-bold text-white">2 Weeks</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Timeline Pathway */}
           <div className="relative max-w-3xl mx-auto">
             {/* Timeline Items */}
