@@ -379,9 +379,25 @@ function App() {
       {/* Program Schedule Section */}
       <section 
         id="syllabus" 
-        className="py-24 bg-[#1A1A2E]"
+        className="py-24 bg-[#1A1A2E] relative overflow-hidden"
       >
-        <div className="max-w-4xl mx-auto px-6">
+        {/* Twinkling Stars Background */}
+        <div className="absolute inset-0 pointer-events-none">
+          {[...Array(30)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-white rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animation: `twinkle ${2 + Math.random() * 3}s ease-in-out infinite`,
+                animationDelay: `${Math.random() * 5}s`,
+              }}
+            />
+          ))}
+        </div>
+
+        <div className="max-w-4xl mx-auto px-6 relative z-10">
           <div className="text-center mb-16 animate-on-scroll animate-rise-tilt">
             <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">Your 14-Day Journey</h2>
             <p className="text-white/60 text-base md:text-lg max-w-2xl mx-auto">
