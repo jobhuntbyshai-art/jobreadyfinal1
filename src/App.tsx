@@ -398,29 +398,22 @@ function App() {
                 return (
                   <div 
                     key={item.day}
-                    className="relative"
+                    className="relative pb-6"
                   >
-                    {/* Vertical Line - Only show if not last item */}
-                    {!isLastItem && (
-                      <div className="absolute left-5 top-10 bottom-0 w-0.5 bg-white/10 hidden md:block"></div>
-                    )}
-
                     {/* Timeline Item */}
                     <div 
-                      className="flex gap-4 md:gap-8 cursor-pointer group pb-6 animate-on-scroll animate-reveal-blur"
+                      className="cursor-pointer group animate-on-scroll animate-reveal-blur relative"
                       style={{ animationDelay: `${index * 30}ms` }}
                       onClick={() => setExpandedDay(expandedDay === item.day ? null : item.day)}
                     >
-                      {/* Icon Circle - Hidden on Mobile */}
-                      <div className="relative flex-shrink-0 hidden md:block">
-                        <div className={`w-10 h-10 rounded-full ${item.color} flex items-center justify-center font-bold text-[#1A1A2E] text-sm shadow-lg z-10 relative`}>
-                          {item.day}
-                        </div>
-                      </div>
-
-                      {/* Content */}
-                      <div className="flex-1 pb-2">
-                        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 md:p-5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all">
+                      {/* Content with integrated pathway */}
+                      <div className="relative">
+                        {/* Vertical Line running through cards */}
+                        {!isLastItem && (
+                          <div className="absolute left-4 top-0 bottom-0 w-1 bg-gradient-to-b from-white/20 via-white/10 to-white/5"></div>
+                        )}
+                        
+                        <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 md:p-5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all relative">
                           <div className="flex items-start justify-between gap-4">
                             <div className="flex-1">
                               <h3 className="font-bold text-white text-base md:text-lg mb-3">{item.title}</h3>
