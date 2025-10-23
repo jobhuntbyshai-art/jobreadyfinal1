@@ -383,7 +383,7 @@ function App() {
       >
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16 animate-on-scroll animate-rise-tilt">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white">Your 14-Day Journey</h2>
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 text-white">Your 14-Day Journey</h2>
             <p className="text-white/60 text-base md:text-lg max-w-2xl mx-auto">
               A structured path to transform your portfolio and land interviews
             </p>
@@ -422,7 +422,11 @@ function App() {
                               <span className="text-xs px-3 py-1 rounded-full bg-white/10 text-white/80 font-medium">
                                 Day {item.day}
                               </span>
-                              <span className={`text-xs font-semibold px-3 py-1 rounded-full ${item.color} text-[#1A1A2E]`}>
+                              <span className={`text-xs px-3 py-1 rounded-full bg-white/5 border ${
+                                item.color === 'bg-[#F4E04D]' ? 'border-[#F4E04D]/40 text-[#F4E04D]' :
+                                item.color === 'bg-[#B8A8D8]' ? 'border-[#B8A8D8]/40 text-[#B8A8D8]' :
+                                'border-[#FFB6C1]/40 text-[#FFB6C1]'
+                              } font-medium`}>
                                 {item.type}
                               </span>
                             </div>
